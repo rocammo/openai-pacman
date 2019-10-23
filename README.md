@@ -72,3 +72,8 @@ To execute the project:
 ```
 $ python main.py
 ```
+
+## Screenshots
+
+<img width="272" alt="screenshot" src="https://user-images.githubusercontent.com/9489977/67415907-26839c80-f5c6-11e9-830d-a39ad2d13dd2.png">
+
