@@ -44,6 +44,27 @@ After activating it, all that is missing is to install the necessary packages (r
 (env)$ pip install -r requirements.txt
 ```
 
+### Virtual display for Ubuntu subsystem for Windows
+
+If you are using the Ubuntu subsystem for Windows you will encounter this error if you try to render the simulation.
+
+```
+pyglet.canvas.xlib.NoSuchDisplayException: Cannot connect to "None"
+```
+
+This is caused by not having a display attached to your terminal, it can be fixed by installing a X server on Windows, we recommend 
+[Xming X Server for Windows](https://sourceforge.net/projects/xming/) as is easy to install and use.
+
+Then just run the following command on the linux terminal to attach the virtual display:
+
+```
+export DISPLAY=:0
+```
+
+This setting will only persist on the current terminal session so you can place it on .bashrc to make it persisten.
+Remember that Xming server should be running on Windows, as is needed to handle the output of your Ubuntu subsystem.
+
+
 ## Usage
 
 To execute the project:
