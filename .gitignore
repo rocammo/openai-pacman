@@ -1,0 +1,8 @@
+# Environments
+env/
+
+# VSCode
+.vscode/*
+
+# macOS Specific
+.DS_Store
