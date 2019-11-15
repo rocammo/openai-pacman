@@ -52,7 +52,7 @@ If you are using the Ubuntu subsystem for Windows you will encounter this error 
 pyglet.canvas.xlib.NoSuchDisplayException: Cannot connect to "None"
 ```
 
-This is caused by not having a display attached to your terminal, it can be fixed by installing a X server on Windows, we recommend 
+This is caused by not having a display attached to your terminal, it can be fixed by installing a X server on Windows, we recommend
 [Xming X Server for Windows](https://sourceforge.net/projects/xming/) as is easy to install and use.
 
 Then just run the following command on the linux terminal to attach the virtual display:
@@ -64,16 +64,14 @@ export DISPLAY=:0
 This setting will only persist on the current terminal session so you can place it on .bashrc to make it persisten.
 Remember that Xming server should be running on Windows, as is needed to handle the output of your Ubuntu subsystem.
 
-
 ## Usage
 
 To execute the project:
 
 ```
-$ python main.py
+$ python -m pacman
 ```
 
 ## Screenshots
 
 <img width="272" alt="screenshot" src="https://user-images.githubusercontent.com/9489977/67415907-26839c80-f5c6-11e9-830d-a39ad2d13dd2.png">
-
