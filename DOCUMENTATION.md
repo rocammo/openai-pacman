@@ -2,6 +2,12 @@
 Here we explain some technical terms about reinforcement learning algorithms and related terminology.
 More definitions and explanations will be added as we advance in our research.
 
+### Episode
+An episode is one iteration of our game, it is divided in Steps. Once our agent loses all its lifes, it prints the rewards obtained and the game resets. To train our agent we need to let it run over multiple episodes.
+
+### Step
+A step or movement is one single action taken by our agent, for example, moving to the right. This actions are randomly chosen on the exploration phase and decided based on past actions in the exploitation phase.
+
 ### Baseline
 The less effort result we have to beat, for example, if a random set of movements can produce a score of 100, then 100 is the baseline to beat.
 
