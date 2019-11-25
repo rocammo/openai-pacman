@@ -72,6 +72,16 @@ To execute the project:
 $ python -m pacman
 ```
 
+## Algorithms
+
+Our project implements three different reinforcement learning algorithms in the same framework:
+
+ * [x] Deep Q Reinforcement Learning
+ * [ ] Duel Q Reinforcement Learning
+ * [ ] To be determined
+ 
+You can choose the algorithm to run by using the `--network` parameter.
+ 
 ## Screenshots
 
 <img width="272" alt="screenshot" src="https://user-images.githubusercontent.com/9489977/67415907-26839c80-f5c6-11e9-830d-a39ad2d13dd2.png">
