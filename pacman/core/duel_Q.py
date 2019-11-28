@@ -1,7 +1,7 @@
 # from keras.models import load_model
 
 class DuelQ(object):
-    def __init__(self):
+    def __init__(self, outer):
         self.construct_q_network()
 
     def construct_q_network(self):

@@ -12,9 +12,9 @@ class PacMan(object):
         # construct appropiate network based on flags
         print(mode)
         if mode == 'DDQN':
-            self.algorithm = DeepQ()
+            self.algorithm = DeepQ(self)
         elif mode == 'DQN':
-            self.algorithm = DuelQ()
+            self.algorithm = DuelQ(self)
 
     def load_network(self, path):
         self.algorithm.load_network(path)
