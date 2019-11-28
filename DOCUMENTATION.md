@@ -8,6 +8,16 @@ An episode is one iteration of our game, it is divided in Steps. Once our agent 
 ### Step
 A step or movement is one single action taken by our agent, for example, moving to the right. This actions are randomly chosen on the exploration phase and decided based on past actions in the exploitation phase.
 
+### Action
+An action is an specific movement that can be performed on a step, in each enviroment or game they are a finite range of actions that can be taken, for example: moving left, right, up, down, shoot and do nothing could be a set of actions. Our algorithm has to select one action from this set on each step based on experience or randomness.
+
+### Reward
+A reward is a numeric value that represents the gains obtained by a certain action in our enviroment, they are used to tell our algorithms what actions are worth and how much they are worth to solve the enviroment. Its fundamental to give rewards when the step chosen led to improvements and to take back rewards if the step chosen led to a bad result. 
+
+### Weights
+Neural networks use weights to calibrate each neuron in each layer, the training process consists in finding the best weights for each individual neuron to obtain the best ouput at the final layer based on the input given.
+This weights can be saved into a file to retain the state of the model and can be load later to bring back that state.
+
 ### Baseline
 The less effort result we have to beat, for example, if a random set of movements can produce a score of 100, then 100 is the baseline to beat.
 
@@ -46,7 +56,13 @@ Q(state, action) = reward
 ### Epsilon
 It is a value that ranges from 1 to 0, when its near 1, our algorithm will be in the explotation phase, that means that it will try random movements. When its near 0, our algorithm will be in an exploration phase, it will try the movements from its memory that have a higher confidence. In each step, the algorithm chooses to perform a random or predefined movement depending on the epsilon value, that decays through time. 
 
+### Replay memory
+The replay memory, replay buffer or experience replay are terms that refer to a technique that allows the agent to learn from earlier
+memories, this can speed up learning and break undesirable temporal correlations. [1]
+
 # Bibliography
+[1] https://www.padl.ws/papers/Paper%2018.pdf
+
 [https://junedmunshi.wordpress.com/2012/03/30/how-to-implement-epsilon-greedy-strategy-policy/](https://junedmunshi.wordpress.com/2012/03/30/how-to-implement-epsilon-greedy-strategy-policy/)
 
 [https://medium.com/@dennybritz/exploration-vs-exploitation-f46af4cf62fe](https://medium.com/@dennybritz/exploration-vs-exploitation-f46af4cf62fe)
