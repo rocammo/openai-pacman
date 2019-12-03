@@ -11,6 +11,9 @@ A step or movement is one single action taken by our agent, for example, moving 
 ### Action
 An action is an specific movement that can be performed on a step, in each enviroment or game they are a finite range of actions that can be taken, for example: moving left, right, up, down, shoot and do nothing could be a set of actions. Our algorithm has to select one action from this set on each step based on experience or randomness.
 
+### Action space
+The action space is the collection of possible actions for a certain enviroment.
+
 ### Reward
 A reward is a numeric value that represents the gains obtained by a certain action in our enviroment, they are used to tell our algorithms what actions are worth and how much they are worth to solve the enviroment. Its fundamental to give rewards when the step chosen led to improvements and to take back rewards if the step chosen led to a bad result. 
 
@@ -53,6 +56,9 @@ A Q-table is not sustainable as games are increasingly complex. For this reason,
 
 Q(state, action) = reward
 
+<img width="335" alt="ilustration" src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2019/04/Screenshot-2019-04-16-at-5.46.01-PM-670x440.png">
+_This picture illustrates a diagram of the workflow using a Q-table and a Q-function, source [2]_
+
 ### Epsilon
 It is a value that ranges from 1 to 0, when its near 1, our algorithm will be in the explotation phase, that means that it will try random movements. When its near 0, our algorithm will be in an exploration phase, it will try the movements from its memory that have a higher confidence. In each step, the algorithm chooses to perform a random or predefined movement depending on the epsilon value, that decays through time. 
 
@@ -63,6 +69,8 @@ memories, this can speed up learning and break undesirable temporal correlations
 # Bibliography
 [1] https://www.padl.ws/papers/Paper%2018.pdf
 
+[2] https://www.analyticsvidhya.com/blog/2019/04/introduction-deep-q-learning-python/
+
 [https://junedmunshi.wordpress.com/2012/03/30/how-to-implement-epsilon-greedy-strategy-policy/](https://junedmunshi.wordpress.com/2012/03/30/how-to-implement-epsilon-greedy-strategy-policy/)
 
 [https://medium.com/@dennybritz/exploration-vs-exploitation-f46af4cf62fe](https://medium.com/@dennybritz/exploration-vs-exploitation-f46af4cf62fe)
@@ -70,3 +78,6 @@ memories, this can speed up learning and break undesirable temporal correlations
 https://www.digitalocean.com/community/tutorials/how-to-build-atari-bot-with-openai-gym
 
 https://www.freecodecamp.org/news/an-introduction-to-q-learning-reinforcement-learning-14ac0b4493cc/
+
+https://medium.com/@ashish_fagna/understanding-openai-gym-25c79c06eccb
+
