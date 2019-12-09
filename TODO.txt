@@ -1,0 +1,2 @@
+1.- [PROFILING]
+    Add timer to time how long it takes to run each part.
