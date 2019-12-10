@@ -66,10 +66,23 @@ It is a value that ranges from 1 to 0, when its near 1, our algorithm will be in
 The replay memory, replay buffer or experience replay are terms that refer to a technique that allows the agent to learn from earlier
 memories, this can speed up learning and break undesirable temporal correlations. [1]
 
+### (.h5) or HDF5 files
+When using Keras, the model architecture and model weights are clearly separated [3]. In our project, the model architecture is defined in the Deep_Q.py and Duel_Q.py files, when constructing the layers.
+
+On the opposite, Model Weights have to be saved to make our state persist between launches, thats when the HDF5 format comes handy. Its a grid format that keras uses to store multi-dimensional arrays filled with numbers, the weights of our neurons.
+
+You can find them in openai-pacman/results/, the file extension is .h5 and they are not supposed to be open with a text editor, you need to use tools like HDFView [4].
+
+<img width="335" alt="HDFView" src="https://user-images.githubusercontent.com/6007737/70523346-270acf00-1b43-11ea-8bd8-703d249b75b7.png">
+
 # Bibliography
 [1] https://www.padl.ws/papers/Paper%2018.pdf
 
 [2] https://www.analyticsvidhya.com/blog/2019/04/introduction-deep-q-learning-python/
+
+[3] https://machinelearningmastery.com/save-load-keras-deep-learning-models/
+
+[4] https://www.hdfgroup.org/downloads/hdfview/
 
 [https://junedmunshi.wordpress.com/2012/03/30/how-to-implement-epsilon-greedy-strategy-policy/](https://junedmunshi.wordpress.com/2012/03/30/how-to-implement-epsilon-greedy-strategy-policy/)
 
