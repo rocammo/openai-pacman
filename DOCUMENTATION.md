@@ -94,3 +94,19 @@ https://www.freecodecamp.org/news/an-introduction-to-q-learning-reinforcement-le
 
 https://medium.com/@ashish_fagna/understanding-openai-gym-25c79c06eccb
 
+
+
+# Second Part: Questions to resolve 
+•	(5 points) Describe the TABU, GENETIC and  A*  Search algorithm
+
+1.	In which category do you classify it. Indicates advantages and disadvantages with the algorithms that have been studied in the classes 
+
+2.	Which advantages and disadvantages do you discover in  this algorithm to solve the traveling salesman problem. 
+
+
+•	(1 point) what is overfitting training problem and how to solve it in neural networks and specially in Keras. 
+
+•	(2 points ) Give an original example of reasoning based on backward chaining. 
+
+•	(2 points) We want to solve the problem of travelling Sales problem (https://en.wikipedia.org/wiki/Travelling_salesman_problem) , how would you solve it? What algorithm would you use and why? How should the problem be coded to solve it with the "tabu search" algorithm? 
+
