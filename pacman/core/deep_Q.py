@@ -11,6 +11,7 @@ from gym import wrappers
 
 class DeepQAgent:
     def __init__(self, state_size, action_size):
+        print('\033[94m' + 'INFO: DeepQAgent is initializing' + '\033[0m')
         # if you want to see MsPacman learning, then change to True
         self.render = True
         self.load_model = False
@@ -39,6 +40,7 @@ class DeepQAgent:
     # approximate Q function using Neural Network
     # state is input and Q Value of each action is output of network
     def build_model(self):
+        print('\033[94m' + 'INFO: DeepQAgent is building the model' + '\033[0m')
         model = Sequential()
         model.add(Dense(128, input_dim=self.state_size, activation='relu',
                         kernel_initializer='he_uniform'))
@@ -48,10 +50,12 @@ class DeepQAgent:
                         kernel_initializer='he_uniform'))
         model.summary()
         model.compile(loss='mse', optimizer=Adam(lr=self.learning_rate))
+        print('\033[94m' + 'INFO: DeepQAgent model was sucessfully built' + '\033[0m')
         return model
 
     # get action from model using epsilon-greedy policy
     def get_action(self, state):
+        #print('\033[94m' + 'INFO: DeepQAgent is getting an action' + '\033[0m')
         if np.random.rand() <= self.epsilon:
             return random.randrange(self.action_size)
         else:
@@ -60,12 +64,14 @@ class DeepQAgent:
 
     # save sample <s,a,r,s'> to the replay memory
     def append_sample(self, state, action, reward, next_state, done):
+        #print('\033[94m' + 'INFO: DeepQAgent is appending a sample' + '\033[0m')
         self.memory.append((state, action, reward, next_state, done))
         if self.epsilon > self.epsilon_min:
             self.epsilon *= self.epsilon_decay
 
     # pick samples randomly from replay memory (with batch_size)
     def train_model(self):
+        #print('\033[94m' + 'INFO: DeepQAgent is training the model' + '\033[0m')
         if len(self.memory) < self.train_start:
             return
         batch_size = min(self.batch_size, len(self.memory))
@@ -95,5 +101,6 @@ class DeepQAgent:
                     np.amax(target_val[i]))
 
         # and do the model fit!
+        #print('\033[94m' + 'INFO: DeepQAgent is fitting the model' + '\033[0m')
         self.model.fit(update_input, target, batch_size=self.batch_size,
                        epochs=1, verbose=0)
