@@ -19,7 +19,7 @@ class PacMan:
         self.env.reset()
 
         # construct appropiate network based on flags
-        print(mode)
+        print('\033[95m' + 'INFO: Using', mode, 'on MsPacman-ram-v0' + '\033[0m')
         if mode == 'DDQN':
             state_size = self.env.observation_space.shape[0]
             action_size = self.env.action_space.n
@@ -28,16 +28,18 @@ class PacMan:
             self.algorithm = DuelQ(self)
 
     def load_network(self, path):
+        print('\033[95m' + 'INFO: Loading network' + '\033[0m')
         print('load_network')
         self.algorithm.load_network(path)
 
     def train(self, num_frames):
+        print('\033[95m' + 'INFO: Training' + '\033[0m')
         EPISODES = 5
+        env = self.env
+        state_size = env.observation_space.shape[0]
+        action_size = env.action_space.n
 
-        #state_size = env.observation_space.shape[0]
-        #action_size = env.action_space.n
-
-        #agent = self.algorithm.Agent(state_size, action_size)
+        agent = self.agent
 
         scores, episodes = [], []
 
@@ -77,16 +79,18 @@ class PacMan:
                     print("episode:", e, "  score:", score, "  memory length:",
                           len(agent.memory), "  epsilon:", agent.epsilon)
 
-
             # save the model
+            print('\033[95m' +'INFO: Episode has ended, saving the network into the ./pacman.h5 file.' + '\033[0m')
             if e % 50 == 0:
                 agent.model.save_weights("./pacman.h5")
 
-        print('Successfully constructed DDQN (DeepQ) network.')
+        print('\033[95m' +'INFO: All episodes were run, exiting.' + '\033[0m')
 
     def simulate(self, path='', save=False):
+        print('\033[95m' + 'INFO: Simulating' + '\033[0m')
         print('simulate')
 
     def calculate_mean(self, num_samples=100):
+        print('\033[95m' + 'INFO: Calculating the mean' + '\033[0m')
         print('calculate_mean')
         pass
