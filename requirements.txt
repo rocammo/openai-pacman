@@ -5,3 +5,4 @@ gym==0.15.4
 atari-py==0.2.6
 opencv-contrib-python-headless==4.1.2.30
 opencv-python-headless==4.1.2.30
+matplotlib==3.1.2

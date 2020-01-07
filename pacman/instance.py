@@ -10,12 +10,16 @@ from keras.optimizers import Adam
 from keras.models import Sequential
 from gym import wrappers
 
+from pacman.utils.replay_buffer import ReplayBuffer
 from pacman.core.deep_Q import DeepQAgent
 from pacman.core.duel_Q import DuelQ
 
+# constants
+BUFFER_SIZE = 100000
+
 class PacMan:
     def __init__(self, mode):
-        self.env = gym.make('MsPacman-v0')
+        self.env = gym.make('MsPacman-ram-v0')
         self.env.reset()
         self.replay_buffer = ReplayBuffer(BUFFER_SIZE)
 
