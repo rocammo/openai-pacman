@@ -23,7 +23,7 @@ if __name__ == '__main__':
     if args.load:
         game_instance.load_network(args.load)
 
-    if args.mode == 'train':
+    if args.mode.lower() == 'train':
         game_instance.train(NUM_FRAMES)
 
     if args.statistics:

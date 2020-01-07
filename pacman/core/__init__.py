@@ -1,2 +1,2 @@
-from .deep_Q import DeepQ
+from .deep_Q import DeepQAgent
 from .duel_Q import DuelQ

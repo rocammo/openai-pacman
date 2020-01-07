@@ -1,102 +1,105 @@
+import sys
+import pylab
+import random
 import numpy as np
-from keras.models import Sequential, load_model
-from keras.layers.convolutional import Convolution2D
+from collections import deque
+from keras.layers import Dense
 from keras.optimizers import Adam
-from keras.layers.core import Activation, Flatten, Dense
+from keras.models import Sequential
+from gym import wrappers
 
-# constants
-NUM_FRAMES = 3
-NUM_ACTIONS = 6
-DECAY_RATE = 0.99
-TAU = 0.01
+class DeepQAgent:
+    def __init__(self, state_size, action_size):
+        print('\033[94m' + 'INFO: DeepQAgent is initializing' + '\033[0m')
+        # if you want to see MsPacman learning, then change to True
+        self.render = True
+        self.load_model = False
 
-class DeepQ:
-    def __init__(self):
-        self.construct_network()
+        # get size of state and action
+        self.state_size = state_size
+        self.action_size = action_size
 
-    def construct_network(self):
-        self.model = Sequential()
-        self.model.add(Convolution2D(32, 8, 8, subsample=(
-            4, 4), input_shape=(84, 84, NUM_FRAMES)))
-        self.model.add(Activation('relu'))
-        self.model.add(Convolution2D(64, 4, 4, subsample=(2, 2)))
-        self.model.add(Activation('relu'))
-        self.model.add(Convolution2D(64, 3, 3))
-        self.model.add(Activation('relu'))
-        self.model.add(Flatten())
-        self.model.add(Dense(512))
-        self.model.add(Activation('relu'))
-        self.model.add(Dense(NUM_ACTIONS))
-        self.model.compile(loss='mse', optimizer=Adam(lr=0.00001))
+        # These are hyper parameters for the DQN
+        self.discount_factor = 0.99
+        self.learning_rate = 0.001
+        self.epsilon = 1.0
+        self.epsilon_decay = 0.9999
+        self.epsilon_min = 0.1
+        self.batch_size = 128
+        self.train_start = 1000
+        # create replay memory using deque
+        self.memory = deque(maxlen=2000)
 
-        self.target_model = Sequential()
-        self.target_model.add(Convolution2D(
-            32, 8, 8, subsample=(4, 4), input_shape=(84, 84, NUM_FRAMES)))
-        self.target_model.add(Activation('relu'))
-        self.target_model.add(Convolution2D(64, 4, 4, subsample=(2, 2)))
-        self.target_model.add(Activation('relu'))
-        self.target_model.add(Convolution2D(64, 3, 3))
-        self.target_model.add(Activation('relu'))
-        self.target_model.add(Flatten())
-        self.target_model.add(Dense(512))
-        self.model.add(Activation('relu'))
-        self.target_model.add(Dense(NUM_ACTIONS))
-        self.target_model.compile(loss='mse', optimizer=Adam(lr=0.00001))
-        self.target_model.set_weights(self.model.get_weights())
+        # create main model
+        self.model = self.build_model()
 
-        print('Successfully constructed DDQN (DeepQ) network.')
+        if self.load_model:
+            self.model.load_weights("./pacman.h5")
 
-    def predict_movement(self, data, epsilon):
-        '''
-        predict movement of game controller where is epsilon probability
-        randomly moved
-        '''
-        q_actions = self.model.predict(
-            data.reshape(1, 84, 84, NUM_FRAMES), batch_size=1)
-        opt_policy = np.argmax(q_actions)
-        rand_val = np.random.random_sample()
+    # approximate Q function using Neural Network
+    # state is input and Q Value of each action is output of network
+    def build_model(self):
+        print('\033[94m' + 'INFO: DeepQAgent is building the model' + '\033[0m')
+        model = Sequential()
+        model.add(Dense(128, input_dim=self.state_size, activation='relu',
+                        kernel_initializer='he_uniform'))
+        model.add(Dense(32, activation='relu',
+                        kernel_initializer='he_uniform'))
+        model.add(Dense(self.action_size, activation='linear',
+                        kernel_initializer='he_uniform'))
+        model.summary()
+        model.compile(loss='mse', optimizer=Adam(lr=self.learning_rate))
+        print('\033[94m' + 'INFO: DeepQAgent model was sucessfully built' + '\033[0m')
+        return model
 
-        if rand_val < epsilon:
-            opt_policy = np.random.randint(0, NUM_ACTIONS)
+    # get action from model using epsilon-greedy policy
+    def get_action(self, state):
+        #print('\033[94m' + 'INFO: DeepQAgent is getting an action' + '\033[0m')
+        if np.random.rand() <= self.epsilon:
+            return random.randrange(self.action_size)
+        else:
+            q_value = self.model.predict(state)
+            return np.argmax(q_value[0])
 
-        return opt_policy, q_actions[0, opt_policy]
+    # save sample <s,a,r,s'> to the replay memory
+    def append_sample(self, state, action, reward, next_state, done):
+        #print('\033[94m' + 'INFO: DeepQAgent is appending a sample' + '\033[0m')
+        self.memory.append((state, action, reward, next_state, done))
+        if self.epsilon > self.epsilon_min:
+            self.epsilon *= self.epsilon_decay
 
-    def train(self, s_batch, a_batch, r_batch, d_batch, s2_batch, observation_num):
-        '''
-        train network to fit given parameters
-        '''
-        batch_size = s_batch.shape[0]
-        targets = np.zeros((batch_size, NUM_ACTIONS))
+    # pick samples randomly from replay memory (with batch_size)
+    def train_model(self):
+        #print('\033[94m' + 'INFO: DeepQAgent is training the model' + '\033[0m')
+        if len(self.memory) < self.train_start:
+            return
+        batch_size = min(self.batch_size, len(self.memory))
+        mini_batch = random.sample(self.memory, batch_size)
 
-        for i in range(batch_size):
-            targets[i] = self.model.predict(
-                s_batch[i].reshape(1, 84, 84, NUM_FRAMES), batch_size=1)
-            fut_action = self.target_model.predict(
-                s2_batch[i].reshape(1, 84, 84, NUM_FRAMES), batch_size=1)
-            targets[i, a_batch[i]] = r_batch[i]
-            if d_batch[i] == False:
-                targets[i, a_batch[i]] += DECAY_RATE * np.max(fut_action)
+        update_input = np.zeros((batch_size, self.state_size))
+        update_target = np.zeros((batch_size, self.state_size))
+        action, reward, done = [], [], []
 
-        loss = self.model.train_on_batch(s_batch, targets)
+        for i in range(self.batch_size):
+            update_input[i] = mini_batch[i][0]
+            action.append(mini_batch[i][1])
+            reward.append(mini_batch[i][2])
+            update_target[i] = mini_batch[i][3]
+            done.append(mini_batch[i][4])
 
-        # print the loss every 10 iterations
-        if observation_num % 10 == 0:
-            print('Log: loss equal to', loss)
+        target = self.model.predict(update_input)
+        target_val = self.model.predict(update_target)
 
-    def save_network(self, path):
-        self.model.save(path)
-        print('Successfully saved DDQN (DeepQ) network.')
 
-    def load_network(self, path):
-        self.model = load_model(path)
-        print('Successfully loaded DDQN (DeepQ) network.')
+        for i in range(self.batch_size):
+            # Q Learning: get maximum Q value at s' from model
+            if done[i]:
+                target[i][action[i]] = reward[i]
+            else:
+                target[i][action[i]] = reward[i] + self.discount_factor * (
+                    np.amax(target_val[i]))
 
-    def target_train(self):
-        model_weights = self.model.get_weights()
-        target_model_weights = self.target_model.get_weights()
-
-        for i in range(len(model_weights)):
-            target_model_weights[i] = TAU * model_weights[i] + (1 - TAU) * \
-                                        target_model_weights[i]
-
-        self.target_model.set_weights(target_model_weights)
+        # and do the model fit!
+        #print('\033[94m' + 'INFO: DeepQAgent is fitting the model' + '\033[0m')
+        self.model.fit(update_input, target, batch_size=self.batch_size,
+                       epochs=1, verbose=0)

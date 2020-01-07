@@ -1,18 +1,17 @@
 import numpy as np
 import gym
-import cv2
-from pacman.utils.replay_buffer import ReplayBuffer
-from pacman.core.deep_Q import DeepQ
-from pacman.core.duel_Q import DuelQ
+import sys
+import pylab
+import random
 
-# constants
-BUFFER_SIZE = 100000
-MINIBATCH_SIZE = 32
-EPSILON_DECAY = 300000
-MIN_OBSERVATION = 5000
-FINAL_EPSILON = 0.1
-INITIAL_EPSILON = 1.0
-NUM_FRAMES = 3
+from collections import deque
+from keras.layers import Dense
+from keras.optimizers import Adam
+from keras.models import Sequential
+from gym import wrappers
+
+from pacman.core.deep_Q import DeepQAgent
+from pacman.core.duel_Q import DuelQ
 
 class PacMan:
     def __init__(self, mode):
@@ -21,10 +20,14 @@ class PacMan:
         self.replay_buffer = ReplayBuffer(BUFFER_SIZE)
 
         # construct appropiate network based on flags
+        print('\033[95m' + 'INFO: Using', mode, 'on MsPacman-ram-v0' + '\033[0m')
+
         if mode == 'DDQN':
-            self.algorithm = DeepQ()
+            state_size = self.env.observation_space.shape[0]
+            action_size = self.env.action_space.n
+            self.agent = DeepQAgent(state_size, action_size)
         elif mode == 'DQN':
-            self.algorithm = DuelQ()
+            self.algorithm = DuelQ(self)
 
         # buffer that keeps the last 3 images
         self.process_buffer = []
@@ -35,6 +38,8 @@ class PacMan:
         self.process_buffer = [s1, s2, s3]
 
     def load_network(self, path):
+        print('\033[95m' + 'INFO: Loading network' + '\033[0m')
+        print('load_network')
         self.algorithm.load_network(path)
 
     def convert_process_buffer(self):
@@ -48,100 +53,64 @@ class PacMan:
         return np.concatenate(black_buffer, axis=2)
 
     def train(self, num_frames):
-        observation_num = 0
-        curr_state = self.convert_process_buffer()
-        epsilon = INITIAL_EPSILON
-        alive_frame = 0
-        total_reward = 0
+        print('\033[95m' + 'INFO: Training' + '\033[0m')
+        EPISODES = 5
+        env = self.env
+        state_size = env.observation_space.shape[0]
+        action_size = env.action_space.n
 
-        while observation_num < num_frames:
-            if observation_num % 1000 == 999:
-                print('Log: executing loop', observation_num)
+        agent = self.agent
 
-            # slowly decay the learning rate
-            if epsilon > FINAL_EPSILON:
-                epsilon -= (INITIAL_EPSILON - FINAL_EPSILON) / EPSILON_DECAY
+        scores, episodes = [], []
 
-            initial_state = self.convert_process_buffer()
-            self.process_buffer = []
+        for e in range(EPISODES):
+            done = False
+            score = 0
+            state = env.reset()
+            state = np.reshape(state, [1, state_size])
+            lives = 3
+            while not done:
+                dead = False
+                while not dead:
+                    if agent.render:
+                        env.render()
 
-            predict_movement, predict_q_value = self.algorithm.predict_movement(curr_state, epsilon)
+                    # get action for the current state and go one step in environment
+                    action = agent.get_action(state)
+                    next_state, reward, done, info = env.step(action)
+                    next_state = np.reshape(next_state, [1, state_size])
+                    # save the sample <s, a, r, s'> to the replay memory
+                    agent.append_sample(state, action, reward, next_state, done)
+                    # every time step do the training
+                    agent.train_model()
 
-            reward, done = 0, False
-            for i in range(NUM_FRAMES):
-                temp_observation, temp_reward, temp_done, _ = self.env.step(predict_movement)
-                reward += temp_reward
-                self.process_buffer.append(temp_observation)
-                done = done | temp_done
+                    state = next_state
+                    score += reward
+                    dead = info['ale.lives']<lives
+                    lives = info['ale.lives']
+                    # if an action make the Pacman dead, then gives penalty of -100
+                    reward = reward if not dead else -100
 
-            if observation_num % 10 == 0:
-                print('Log: predicted q value of', predict_q_value)
+                if done:
+                    scores.append(score)
+                    episodes.append(e)
+                    pylab.plot(episodes, scores, 'b')
+                    pylab.savefig("./pacman.png")
+                    print("episode:", e, "  score:", score, "  memory length:",
+                          len(agent.memory), "  epsilon:", agent.epsilon)
 
-            if done:
-                print('Log: lived with maximum time ', alive_frame)
-                print('Log: earned a total of reward equal to ', total_reward)
-                self.env.reset()
-                alive_frame = 0
-                total_reward = 0
+            # save the model
+            print('\033[95m' +'INFO: Episode has ended, saving the network into the ./pacman.h5 file.' + '\033[0m')
+            if e % 50 == 0:
+                agent.model.save_weights("./pacman.h5")
 
-            new_state = self.convert_process_buffer()
-            self.replay_buffer.add(initial_state, predict_movement, reward, done, new_state)
-            total_reward += reward
-
-            if self.replay_buffer.size() > MIN_OBSERVATION:
-                s_batch, a_batch, r_batch, d_batch, s2_batch = self.replay_buffer.sample(MINIBATCH_SIZE)
-                self.algorithm.train(s_batch, a_batch, r_batch, d_batch, s2_batch, observation_num)
-                self.algorithm.target_train()
-
-            # save the network every 100000 iterations
-            if observation_num % 10000 == 9999:
-                print('Log: saving network...')
-                self.algorithm.save_network('saved.h5')
-
-            alive_frame += 1
-            observation_num += 1
+        print('\033[95m' +'INFO: All episodes were run, exiting.' + '\033[0m')
 
     def simulate(self, path='', save=False):
-        '''
-        simulate game
-        '''
-        done = False
-        tot_award = 0
-
-        if save:
-            self.env.monitor.start(path, force=True)
-
-        self.env.reset()
-        self.env.render()
-
-        while not done:
-            state = self.convert_process_buffer()
-            predict_movement = self.algorithm.predict_movement(state, 0)[0]
-            self.env.render()
-            observation, reward, done, _ = self.env.step(predict_movement)
-            tot_award += reward
-            self.process_buffer.append(observation)
-            self.process_buffer = self.process_buffer[1:]
-
-        if save:
-            self.env.monitor.close()
+        print('\033[95m' + 'INFO: Simulating' + '\033[0m')
+        print('simulate')
 
     def calculate_mean(self, num_samples=100):
-        reward_list = []
-        print('Log: printing scores of each trial...')
-
-        for i in range(num_samples):
-            done = False
-            tot_award = 0
-            self.env.reset()
-            while not done:
-                state = self.convert_process_buffer()
-                predict_movement = self.algorithm.predict_movement(state, 0.0)[0]
-                observation, reward, done, _ = self.env.step(predict_movement)
-                tot_award += reward
-                self.process_buffer.append(observation)
-                self.process_buffer = self.process_buffer[1:]
-            print(tot_award)
-            reward_list.append(tot_award)
-
-        return np.mean(reward_list), np.std(reward_list)
+        print('\033[95m' + 'INFO: Calculating the mean' + '\033[0m')
+        print('calculate_mean')
+        pass
