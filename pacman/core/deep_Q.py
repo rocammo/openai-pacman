@@ -1,5 +1,4 @@
 import sys
-#import gym
 import pylab
 import random
 import numpy as np

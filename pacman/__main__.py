@@ -35,4 +35,3 @@ if __name__ == '__main__':
         game_instance.simulate(path=args.save, save=True)
     elif args.view:
         game_instance.simulate()
-

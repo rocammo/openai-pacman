@@ -3,7 +3,7 @@ import gym
 import sys
 import pylab
 import random
-import numpy as np
+
 from collections import deque
 from keras.layers import Dense
 from keras.optimizers import Adam
@@ -15,11 +15,13 @@ from pacman.core.duel_Q import DuelQ
 
 class PacMan:
     def __init__(self, mode):
-        self.env = gym.make('MsPacman-ram-v0')
+        self.env = gym.make('MsPacman-v0')
         self.env.reset()
+        self.replay_buffer = ReplayBuffer(BUFFER_SIZE)
 
         # construct appropiate network based on flags
         print('\033[95m' + 'INFO: Using', mode, 'on MsPacman-ram-v0' + '\033[0m')
+
         if mode == 'DDQN':
             state_size = self.env.observation_space.shape[0]
             action_size = self.env.action_space.n
@@ -27,10 +29,28 @@ class PacMan:
         elif mode == 'DQN':
             self.algorithm = DuelQ(self)
 
+        # buffer that keeps the last 3 images
+        self.process_buffer = []
+        # initialize buffer with the first frame
+        s1, r1, _, _ = self.env.step(0)
+        s2, r2, _, _ = self.env.step(0)
+        s3, r3, _, _ = self.env.step(0)
+        self.process_buffer = [s1, s2, s3]
+
     def load_network(self, path):
         print('\033[95m' + 'INFO: Loading network' + '\033[0m')
         print('load_network')
         self.algorithm.load_network(path)
+
+    def convert_process_buffer(self):
+        '''
+        convert the list of NUM_FRAMES images in the process buffer
+        into one training sample
+        '''
+        black_buffer = [cv2.resize(cv2.cvtColor(x, cv2.COLOR_RGB2GRAY), (84, 90)) for x in self.process_buffer]
+        black_buffer = [x[1:85, :, np.newaxis] for x in black_buffer]
+
+        return np.concatenate(black_buffer, axis=2)
 
     def train(self, num_frames):
         print('\033[95m' + 'INFO: Training' + '\033[0m')
