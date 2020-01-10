@@ -34,7 +34,9 @@ class DeepQAgent:
         self.model = self.build_model()
 
         if self.load_model:
+            print('\033[94m' + 'INFO: DeepQAgent is loading weights from filesystem' + '\033[0m')
             self.model.load_weights("./pacman.h5")
+            print('\033[94m' + 'INFO: DeepQAgent sucessfully loaded weights' + '\033[0m')
 
     # approximate Q function using Neural Network
     # state is input and Q Value of each action is output of network
