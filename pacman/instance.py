@@ -19,19 +19,24 @@ ENVIROMENT      = 'MsPacman-ram-v0'
 TRAINING_PATH   = './results/'
 
 class PacMan:
-    def __init__(self, mode):
+    def __init__(self, network, mode):
         self.env = gym.make(ENVIROMENT)
         self.env.reset()
 
-        print('\033[95m' + 'INFO: Using', mode, 'on',ENVIROMENT + '\033[0m')
+        print('\033[95m' + 'INFO: Using', network, 'on',ENVIROMENT + '\033[0m')
 
         state_size = self.env.observation_space.shape[0]
         action_size = self.env.action_space.n
 
         # Construct appropiate network based on flags
-        if mode == 'DDQN':
-            self.agent = DeepQAgent(state_size, action_size)
-        elif mode == 'DQN':
+        if mode == 'test':
+            load_model = true
+        else
+            load_model = false
+
+        if network == 'DDQN':
+            self.agent = DeepQAgent(state_size, action_size, load_model)
+        elif network == 'DQN':
             self.agent = DuelQAgent(self)
 
     def load_network(self, path):

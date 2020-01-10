@@ -15,10 +15,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     print(args)
 
-    game_instance = PacMan(args.network)
-
-    if args.load:
-        game_instance.load_network(args.load)
+    game_instance = PacMan(args.network, args.mode)
 
     if args.mode.lower() == 'train':
         game_instance.train()
