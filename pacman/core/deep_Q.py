@@ -34,7 +34,7 @@ class DeepQAgent:
 
         if load_model:
             print('\033[94m' + 'INFO: DeepQAgent is loading weights from filesystem' + '\033[0m')
-            self.model.load_weights("./pacman.h5")
+            self.model.load_weights("./results/pacman.h5")
             print('\033[94m' + 'INFO: DeepQAgent sucessfully loaded weights' + '\033[0m')
 
     # approximate Q function using Neural Network
