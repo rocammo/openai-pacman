@@ -17,8 +17,4 @@ if __name__ == '__main__':
 
     game_instance = PacMan(args.network, args.mode)
 
-    if args.mode.lower() == 'train':
-        game_instance.train()
-
-    if args.mode.lower() == 'test':
-        game_instance.test()
+    game_instance.train()

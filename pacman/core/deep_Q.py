@@ -9,11 +9,10 @@ from keras.models import Sequential
 from gym import wrappers
 
 class DeepQAgent:
-    def __init__(self, state_size, action_size):
+    def __init__(self, state_size, action_size, load_model=False):
         print('\033[94m' + 'INFO: DeepQAgent is initializing' + '\033[0m')
         # if you want to see MsPacman learning, then change to True
         self.render = True
-        self.load_model = False
 
         # get size of state and action
         self.state_size = state_size
@@ -33,7 +32,7 @@ class DeepQAgent:
         # create main model
         self.model = self.build_model()
 
-        if self.load_model:
+        if load_model:
             print('\033[94m' + 'INFO: DeepQAgent is loading weights from filesystem' + '\033[0m')
             self.model.load_weights("./pacman.h5")
             print('\033[94m' + 'INFO: DeepQAgent sucessfully loaded weights' + '\033[0m')

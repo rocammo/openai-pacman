@@ -30,9 +30,9 @@ class PacMan:
 
         # Construct appropiate network based on flags
         if mode == 'test':
-            load_model = true
-        else
-            load_model = false
+            load_model = True
+        else:
+            load_model = False
 
         if network == 'DDQN':
             self.agent = DeepQAgent(state_size, action_size, load_model)
