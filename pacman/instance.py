@@ -29,7 +29,7 @@ class PacMan:
         action_size = self.env.action_space.n
 
         # Construct appropiate network based on flags
-        if mode == 'test':
+        if mode.lower() == 'test':
             load_model = True
         else:
             load_model = False
