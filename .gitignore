@@ -2,6 +2,9 @@
 env/
 __pycache__
 
+# Training results
+results/*
+
 # VSCode
 .vscode/*
 

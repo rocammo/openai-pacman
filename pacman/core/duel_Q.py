@@ -11,7 +11,7 @@ NUM_FRAMES = 3
 NUM_ACTIONS = 6
 DECAY_RATE = 0.99
 
-class DuelQ:
+class DuelQAgent:
     def __init__(self):
         self.construct_network()
 

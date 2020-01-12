@@ -10,55 +10,42 @@ from keras.optimizers import Adam
 from keras.models import Sequential
 from gym import wrappers
 
-from pacman.utils.replay_buffer import ReplayBuffer
 from pacman.core.deep_Q import DeepQAgent
-from pacman.core.duel_Q import DuelQ
+from pacman.core.duel_Q import DuelQAgent
 
-# constants
-BUFFER_SIZE = 100000
+# Constants
+EPISODES        = 4
+ENVIROMENT      = 'MsPacman-ram-v0'
+TRAINING_PATH   = './results/'
 
 class PacMan:
-    def __init__(self, mode):
-        self.env = gym.make('MsPacman-ram-v0')
+    def __init__(self, network, mode):
+        self.env = gym.make(ENVIROMENT)
         self.env.reset()
-        self.replay_buffer = ReplayBuffer(BUFFER_SIZE)
 
-        # construct appropiate network based on flags
-        print('\033[95m' + 'INFO: Using', mode, 'on MsPacman-ram-v0' + '\033[0m')
+        print('\033[95m' + 'INFO: Using', network, 'on',ENVIROMENT + '\033[0m')
 
-        if mode == 'DDQN':
-            state_size = self.env.observation_space.shape[0]
-            action_size = self.env.action_space.n
-            self.agent = DeepQAgent(state_size, action_size)
-        elif mode == 'DQN':
-            self.algorithm = DuelQ(self)
+        state_size = self.env.observation_space.shape[0]
+        action_size = self.env.action_space.n
 
-        # buffer that keeps the last 3 images
-        self.process_buffer = []
-        # initialize buffer with the first frame
-        s1, r1, _, _ = self.env.step(0)
-        s2, r2, _, _ = self.env.step(0)
-        s3, r3, _, _ = self.env.step(0)
-        self.process_buffer = [s1, s2, s3]
+        # Construct appropiate network based on flags
+        if mode.lower() == 'test':
+            load_model = True
+        else:
+            load_model = False
+
+        if network == 'DDQN':
+            self.agent = DeepQAgent(state_size, action_size, load_model)
+        elif network == 'DQN':
+            self.agent = DuelQAgent(self)
 
     def load_network(self, path):
         print('\033[95m' + 'INFO: Loading network' + '\033[0m')
         print('load_network')
-        self.algorithm.load_network(path)
+        self.agent.load_network(path)
 
-    def convert_process_buffer(self):
-        '''
-        convert the list of NUM_FRAMES images in the process buffer
-        into one training sample
-        '''
-        black_buffer = [cv2.resize(cv2.cvtColor(x, cv2.COLOR_RGB2GRAY), (84, 90)) for x in self.process_buffer]
-        black_buffer = [x[1:85, :, np.newaxis] for x in black_buffer]
-
-        return np.concatenate(black_buffer, axis=2)
-
-    def train(self, num_frames):
+    def train(self):
         print('\033[95m' + 'INFO: Training' + '\033[0m')
-        EPISODES = 5
         env = self.env
         state_size = env.observation_space.shape[0]
         action_size = env.action_space.n
@@ -96,25 +83,17 @@ class PacMan:
                     reward = reward if not dead else -100
 
                 if done:
+                    print('\033[95m' + 'INFO: Done' + '\033[0m')
                     scores.append(score)
                     episodes.append(e)
                     pylab.plot(episodes, scores, 'b')
-                    pylab.savefig("./pacman.png")
+                    pylab.savefig(TRAINING_PATH + "pacman.png")
                     print("episode:", e, "  score:", score, "  memory length:",
                           len(agent.memory), "  epsilon:", agent.epsilon)
 
             # save the model
-            print('\033[95m' +'INFO: Episode has ended, saving the network into the ./pacman.h5 file.' + '\033[0m')
+            print('\033[95m' +'INFO: Episode has ended, saving the network into the',TRAINING_PATH+'/pacman.h5 file.' + '\033[0m')
             if e % 50 == 0:
-                agent.model.save_weights("./pacman.h5")
+                agent.model.save_weights(TRAINING_PATH+"pacman.h5")
 
         print('\033[95m' +'INFO: All episodes were run, exiting.' + '\033[0m')
-
-    def simulate(self, path='', save=False):
-        print('\033[95m' + 'INFO: Simulating' + '\033[0m')
-        print('simulate')
-
-    def calculate_mean(self, num_samples=100):
-        print('\033[95m' + 'INFO: Calculating the mean' + '\033[0m')
-        print('calculate_mean')
-        pass

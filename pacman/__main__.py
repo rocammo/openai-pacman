@@ -2,9 +2,6 @@ import argparse
 
 from pacman.instance import PacMan
 
-# constants
-NUM_FRAMES = 1000000
-
 if __name__ == '__main__':
     # parse arguments
     parser = argparse.ArgumentParser(description='Train and test different networks on Pac-Man')
@@ -18,20 +15,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
     print(args)
 
-    game_instance = PacMan(args.network)
+    game_instance = PacMan(args.network, args.mode)
 
-    if args.load:
-        game_instance.load_network(args.load)
-
-    if args.mode.lower() == 'train':
-        game_instance.train(NUM_FRAMES)
-
-    if args.statistics:
-        stat = game_instance.calculate_mean()
-        print('-- STATISTICS')
-        print(stat)
-
-    if args.save:
-        game_instance.simulate(path=args.save, save=True)
-    elif args.view:
-        game_instance.simulate()
+    game_instance.train()
