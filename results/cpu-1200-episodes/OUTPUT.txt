@@ -1,0 +1,3743 @@
+(env) i-rme@DESKTOP-I9FRKM8:~/openai-pacman$ ls
+DOCUMENTATION.md  LICENSE  README.md  TODO.txt  env  pacman  pacman.h5  pacman.png  requirements.txt
+(env) i-rme@DESKTOP-I9FRKM8:~/openai-pacman$ rm pacman.h5
+(env) i-rme@DESKTOP-I9FRKM8:~/openai-pacman$ rm pacman.png
+(env) i-rme@DESKTOP-I9FRKM8:~/openai-pacman$ ls
+DOCUMENTATION.md  LICENSE  README.md  TODO.txt  env  pacman  requirements.txt
+(env) i-rme@DESKTOP-I9FRKM8:~/openai-pacman$ python -m pacman -n DDQN -m TRAIN
+Using TensorFlow backend.
+/home/i-rme/openai-pacman/env/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/i-rme/openai-pacman/env/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/i-rme/openai-pacman/env/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/i-rme/openai-pacman/env/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/i-rme/openai-pacman/env/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/i-rme/openai-pacman/env/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/i-rme/openai-pacman/env/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/i-rme/openai-pacman/env/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/i-rme/openai-pacman/env/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/i-rme/openai-pacman/env/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/i-rme/openai-pacman/env/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/i-rme/openai-pacman/env/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Namespace(load=None, mode='TRAIN', network='DDQN', save=None, statistics=False, view=False)
+INFO: Using DDQN on MsPacman-ram-v0
+INFO: DeepQAgent is initializing
+INFO: DeepQAgent is building the model
+2020-01-11 17:36:38.012992: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-01-11 17:36:38.018535: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3201000000 Hz
+2020-01-11 17:36:38.019558: I tensorflow/compiler/xla/service/service.cc:162] XLA service 0x3c8da90 executing computations on platform Host. Devices:
+2020-01-11 17:36:38.019952: I tensorflow/compiler/xla/service/service.cc:169]   StreamExecutor device (0): <undefined>, <undefined>
+Model: "sequential_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+dense_1 (Dense)              (None, 128)               16512
+_________________________________________________________________
+dense_2 (Dense)              (None, 32)                4128
+_________________________________________________________________
+dense_3 (Dense)              (None, 9)                 297
+=================================================================
+Total params: 20,937
+Trainable params: 20,937
+Non-trainable params: 0
+_________________________________________________________________
+INFO: DeepQAgent model was sucessfully built
+INFO: Training
+INFO: Done
+episode: 0   score: 180.0   memory length: 607   epsilon: 0.9993931838838958
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 1   score: 270.0   memory length: 1286   epsilon: 0.9987148259014373
+INFO: Episode has ended
+INFO: Done
+episode: 2   score: 170.0   memory length: 1939   epsilon: 0.998062877678392
+INFO: Episode has ended
+INFO: Done
+episode: 3   score: 260.0   memory length: 2000   epsilon: 0.997328573290409
+INFO: Episode has ended
+INFO: Done
+episode: 4   score: 320.0   memory length: 2000   epsilon: 0.996458284946892
+INFO: Episode has ended
+INFO: Done
+episode: 5   score: 240.0   memory length: 2000   epsilon: 0.9957998433302311
+INFO: Episode has ended
+INFO: Done
+episode: 6   score: 100.0   memory length: 2000   epsilon: 0.9952035375373209
+INFO: Episode has ended
+INFO: Done
+episode: 7   score: 250.0   memory length: 2000   epsilon: 0.9945857076876001
+INFO: Episode has ended
+INFO: Done
+episode: 8   score: 170.0   memory length: 2000   epsilon: 0.9939513640660379
+INFO: Episode has ended
+INFO: Done
+episode: 9   score: 240.0   memory length: 2000   epsilon: 0.9933680855326738
+INFO: Episode has ended
+INFO: Done
+episode: 10   score: 270.0   memory length: 2000   epsilon: 0.9926819049451565
+INFO: Episode has ended
+INFO: Done
+episode: 11   score: 220.0   memory length: 2000   epsilon: 0.9920011583407538
+INFO: Episode has ended
+INFO: Done
+episode: 12   score: 260.0   memory length: 2000   epsilon: 0.9912534710070477
+INFO: Episode has ended
+INFO: Done
+episode: 13   score: 430.0   memory length: 2000   epsilon: 0.9901924063106046
+INFO: Episode has ended
+INFO: Done
+episode: 14   score: 230.0   memory length: 2000   epsilon: 0.9894500400568096
+INFO: Episode has ended
+INFO: Done
+episode: 15   score: 160.0   memory length: 2000   epsilon: 0.9887823863044172
+INFO: Episode has ended
+INFO: Done
+episode: 16   score: 270.0   memory length: 2000   epsilon: 0.9882426582107935
+INFO: Episode has ended
+INFO: Done
+episode: 17   score: 230.0   memory length: 2000   epsilon: 0.987643964283135
+INFO: Episode has ended
+INFO: Done
+episode: 18   score: 200.0   memory length: 2000   epsilon: 0.9868966003414108
+INFO: Episode has ended
+INFO: Done
+episode: 19   score: 240.0   memory length: 2000   epsilon: 0.9863056259967882
+INFO: Episode has ended
+INFO: Done
+episode: 20   score: 250.0   memory length: 2000   epsilon: 0.9856262951371462
+INFO: Episode has ended
+INFO: Done
+episode: 21   score: 170.0   memory length: 2000   epsilon: 0.9849641764325375
+INFO: Episode has ended
+INFO: Done
+episode: 22   score: 140.0   memory length: 2000   epsilon: 0.9844353923966066
+INFO: Episode has ended
+INFO: Done
+episode: 23   score: 240.0   memory length: 2000   epsilon: 0.983719967597027
+INFO: Episode has ended
+INFO: Done
+episode: 24   score: 230.0   memory length: 2000   epsilon: 0.983007028735592
+INFO: Episode has ended
+INFO: Done
+episode: 25   score: 240.0   memory length: 2000   epsilon: 0.982398735366861
+INFO: Episode has ended
+INFO: Done
+episode: 26   score: 210.0   memory length: 2000   epsilon: 0.9818497276612211
+INFO: Episode has ended
+INFO: Done
+episode: 27   score: 190.0   memory length: 2000   epsilon: 0.9813245782843175
+INFO: Episode has ended
+INFO: Done
+episode: 28   score: 140.0   memory length: 2000   epsilon: 0.9807212489097891
+INFO: Episode has ended
+INFO: Done
+episode: 29   score: 170.0   memory length: 2000   epsilon: 0.9802506154360519
+INFO: Episode has ended
+INFO: Done
+episode: 30   score: 170.0   memory length: 2000   epsilon: 0.9795470477533879
+INFO: Episode has ended
+INFO: Done
+episode: 31   score: 200.0   memory length: 2000   epsilon: 0.9788762874519086
+INFO: Episode has ended
+INFO: Done
+episode: 32   score: 200.0   memory length: 2000   epsilon: 0.9782578327812562
+INFO: Episode has ended
+INFO: Done
+episode: 33   score: 150.0   memory length: 2000   epsilon: 0.9776309701279381
+INFO: Episode has ended
+INFO: Done
+episode: 34   score: 200.0   memory length: 2000   epsilon: 0.9770426131029585
+INFO: Episode has ended
+INFO: Done
+episode: 35   score: 200.0   memory length: 2000   epsilon: 0.9765190583257567
+INFO: Episode has ended
+INFO: Done
+episode: 36   score: 130.0   memory length: 2000   epsilon: 0.9760631301650536
+INFO: Episode has ended
+INFO: Done
+episode: 37   score: 110.0   memory length: 2000   epsilon: 0.9754591337416441
+INFO: Episode has ended
+INFO: Done
+episode: 38   score: 230.0   memory length: 2000   epsilon: 0.9749218035383377
+INFO: Episode has ended
+INFO: Done
+episode: 39   score: 190.0   memory length: 2000   epsilon: 0.9743029243985573
+INFO: Episode has ended
+INFO: Done
+episode: 40   score: 150.0   memory length: 2000   epsilon: 0.9735929160411362
+INFO: Episode has ended
+INFO: Done
+episode: 41   score: 330.0   memory length: 2000   epsilon: 0.9729028829642591
+INFO: Episode has ended
+INFO: Done
+episode: 42   score: 170.0   memory length: 2000   epsilon: 0.9723329286027864
+INFO: Episode has ended
+INFO: Done
+episode: 43   score: 90.0   memory length: 2000   epsilon: 0.9717944050758538
+INFO: Episode has ended
+INFO: Done
+episode: 44   score: 240.0   memory length: 2000   epsilon: 0.9711648859728055
+INFO: Episode has ended
+INFO: Done
+episode: 45   score: 170.0   memory length: 2000   epsilon: 0.9705241283009577
+INFO: Episode has ended
+INFO: Done
+episode: 46   score: 130.0   memory length: 2000   epsilon: 0.9700331670702095
+INFO: Episode has ended
+INFO: Done
+episode: 47   score: 320.0   memory length: 2000   epsilon: 0.9693291782177763
+INFO: Episode has ended
+INFO: Done
+episode: 48   score: 230.0   memory length: 2000   epsilon: 0.968676070147229
+INFO: Episode has ended
+INFO: Done
+episode: 49   score: 280.0   memory length: 2000   epsilon: 0.9680417947519953
+INFO: Episode has ended
+INFO: Done
+episode: 50   score: 240.0   memory length: 2000   epsilon: 0.9674601761364247
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 51   score: 270.0   memory length: 2000   epsilon: 0.9667367861445443
+INFO: Episode has ended
+INFO: Done
+episode: 52   score: 160.0   memory length: 2000   epsilon: 0.9661375948060306
+INFO: Episode has ended
+INFO: Done
+episode: 53   score: 240.0   memory length: 2000   epsilon: 0.9655764316165423
+INFO: Episode has ended
+INFO: Done
+episode: 54   score: 220.0   memory length: 2000   epsilon: 0.9649026940921377
+INFO: Episode has ended
+INFO: Done
+episode: 55   score: 190.0   memory length: 2000   epsilon: 0.9642265339872855
+INFO: Episode has ended
+INFO: Done
+episode: 56   score: 340.0   memory length: 2000   epsilon: 0.9636134805767734
+INFO: Episode has ended
+INFO: Done
+episode: 57   score: 290.0   memory length: 2000   epsilon: 0.962879486424842
+INFO: Episode has ended
+INFO: Done
+episode: 58   score: 220.0   memory length: 2000   epsilon: 0.9622913464596067
+INFO: Episode has ended
+INFO: Done
+episode: 59   score: 220.0   memory length: 2000   epsilon: 0.9616016305120322
+INFO: Episode has ended
+INFO: Done
+episode: 60   score: 240.0   memory length: 2000   epsilon: 0.9609864020549792
+INFO: Episode has ended
+INFO: Done
+episode: 61   score: 170.0   memory length: 2000   epsilon: 0.9603706068467958
+INFO: Episode has ended
+INFO: Done
+episode: 62   score: 140.0   memory length: 2000   epsilon: 0.9598463873582751
+INFO: Episode has ended
+INFO: Done
+episode: 63   score: 180.0   memory length: 2000   epsilon: 0.9592907968811474
+INFO: Episode has ended
+INFO: Done
+episode: 64   score: 260.0   memory length: 2000   epsilon: 0.9586185693396815
+INFO: Episode has ended
+INFO: Done
+episode: 65   score: 250.0   memory length: 2000   epsilon: 0.9579803416067949
+INFO: Episode has ended
+INFO: Done
+episode: 66   score: 200.0   memory length: 2000   epsilon: 0.9573875349715022
+INFO: Episode has ended
+INFO: Done
+episode: 67   score: 150.0   memory length: 2000   epsilon: 0.9567204680259113
+INFO: Episode has ended
+INFO: Done
+episode: 68   score: 160.0   memory length: 2000   epsilon: 0.9560787236003087
+INFO: Episode has ended
+INFO: Done
+episode: 69   score: 150.0   memory length: 2000   epsilon: 0.9554928266455402
+INFO: Episode has ended
+INFO: Done
+episode: 70   score: 1020.0   memory length: 2000   epsilon: 0.9545740840729399
+INFO: Episode has ended
+INFO: Done
+episode: 71   score: 250.0   memory length: 2000   epsilon: 0.9536371519628445
+INFO: Episode has ended
+INFO: Done
+episode: 72   score: 310.0   memory length: 2000   epsilon: 0.9529612625152605
+INFO: Episode has ended
+INFO: Done
+episode: 73   score: 240.0   memory length: 2000   epsilon: 0.9524610889093988
+INFO: Episode has ended
+INFO: Done
+episode: 74   score: 230.0   memory length: 2000   epsilon: 0.9517717563048568
+INFO: Episode has ended
+INFO: Done
+episode: 75   score: 290.0   memory length: 2000   epsilon: 0.9511133577524492
+INFO: Episode has ended
+INFO: Done
+episode: 76   score: 300.0   memory length: 2000   epsilon: 0.9502672430178746
+INFO: Episode has ended
+INFO: Done
+episode: 77   score: 310.0   memory length: 2000   epsilon: 0.9494076397622595
+INFO: Episode has ended
+INFO: Done
+episode: 78   score: 130.0   memory length: 2000   epsilon: 0.9488713756865128
+INFO: Episode has ended
+INFO: Done
+episode: 79   score: 210.0   memory length: 2000   epsilon: 0.9483050682516467
+INFO: Episode has ended
+INFO: Done
+episode: 80   score: 200.0   memory length: 2000   epsilon: 0.9476244292509447
+INFO: Episode has ended
+INFO: Done
+episode: 81   score: 150.0   memory length: 2000   epsilon: 0.9470105672266166
+INFO: Episode has ended
+INFO: Done
+episode: 82   score: 170.0   memory length: 2000   epsilon: 0.946493640332317
+INFO: Episode has ended
+INFO: Done
+episode: 83   score: 950.0   memory length: 2000   epsilon: 0.945552347060575
+INFO: Episode has ended
+INFO: Done
+episode: 84   score: 220.0   memory length: 2000   epsilon: 0.9448680145773694
+INFO: Episode has ended
+INFO: Done
+episode: 85   score: 190.0   memory length: 2000   epsilon: 0.9442210012912082
+INFO: Episode has ended
+INFO: Done
+episode: 86   score: 150.0   memory length: 2000   epsilon: 0.9436414272540498
+INFO: Episode has ended
+INFO: Done
+episode: 87   score: 190.0   memory length: 2000   epsilon: 0.9430659812245679
+INFO: Episode has ended
+INFO: Done
+episode: 88   score: 120.0   memory length: 2000   epsilon: 0.9424286837334147
+INFO: Episode has ended
+INFO: Done
+episode: 89   score: 220.0   memory length: 2000   epsilon: 0.9418002930787326
+INFO: Episode has ended
+INFO: Done
+episode: 90   score: 200.0   memory length: 2000   epsilon: 0.9411958510349954
+INFO: Episode has ended
+INFO: Done
+episode: 91   score: 200.0   memory length: 2000   epsilon: 0.9406501154471316
+INFO: Episode has ended
+INFO: Done
+episode: 92   score: 220.0   memory length: 2000   epsilon: 0.9400595723292884
+INFO: Episode has ended
+INFO: Done
+episode: 93   score: 160.0   memory length: 2000   epsilon: 0.9394994634731292
+INFO: Episode has ended
+INFO: Done
+episode: 94   score: 160.0   memory length: 2000   epsilon: 0.9389096427382371
+INFO: Episode has ended
+INFO: Done
+episode: 95   score: 290.0   memory length: 2000   epsilon: 0.9382366854719053
+INFO: Episode has ended
+INFO: Done
+episode: 96   score: 220.0   memory length: 2000   epsilon: 0.9376064019031057
+INFO: Episode has ended
+INFO: Done
+episode: 97   score: 90.0   memory length: 2000   epsilon: 0.9371039792817522
+INFO: Episode has ended
+INFO: Done
+episode: 98   score: 170.0   memory length: 2000   epsilon: 0.9365840306123636
+INFO: Episode has ended
+INFO: Done
+episode: 99   score: 210.0   memory length: 2000   epsilon: 0.935987616264777
+INFO: Episode has ended
+INFO: Done
+episode: 100   score: 220.0   memory length: 2000   epsilon: 0.9353223652617247
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 101   score: 160.0   memory length: 2000   epsilon: 0.9346744110806583
+INFO: Episode has ended
+INFO: Done
+episode: 102   score: 160.0   memory length: 2000   epsilon: 0.9341277861802205
+INFO: Episode has ended
+INFO: Done
+episode: 103   score: 280.0   memory length: 2000   epsilon: 0.9334461213933758
+INFO: Episode has ended
+INFO: Done
+episode: 104   score: 960.0   memory length: 2000   epsilon: 0.9325653635974614
+INFO: Episode has ended
+INFO: Done
+episode: 105   score: 170.0   memory length: 2000   epsilon: 0.932051661363215
+INFO: Episode has ended
+INFO: Done
+episode: 106   score: 230.0   memory length: 2000   epsilon: 0.9315177484749332
+INFO: Episode has ended
+INFO: Done
+episode: 107   score: 160.0   memory length: 2000   epsilon: 0.9308417116825525
+INFO: Episode has ended
+INFO: Done
+episode: 108   score: 230.0   memory length: 2000   epsilon: 0.9302768619303634
+INFO: Episode has ended
+INFO: Done
+episode: 109   score: 230.0   memory length: 2000   epsilon: 0.9296426290913726
+INFO: Episode has ended
+INFO: Done
+episode: 110   score: 210.0   memory length: 2000   epsilon: 0.9290292670812025
+INFO: Episode has ended
+INFO: Done
+episode: 111   score: 300.0   memory length: 2000   epsilon: 0.9283531795624212
+INFO: Episode has ended
+INFO: Done
+episode: 112   score: 340.0   memory length: 2000   epsilon: 0.9277174750701969
+INFO: Episode has ended
+INFO: Done
+episode: 113   score: 190.0   memory length: 2000   epsilon: 0.9270599561695885
+INFO: Episode has ended
+INFO: Done
+episode: 114   score: 120.0   memory length: 2000   epsilon: 0.9265826429721882
+INFO: Episode has ended
+INFO: Done
+episode: 115   score: 170.0   memory length: 2000   epsilon: 0.9259518546847016
+INFO: Episode has ended
+INFO: Done
+episode: 116   score: 250.0   memory length: 2000   epsilon: 0.9254306902514712
+INFO: Episode has ended
+INFO: Done
+episode: 117   score: 250.0   memory length: 2000   epsilon: 0.9248987202945962
+INFO: Episode has ended
+INFO: Done
+episode: 118   score: 300.0   memory length: 2000   epsilon: 0.9243254605302575
+INFO: Episode has ended
+INFO: Done
+episode: 119   score: 190.0   memory length: 2000   epsilon: 0.923674964082394
+INFO: Episode has ended
+INFO: Done
+episode: 120   score: 170.0   memory length: 2000   epsilon: 0.9231144632281482
+INFO: Episode has ended
+INFO: Done
+episode: 121   score: 150.0   memory length: 2000   epsilon: 0.9225330839792999
+INFO: Episode has ended
+INFO: Done
+episode: 122   score: 190.0   memory length: 2000   epsilon: 0.9218368340201843
+INFO: Episode has ended
+INFO: Done
+episode: 123   score: 240.0   memory length: 2000   epsilon: 0.921220331113171
+INFO: Episode has ended
+INFO: Done
+episode: 124   score: 220.0   memory length: 2000   epsilon: 0.9206576371300147
+INFO: Episode has ended
+INFO: Done
+episode: 125   score: 180.0   memory length: 2000   epsilon: 0.920041002800371
+INFO: Episode has ended
+INFO: Done
+episode: 126   score: 210.0   memory length: 2000   epsilon: 0.9193981185321826
+INFO: Episode has ended
+INFO: Done
+episode: 127   score: 200.0   memory length: 2000   epsilon: 0.9187814090154552
+INFO: Episode has ended
+INFO: Done
+episode: 128   score: 250.0   memory length: 2000   epsilon: 0.9181136973398301
+INFO: Episode has ended
+INFO: Done
+episode: 129   score: 560.0   memory length: 2000   epsilon: 0.916982360197986
+INFO: Episode has ended
+INFO: Done
+episode: 130   score: 190.0   memory length: 2000   epsilon: 0.9164653277051719
+INFO: Episode has ended
+INFO: Done
+episode: 131   score: 280.0   memory length: 2000   epsilon: 0.9158725661207997
+INFO: Episode has ended
+INFO: Done
+episode: 132   score: 190.0   memory length: 2000   epsilon: 0.9152545604300335
+INFO: Episode has ended
+INFO: Done
+episode: 133   score: 170.0   memory length: 2000   epsilon: 0.9146955104212383
+INFO: Episode has ended
+INFO: Done
+episode: 134   score: 260.0   memory length: 2000   epsilon: 0.9140837834643686
+INFO: Episode has ended
+INFO: Done
+episode: 135   score: 300.0   memory length: 2000   epsilon: 0.9134797734287861
+INFO: Episode has ended
+INFO: Done
+episode: 136   score: 270.0   memory length: 2000   epsilon: 0.9128049609127323
+INFO: Episode has ended
+INFO: Done
+episode: 137   score: 180.0   memory length: 2000   epsilon: 0.9122811609482268
+INFO: Episode has ended
+INFO: Done
+episode: 138   score: 530.0   memory length: 2000   epsilon: 0.9115069625491834
+INFO: Episode has ended
+INFO: Done
+episode: 139   score: 210.0   memory length: 2000   epsilon: 0.9109283390710328
+INFO: Episode has ended
+INFO: Done
+episode: 140   score: 230.0   memory length: 2000   epsilon: 0.910379214585667
+INFO: Episode has ended
+INFO: Done
+episode: 141   score: 260.0   memory length: 2000   epsilon: 0.9096912276472566
+INFO: Episode has ended
+INFO: Done
+episode: 142   score: 300.0   memory length: 2000   epsilon: 0.908901957859644
+INFO: Episode has ended
+INFO: Done
+episode: 143   score: 180.0   memory length: 2000   epsilon: 0.9083149965102983
+INFO: Episode has ended
+INFO: Done
+episode: 144   score: 250.0   memory length: 2000   epsilon: 0.907682121223934
+INFO: Episode has ended
+INFO: Done
+episode: 145   score: 180.0   memory length: 2000   epsilon: 0.9070923192566245
+INFO: Episode has ended
+INFO: Done
+episode: 146   score: 330.0   memory length: 2000   epsilon: 0.9064929290541706
+INFO: Episode has ended
+INFO: Done
+episode: 147   score: 230.0   memory length: 2000   epsilon: 0.9058522647345022
+INFO: Episode has ended
+INFO: Done
+episode: 148   score: 280.0   memory length: 2000   epsilon: 0.9051405442413365
+INFO: Episode has ended
+INFO: Done
+episode: 149   score: 220.0   memory length: 2000   epsilon: 0.9045750078669289
+INFO: Episode has ended
+INFO: Done
+episode: 150   score: 230.0   memory length: 2000   epsilon: 0.9039646254586484
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 151   score: 140.0   memory length: 2000   epsilon: 0.9033555582752351
+INFO: Episode has ended
+INFO: Done
+episode: 152   score: 910.0   memory length: 2000   epsilon: 0.9024607759074603
+INFO: Episode has ended
+INFO: Done
+episode: 153   score: 340.0   memory length: 2000   epsilon: 0.901811237685839
+INFO: Episode has ended
+INFO: Done
+episode: 154   score: 140.0   memory length: 2000   epsilon: 0.9013126736877545
+INFO: Episode has ended
+INFO: Done
+episode: 155   score: 180.0   memory length: 2000   epsilon: 0.9007225068921151
+INFO: Episode has ended
+INFO: Done
+episode: 156   score: 270.0   memory length: 2000   epsilon: 0.9001417279061202
+INFO: Episode has ended
+INFO: Done
+episode: 157   score: 270.0   memory length: 2000   epsilon: 0.8994983562817276
+INFO: Episode has ended
+INFO: Done
+episode: 158   score: 290.0   memory length: 2000   epsilon: 0.8988824105851697
+INFO: Episode has ended
+INFO: Done
+episode: 159   score: 190.0   memory length: 2000   epsilon: 0.8983118011567947
+INFO: Episode has ended
+INFO: Done
+episode: 160   score: 310.0   memory length: 2000   epsilon: 0.89772000840105
+INFO: Episode has ended
+INFO: Done
+episode: 161   score: 190.0   memory length: 2000   epsilon: 0.8971635942238372
+INFO: Episode has ended
+INFO: Done
+episode: 162   score: 190.0   memory length: 2000   epsilon: 0.8966568397113397
+INFO: Episode has ended
+INFO: Done
+episode: 163   score: 90.0   memory length: 2000   epsilon: 0.8961817372619989
+INFO: Episode has ended
+INFO: Done
+episode: 164   score: 170.0   memory length: 2000   epsilon: 0.8955940345360573
+INFO: Episode has ended
+INFO: Done
+episode: 165   score: 340.0   memory length: 2000   epsilon: 0.8948098372982193
+INFO: Episode has ended
+INFO: Done
+episode: 166   score: 160.0   memory length: 2000   epsilon: 0.8943750651580812
+INFO: Episode has ended
+INFO: Done
+episode: 167   score: 320.0   memory length: 2000   epsilon: 0.8936955979990329
+INFO: Episode has ended
+INFO: Done
+episode: 168   score: 100.0   memory length: 2000   epsilon: 0.8932774461052576
+INFO: Episode has ended
+INFO: Done
+episode: 169   score: 300.0   memory length: 2000   epsilon: 0.8925916720546851
+INFO: Episode has ended
+INFO: Done
+episode: 170   score: 140.0   memory length: 2000   epsilon: 0.8919974036173012
+INFO: Episode has ended
+INFO: Done
+episode: 171   score: 330.0   memory length: 2000   epsilon: 0.8914186848275385
+INFO: Episode has ended
+INFO: Done
+episode: 172   score: 270.0   memory length: 2000   epsilon: 0.8908964662420944
+INFO: Episode has ended
+INFO: Done
+episode: 173   score: 200.0   memory length: 2000   epsilon: 0.8903077779664563
+INFO: Episode has ended
+INFO: Done
+episode: 174   score: 180.0   memory length: 2000   epsilon: 0.8897194786853878
+INFO: Episode has ended
+INFO: Done
+episode: 175   score: 210.0   memory length: 2000   epsilon: 0.8891289007498088
+INFO: Episode has ended
+INFO: Done
+episode: 176   score: 330.0   memory length: 2000   epsilon: 0.8884418693378437
+INFO: Episode has ended
+INFO: Done
+episode: 177   score: 150.0   memory length: 2000   epsilon: 0.8879649038921965
+INFO: Episode has ended
+INFO: Done
+episode: 178   score: 180.0   memory length: 2000   epsilon: 0.8875148195668857
+INFO: Episode has ended
+INFO: Done
+episode: 179   score: 220.0   memory length: 2000   epsilon: 0.8869461045757953
+INFO: Episode has ended
+INFO: Done
+episode: 180   score: 180.0   memory length: 2000   epsilon: 0.8863812995342664
+INFO: Episode has ended
+INFO: Done
+episode: 181   score: 320.0   memory length: 2000   epsilon: 0.8857477631045763
+INFO: Episode has ended
+INFO: Done
+episode: 182   score: 190.0   memory length: 2000   epsilon: 0.8851589363542746
+INFO: Episode has ended
+INFO: Done
+episode: 183   score: 300.0   memory length: 2000   epsilon: 0.8844891242603931
+INFO: Episode has ended
+INFO: Done
+episode: 184   score: 170.0   memory length: 2000   epsilon: 0.8839612415779117
+INFO: Episode has ended
+INFO: Done
+episode: 185   score: 260.0   memory length: 2000   epsilon: 0.8833294348720755
+INFO: Episode has ended
+INFO: Done
+episode: 186   score: 230.0   memory length: 2000   epsilon: 0.8827307401962967
+INFO: Episode has ended
+INFO: Done
+episode: 187   score: 200.0   memory length: 2000   epsilon: 0.8820530629103547
+INFO: Episode has ended
+INFO: Done
+episode: 188   score: 190.0   memory length: 2000   epsilon: 0.8814631664586662
+INFO: Episode has ended
+INFO: Done
+episode: 189   score: 260.0   memory length: 2000   epsilon: 0.880863094090087
+INFO: Episode has ended
+INFO: Done
+episode: 190   score: 190.0   memory length: 2000   epsilon: 0.8802590289235329
+INFO: Episode has ended
+INFO: Done
+episode: 191   score: 430.0   memory length: 2000   epsilon: 0.8793976766042745
+INFO: Episode has ended
+INFO: Done
+episode: 192   score: 240.0   memory length: 2000   epsilon: 0.8787497989648962
+INFO: Episode has ended
+INFO: Done
+episode: 193   score: 160.0   memory length: 2000   epsilon: 0.8782745236595664
+INFO: Episode has ended
+INFO: Done
+episode: 194   score: 210.0   memory length: 2000   epsilon: 0.8778144281346622
+INFO: Episode has ended
+INFO: Done
+episode: 195   score: 220.0   memory length: 2000   epsilon: 0.8772370159416716
+INFO: Episode has ended
+INFO: Done
+episode: 196   score: 190.0   memory length: 2000   epsilon: 0.8767204752171726
+INFO: Episode has ended
+INFO: Done
+episode: 197   score: 270.0   memory length: 2000   epsilon: 0.8761034809015867
+INFO: Episode has ended
+INFO: Done
+episode: 198   score: 180.0   memory length: 2000   epsilon: 0.8754991777061726
+INFO: Episode has ended
+INFO: Done
+episode: 199   score: 180.0   memory length: 2000   epsilon: 0.8749460367602262
+INFO: Episode has ended
+INFO: Done
+episode: 200   score: 420.0   memory length: 2000   epsilon: 0.8741545683946574
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 201   score: 230.0   memory length: 2000   epsilon: 0.8736354745076172
+INFO: Episode has ended
+INFO: Done
+episode: 202   score: 260.0   memory length: 2000   epsilon: 0.8730442231568986
+INFO: Episode has ended
+INFO: Done
+episode: 203   score: 260.0   memory length: 2000   epsilon: 0.8724289435834502
+INFO: Episode has ended
+INFO: Done
+episode: 204   score: 330.0   memory length: 2000   epsilon: 0.8718263031183573
+INFO: Episode has ended
+INFO: Done
+episode: 205   score: 230.0   memory length: 2000   epsilon: 0.8711970713928601
+INFO: Episode has ended
+INFO: Done
+episode: 206   score: 110.0   memory length: 2000   epsilon: 0.8707572277217475
+INFO: Episode has ended
+INFO: Done
+episode: 207   score: 240.0   memory length: 2000   epsilon: 0.8701174559843831
+INFO: Episode has ended
+INFO: Done
+episode: 208   score: 190.0   memory length: 2000   epsilon: 0.869684245153135
+INFO: Episode has ended
+INFO: Done
+episode: 209   score: 300.0   memory length: 2000   epsilon: 0.8690852387900924
+INFO: Episode has ended
+INFO: Done
+episode: 210   score: 210.0   memory length: 2000   epsilon: 0.8685187796169134
+INFO: Episode has ended
+INFO: Done
+episode: 211   score: 180.0   memory length: 2000   epsilon: 0.8680030323960204
+INFO: Episode has ended
+INFO: Done
+episode: 212   score: 350.0   memory length: 2000   epsilon: 0.8674520251582419
+INFO: Episode has ended
+INFO: Done
+episode: 213   score: 150.0   memory length: 2000   epsilon: 0.8669629199121304
+INFO: Episode has ended
+INFO: Done
+episode: 214   score: 210.0   memory length: 2000   epsilon: 0.8663848481638567
+INFO: Episode has ended
+INFO: Done
+episode: 215   score: 380.0   memory length: 2000   epsilon: 0.8656444053328524
+INFO: Episode has ended
+INFO: Done
+episode: 216   score: 200.0   memory length: 2000   epsilon: 0.8650507766118942
+INFO: Episode has ended
+INFO: Done
+episode: 217   score: 220.0   memory length: 2000   epsilon: 0.8644022314399828
+INFO: Episode has ended
+INFO: Done
+episode: 218   score: 250.0   memory length: 2000   epsilon: 0.8638638762956427
+INFO: Episode has ended
+INFO: Done
+episode: 219   score: 190.0   memory length: 2000   epsilon: 0.863257656359449
+INFO: Episode has ended
+INFO: Done
+episode: 220   score: 180.0   memory length: 2000   epsilon: 0.8626863686223837
+INFO: Episode has ended
+INFO: Done
+episode: 221   score: 240.0   memory length: 2000   epsilon: 0.8620826991714532
+INFO: Episode has ended
+INFO: Done
+episode: 222   score: 200.0   memory length: 2000   epsilon: 0.8615354501537896
+INFO: Episode has ended
+INFO: Done
+episode: 223   score: 280.0   memory length: 2000   epsilon: 0.8609773557451438
+INFO: Episode has ended
+INFO: Done
+episode: 224   score: 210.0   memory length: 2000   epsilon: 0.8604626449429063
+INFO: Episode has ended
+INFO: Done
+episode: 225   score: 390.0   memory length: 2000   epsilon: 0.8596842781241375
+INFO: Episode has ended
+INFO: Done
+episode: 226   score: 160.0   memory length: 2000   epsilon: 0.8591823688265222
+INFO: Episode has ended
+INFO: Done
+episode: 227   score: 220.0   memory length: 2000   epsilon: 0.8586069091521801
+INFO: Episode has ended
+INFO: Done
+episode: 228   score: 230.0   memory length: 2000   epsilon: 0.8580635826879772
+INFO: Episode has ended
+INFO: Done
+episode: 229   score: 220.0   memory length: 2000   epsilon: 0.8575145974145744
+INFO: Episode has ended
+INFO: Done
+episode: 230   score: 220.0   memory length: 2000   epsilon: 0.8570070987535658
+INFO: Episode has ended
+INFO: Done
+episode: 231   score: 140.0   memory length: 2000   epsilon: 0.8566275285000412
+INFO: Episode has ended
+INFO: Done
+episode: 232   score: 270.0   memory length: 2000   epsilon: 0.8561505195874629
+INFO: Episode has ended
+INFO: Done
+episode: 233   score: 220.0   memory length: 2000   epsilon: 0.8557465116935643
+INFO: Episode has ended
+INFO: Done
+episode: 234   score: 230.0   memory length: 2000   epsilon: 0.8551853257903851
+INFO: Episode has ended
+INFO: Done
+episode: 235   score: 160.0   memory length: 2000   epsilon: 0.8547766446828717
+INFO: Episode has ended
+INFO: Done
+episode: 236   score: 220.0   memory length: 2000   epsilon: 0.8542084068900284
+INFO: Episode has ended
+INFO: Done
+episode: 237   score: 190.0   memory length: 2000   epsilon: 0.8537651875306023
+INFO: Episode has ended
+INFO: Done
+episode: 238   score: 290.0   memory length: 2000   epsilon: 0.8532163926970555
+INFO: Episode has ended
+INFO: Done
+episode: 239   score: 210.0   memory length: 2000   epsilon: 0.8526500447774338
+INFO: Episode has ended
+INFO: Done
+episode: 240   score: 330.0   memory length: 2000   epsilon: 0.8519307113813476
+INFO: Episode has ended
+INFO: Done
+episode: 241   score: 140.0   memory length: 2000   epsilon: 0.8514461004491373
+INFO: Episode has ended
+INFO: Done
+episode: 242   score: 270.0   memory length: 2000   epsilon: 0.8508069041563336
+INFO: Episode has ended
+INFO: Done
+episode: 243   score: 270.0   memory length: 2000   epsilon: 0.8502591606285176
+INFO: Episode has ended
+INFO: Done
+episode: 244   score: 230.0   memory length: 2000   epsilon: 0.8497372614823587
+INFO: Episode has ended
+INFO: Done
+episode: 245   score: 130.0   memory length: 2000   epsilon: 0.849286170546196
+INFO: Episode has ended
+INFO: Done
+episode: 246   score: 340.0   memory length: 2000   epsilon: 0.8486766016323698
+INFO: Episode has ended
+INFO: Done
+episode: 247   score: 210.0   memory length: 2000   epsilon: 0.8481056341460816
+INFO: Episode has ended
+INFO: Done
+episode: 248   score: 280.0   memory length: 2000   epsilon: 0.8475486114679067
+INFO: Episode has ended
+INFO: Done
+episode: 249   score: 160.0   memory length: 2000   epsilon: 0.8470410816162235
+INFO: Episode has ended
+INFO: Done
+episode: 250   score: 210.0   memory length: 2000   epsilon: 0.8464864510917591
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 251   score: 270.0   memory length: 2000   epsilon: 0.8459118815925857
+INFO: Episode has ended
+INFO: Done
+episode: 252   score: 230.0   memory length: 2000   epsilon: 0.8453546090254417
+INFO: Episode has ended
+INFO: Done
+episode: 253   score: 310.0   memory length: 2000   epsilon: 0.8447841869182405
+INFO: Episode has ended
+INFO: Done
+episode: 254   score: 210.0   memory length: 2000   epsilon: 0.8442225919041645
+INFO: Episode has ended
+INFO: Done
+episode: 255   score: 180.0   memory length: 2000   epsilon: 0.8437567093958815
+INFO: Episode has ended
+INFO: Done
+episode: 256   score: 170.0   memory length: 2000   epsilon: 0.8432008566200538
+INFO: Episode has ended
+INFO: Done
+episode: 257   score: 230.0   memory length: 2000   epsilon: 0.842656324497208
+INFO: Episode has ended
+INFO: Done
+episode: 258   score: 230.0   memory length: 2000   epsilon: 0.8420700394530614
+INFO: Episode has ended
+INFO: Done
+episode: 259   score: 200.0   memory length: 2000   epsilon: 0.8415851465304452
+INFO: Episode has ended
+INFO: Done
+episode: 260   score: 310.0   memory length: 2000   epsilon: 0.8410719358796033
+INFO: Episode has ended
+INFO: Done
+episode: 261   score: 920.0   memory length: 2000   epsilon: 0.8403497649424001
+INFO: Episode has ended
+INFO: Done
+episode: 262   score: 260.0   memory length: 2000   epsilon: 0.8398389873220413
+INFO: Episode has ended
+INFO: Done
+episode: 263   score: 280.0   memory length: 2000   epsilon: 0.8392672513839721
+INFO: Episode has ended
+INFO: Done
+episode: 264   score: 220.0   memory length: 2000   epsilon: 0.8387940378763241
+INFO: Episode has ended
+INFO: Done
+episode: 265   score: 160.0   memory length: 2000   epsilon: 0.8383554630725221
+INFO: Episode has ended
+INFO: Done
+episode: 266   score: 200.0   memory length: 2000   epsilon: 0.8378182491475267
+INFO: Episode has ended
+INFO: Done
+episode: 267   score: 280.0   memory length: 2000   epsilon: 0.8372612849444677
+INFO: Episode has ended
+INFO: Done
+episode: 268   score: 300.0   memory length: 2000   epsilon: 0.8364562264810079
+INFO: Episode has ended
+INFO: Done
+episode: 269   score: 260.0   memory length: 2000   epsilon: 0.8358784345896866
+INFO: Episode has ended
+INFO: Done
+episode: 270   score: 150.0   memory length: 2000   epsilon: 0.8354405488071006
+INFO: Episode has ended
+INFO: Done
+episode: 271   score: 220.0   memory length: 2000   epsilon: 0.8348150378063819
+INFO: Episode has ended
+INFO: Done
+episode: 272   score: 200.0   memory length: 2000   epsilon: 0.8342717498045399
+INFO: Episode has ended
+INFO: Done
+episode: 273   score: 250.0   memory length: 2000   epsilon: 0.8336212712340563
+INFO: Episode has ended
+INFO: Done
+episode: 274   score: 280.0   memory length: 2000   epsilon: 0.8330854247818095
+INFO: Episode has ended
+INFO: Done
+episode: 275   score: 270.0   memory length: 2000   epsilon: 0.8325873883764844
+INFO: Episode has ended
+INFO: Done
+episode: 276   score: 230.0   memory length: 2000   epsilon: 0.8320655194460304
+INFO: Episode has ended
+INFO: Done
+episode: 277   score: 140.0   memory length: 2000   epsilon: 0.8314766252569404
+INFO: Episode has ended
+INFO: Done
+episode: 278   score: 210.0   memory length: 2000   epsilon: 0.8309380026670135
+INFO: Episode has ended
+INFO: Done
+episode: 279   score: 200.0   memory length: 2000   epsilon: 0.8302818205428621
+INFO: Episode has ended
+INFO: Done
+episode: 280   score: 180.0   memory length: 2000   epsilon: 0.8296518754204929
+INFO: Episode has ended
+INFO: Done
+episode: 281   score: 190.0   memory length: 2000   epsilon: 0.8290646894874332
+INFO: Episode has ended
+INFO: Done
+episode: 282   score: 180.0   memory length: 2000   epsilon: 0.8286171151872463
+INFO: Episode has ended
+INFO: Done
+episode: 283   score: 120.0   memory length: 2000   epsilon: 0.8281573600522782
+INFO: Episode has ended
+INFO: Done
+episode: 284   score: 200.0   memory length: 2000   epsilon: 0.8275952317878643
+INFO: Episode has ended
+INFO: Done
+episode: 285   score: 340.0   memory length: 2000   epsilon: 0.8270219066856489
+INFO: Episode has ended
+INFO: Done
+episode: 286   score: 150.0   memory length: 2000   epsilon: 0.8265481586380087
+INFO: Episode has ended
+INFO: Done
+episode: 287   score: 230.0   memory length: 2000   epsilon: 0.8260069465897738
+INFO: Episode has ended
+INFO: Done
+episode: 288   score: 200.0   memory length: 2000   epsilon: 0.8254198640897493
+INFO: Episode has ended
+INFO: Done
+episode: 289   score: 150.0   memory length: 2000   epsilon: 0.8248513453962953
+INFO: Episode has ended
+INFO: Done
+episode: 290   score: 140.0   memory length: 2000   epsilon: 0.8244118165542634
+INFO: Episode has ended
+INFO: Done
+episode: 291   score: 270.0   memory length: 2000   epsilon: 0.8238374014378226
+INFO: Episode has ended
+INFO: Done
+episode: 292   score: 220.0   memory length: 2000   epsilon: 0.8232773821529535
+INFO: Episode has ended
+INFO: Done
+episode: 293   score: 240.0   memory length: 2000   epsilon: 0.8227358435504514
+INFO: Episode has ended
+INFO: Done
+episode: 294   score: 250.0   memory length: 2000   epsilon: 0.8222308385423973
+INFO: Episode has ended
+INFO: Done
+episode: 295   score: 320.0   memory length: 2000   epsilon: 0.8215371681378993
+INFO: Episode has ended
+INFO: Done
+episode: 296   score: 190.0   memory length: 2000   epsilon: 0.8211158274430904
+INFO: Episode has ended
+INFO: Done
+episode: 297   score: 250.0   memory length: 2000   epsilon: 0.8206553104207265
+INFO: Episode has ended
+INFO: Done
+episode: 298   score: 200.0   memory length: 2000   epsilon: 0.8201409205619553
+INFO: Episode has ended
+INFO: Done
+episode: 299   score: 210.0   memory length: 2000   epsilon: 0.8196366887108664
+INFO: Episode has ended
+INFO: Done
+episode: 300   score: 220.0   memory length: 2000   epsilon: 0.8191843738829054
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 301   score: 300.0   memory length: 2000   epsilon: 0.8184073362862063
+INFO: Episode has ended
+INFO: Done
+episode: 302   score: 150.0   memory length: 2000   epsilon: 0.8180751301839637
+INFO: Episode has ended
+INFO: Done
+episode: 303   score: 330.0   memory length: 2000   epsilon: 0.8174928677101645
+INFO: Episode has ended
+INFO: Done
+episode: 304   score: 120.0   memory length: 2000   epsilon: 0.8170294804051819
+INFO: Episode has ended
+INFO: Done
+episode: 305   score: 350.0   memory length: 2000   epsilon: 0.8163769342509495
+INFO: Episode has ended
+INFO: Done
+episode: 306   score: 190.0   memory length: 2000   epsilon: 0.8158905183212589
+INFO: Episode has ended
+INFO: Done
+episode: 307   score: 250.0   memory length: 2000   epsilon: 0.8152388818347259
+INFO: Episode has ended
+INFO: Done
+episode: 308   score: 230.0   memory length: 2000   epsilon: 0.8147132220366058
+INFO: Episode has ended
+INFO: Done
+episode: 309   score: 210.0   memory length: 2000   epsilon: 0.814196857300554
+INFO: Episode has ended
+INFO: Done
+episode: 310   score: 220.0   memory length: 2000   epsilon: 0.8136092190386867
+INFO: Episode has ended
+INFO: Done
+episode: 311   score: 140.0   memory length: 2000   epsilon: 0.8130480220321663
+INFO: Episode has ended
+INFO: Done
+episode: 312   score: 210.0   memory length: 2000   epsilon: 0.8125928423744238
+INFO: Episode has ended
+INFO: Done
+episode: 313   score: 130.0   memory length: 2000   epsilon: 0.8121379175460589
+INFO: Episode has ended
+INFO: Done
+episode: 314   score: 280.0   memory length: 2000   epsilon: 0.8116548389736932
+INFO: Episode has ended
+INFO: Done
+episode: 315   score: 150.0   memory length: 2000   epsilon: 0.8111712365756797
+INFO: Episode has ended
+INFO: Done
+episode: 316   score: 300.0   memory length: 2000   epsilon: 0.8105857820246515
+INFO: Episode has ended
+INFO: Done
+episode: 317   score: 210.0   memory length: 2000   epsilon: 0.8100477314489067
+INFO: Episode has ended
+INFO: Done
+episode: 318   score: 270.0   memory length: 2000   epsilon: 0.8094703729804393
+INFO: Episode has ended
+INFO: Done
+episode: 319   score: 170.0   memory length: 2000   epsilon: 0.8090196233027416
+INFO: Episode has ended
+INFO: Done
+episode: 320   score: 300.0   memory length: 2000   epsilon: 0.8083928756773655
+INFO: Episode has ended
+INFO: Done
+episode: 321   score: 270.0   memory length: 2000   epsilon: 0.807893442971067
+INFO: Episode has ended
+INFO: Done
+episode: 322   score: 270.0   memory length: 2000   epsilon: 0.8073700973406314
+INFO: Episode has ended
+INFO: Done
+episode: 323   score: 120.0   memory length: 2000   epsilon: 0.8068664553007139
+INFO: Episode has ended
+INFO: Done
+episode: 324   score: 240.0   memory length: 2000   epsilon: 0.8063252292402299
+INFO: Episode has ended
+INFO: Done
+episode: 325   score: 170.0   memory length: 2000   epsilon: 0.8058222389949521
+INFO: Episode has ended
+INFO: Done
+episode: 326   score: 280.0   memory length: 2000   epsilon: 0.8053050668889258
+INFO: Episode has ended
+INFO: Done
+episode: 327   score: 160.0   memory length: 2000   epsilon: 0.804809151477379
+INFO: Episode has ended
+INFO: Done
+episode: 328   score: 130.0   memory length: 2000   epsilon: 0.8045210812247594
+INFO: Episode has ended
+INFO: Done
+episode: 329   score: 260.0   memory length: 2000   epsilon: 0.8038085908703658
+INFO: Episode has ended
+INFO: Done
+episode: 330   score: 230.0   memory length: 2000   epsilon: 0.8032903012364687
+INFO: Episode has ended
+INFO: Done
+episode: 331   score: 260.0   memory length: 2000   epsilon: 0.8027041130081901
+INFO: Episode has ended
+INFO: Done
+episode: 332   score: 210.0   memory length: 2000   epsilon: 0.8022354704288108
+INFO: Episode has ended
+INFO: Done
+episode: 333   score: 330.0   memory length: 2000   epsilon: 0.8016075655983159
+INFO: Episode has ended
+INFO: Done
+episode: 334   score: 250.0   memory length: 2000   epsilon: 0.8010938995394796
+INFO: Episode has ended
+INFO: Done
+episode: 335   score: 300.0   memory length: 2000   epsilon: 0.8005597478008042
+INFO: Episode has ended
+INFO: Done
+episode: 336   score: 210.0   memory length: 2000   epsilon: 0.7999763521265036
+INFO: Episode has ended
+INFO: Done
+episode: 337   score: 200.0   memory length: 2000   epsilon: 0.799518096750298
+INFO: Episode has ended
+INFO: Done
+episode: 338   score: 220.0   memory length: 2000   epsilon: 0.799027343070301
+INFO: Episode has ended
+INFO: Done
+episode: 339   score: 290.0   memory length: 2000   epsilon: 0.7984953677612551
+INFO: Episode has ended
+INFO: Done
+episode: 340   score: 170.0   memory length: 2000   epsilon: 0.7980403548651066
+INFO: Episode has ended
+INFO: Done
+episode: 341   score: 170.0   memory length: 2000   epsilon: 0.7975696496920507
+INFO: Episode has ended
+INFO: Done
+episode: 342   score: 220.0   memory length: 2000   epsilon: 0.7970888599255592
+INFO: Episode has ended
+INFO: Done
+episode: 343   score: 190.0   memory length: 2000   epsilon: 0.7965884450180305
+INFO: Episode has ended
+INFO: Done
+episode: 344   score: 240.0   memory length: 2000   epsilon: 0.7959864514348299
+INFO: Episode has ended
+INFO: Done
+episode: 345   score: 210.0   memory length: 2000   epsilon: 0.7954787737913501
+INFO: Episode has ended
+INFO: Done
+episode: 346   score: 250.0   memory length: 2000   epsilon: 0.794933262211623
+INFO: Episode has ended
+INFO: Done
+episode: 347   score: 140.0   memory length: 2000   epsilon: 0.7944890184736041
+INFO: Episode has ended
+INFO: Done
+episode: 348   score: 250.0   memory length: 2000   epsilon: 0.793999763699524
+INFO: Episode has ended
+INFO: Done
+episode: 349   score: 210.0   memory length: 2000   epsilon: 0.7934624075063991
+INFO: Episode has ended
+INFO: Done
+episode: 350   score: 320.0   memory length: 2000   epsilon: 0.7929277937614885
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 351   score: 180.0   memory length: 2000   epsilon: 0.7924339533463025
+INFO: Episode has ended
+INFO: Done
+episode: 352   score: 230.0   memory length: 2000   epsilon: 0.7918390585608263
+INFO: Episode has ended
+INFO: Done
+episode: 353   score: 100.0   memory length: 2000   epsilon: 0.7914733132265656
+INFO: Episode has ended
+INFO: Done
+episode: 354   score: 240.0   memory length: 2000   epsilon: 0.7909629772853868
+INFO: Episode has ended
+INFO: Done
+episode: 355   score: 230.0   memory length: 2000   epsilon: 0.7904671986935574
+INFO: Episode has ended
+INFO: Done
+episode: 356   score: 400.0   memory length: 2000   epsilon: 0.7898958971736213
+INFO: Episode has ended
+INFO: Done
+episode: 357   score: 150.0   memory length: 2000   epsilon: 0.7894647315171032
+INFO: Episode has ended
+INFO: Done
+episode: 358   score: 250.0   memory length: 2000   epsilon: 0.7890117085647133
+INFO: Episode has ended
+INFO: Done
+episode: 359   score: 280.0   memory length: 2000   epsilon: 0.7884793051015991
+INFO: Episode has ended
+INFO: Done
+episode: 360   score: 210.0   memory length: 2000   epsilon: 0.7879433211613152
+INFO: Episode has ended
+INFO: Done
+episode: 361   score: 230.0   memory length: 2000   epsilon: 0.7874903837571483
+INFO: Episode has ended
+INFO: Done
+episode: 362   score: 180.0   memory length: 2000   epsilon: 0.7869723852658148
+INFO: Episode has ended
+INFO: Done
+episode: 363   score: 270.0   memory length: 2000   epsilon: 0.7864138329025356
+INFO: Episode has ended
+INFO: Done
+episode: 364   score: 160.0   memory length: 2000   epsilon: 0.7859861399066197
+INFO: Episode has ended
+INFO: Done
+episode: 365   score: 240.0   memory length: 2000   epsilon: 0.7854966227970984
+INFO: Episode has ended
+INFO: Done
+episode: 366   score: 200.0   memory length: 2000   epsilon: 0.7848959473679485
+INFO: Episode has ended
+INFO: Done
+episode: 367   score: 300.0   memory length: 2000   epsilon: 0.7844031872094901
+INFO: Episode has ended
+INFO: Done
+episode: 368   score: 140.0   memory length: 2000   epsilon: 0.7839734518062743
+INFO: Episode has ended
+INFO: Done
+episode: 369   score: 160.0   memory length: 2000   epsilon: 0.7834546328697684
+INFO: Episode has ended
+INFO: Done
+episode: 370   score: 350.0   memory length: 2000   epsilon: 0.7826488722845625
+INFO: Episode has ended
+INFO: Done
+episode: 371   score: 270.0   memory length: 2000   epsilon: 0.7820957348124098
+INFO: Episode has ended
+INFO: Done
+episode: 372   score: 350.0   memory length: 2000   epsilon: 0.7814710895869522
+INFO: Episode has ended
+INFO: Done
+episode: 373   score: 220.0   memory length: 2000   epsilon: 0.7809960993386429
+INFO: Episode has ended
+INFO: Done
+episode: 374   score: 260.0   memory length: 2000   epsilon: 0.7804534953550106
+INFO: Episode has ended
+INFO: Done
+episode: 375   score: 220.0   memory length: 2000   epsilon: 0.7799268667394701
+INFO: Episode has ended
+INFO: Done
+episode: 376   score: 250.0   memory length: 2000   epsilon: 0.7793616244035515
+INFO: Episode has ended
+INFO: Done
+episode: 377   score: 250.0   memory length: 2000   epsilon: 0.7787757644799941
+INFO: Episode has ended
+INFO: Done
+episode: 378   score: 390.0   memory length: 2000   epsilon: 0.7780098256484604
+INFO: Episode has ended
+INFO: Done
+episode: 379   score: 210.0   memory length: 2000   epsilon: 0.7775120584136525
+INFO: Episode has ended
+INFO: Done
+episode: 380   score: 190.0   memory length: 2000   epsilon: 0.7771195137537386
+INFO: Episode has ended
+INFO: Done
+episode: 381   score: 280.0   memory length: 2000   epsilon: 0.7766432852326344
+INFO: Episode has ended
+INFO: Done
+episode: 382   score: 170.0   memory length: 2000   epsilon: 0.77614328772341
+INFO: Episode has ended
+INFO: Done
+episode: 383   score: 280.0   memory length: 2000   epsilon: 0.7756599008041107
+INFO: Episode has ended
+INFO: Done
+episode: 384   score: 980.0   memory length: 2000   epsilon: 0.7749148493214678
+INFO: Episode has ended
+INFO: Done
+episode: 385   score: 340.0   memory length: 2000   epsilon: 0.7744322274813296
+INFO: Episode has ended
+INFO: Done
+episode: 386   score: 350.0   memory length: 2000   epsilon: 0.7738431084498609
+INFO: Episode has ended
+INFO: Done
+episode: 387   score: 350.0   memory length: 2000   epsilon: 0.7732961944555926
+INFO: Episode has ended
+INFO: Done
+episode: 388   score: 240.0   memory length: 2000   epsilon: 0.7728872287451963
+INFO: Episode has ended
+INFO: Done
+episode: 389   score: 230.0   memory length: 2000   epsilon: 0.7723479414230444
+INFO: Episode has ended
+INFO: Done
+episode: 390   score: 240.0   memory length: 2000   epsilon: 0.7718993373768577
+INFO: Episode has ended
+INFO: Done
+episode: 391   score: 2680.0   memory length: 2000   epsilon: 0.7709181051250833
+INFO: Episode has ended
+INFO: Done
+episode: 392   score: 590.0   memory length: 2000   epsilon: 0.7701722170944073
+INFO: Episode has ended
+INFO: Done
+episode: 393   score: 280.0   memory length: 2000   epsilon: 0.7697087127167677
+INFO: Episode has ended
+INFO: Done
+episode: 394   score: 220.0   memory length: 2000   epsilon: 0.7691877960079865
+INFO: Episode has ended
+INFO: Done
+episode: 395   score: 220.0   memory length: 2000   epsilon: 0.7686956730686032
+INFO: Episode has ended
+INFO: Done
+episode: 396   score: 320.0   memory length: 2000   epsilon: 0.7681600785930186
+INFO: Episode has ended
+INFO: Done
+episode: 397   score: 360.0   memory length: 2000   epsilon: 0.7674483237935837
+INFO: Episode has ended
+INFO: Done
+episode: 398   score: 270.0   memory length: 2000   epsilon: 0.7668399782095279
+INFO: Episode has ended
+INFO: Done
+episode: 399   score: 320.0   memory length: 2000   epsilon: 0.7663646845416412
+INFO: Episode has ended
+INFO: Done
+episode: 400   score: 170.0   memory length: 2000   epsilon: 0.7658965785062758
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 401   score: 290.0   memory length: 2000   epsilon: 0.7653874263388385
+INFO: Episode has ended
+INFO: Done
+episode: 402   score: 460.0   memory length: 2000   epsilon: 0.7645948951708937
+INFO: Episode has ended
+INFO: Done
+episode: 403   score: 170.0   memory length: 2000   epsilon: 0.7641110595104619
+INFO: Episode has ended
+INFO: Done
+episode: 404   score: 90.0   memory length: 2000   epsilon: 0.7637023692236656
+INFO: Episode has ended
+INFO: Done
+episode: 405   score: 180.0   memory length: 2000   epsilon: 0.7632236776842813
+INFO: Episode has ended
+INFO: Done
+episode: 406   score: 250.0   memory length: 2000   epsilon: 0.7627376587720324
+INFO: Episode has ended
+INFO: Done
+episode: 407   score: 150.0   memory length: 2000   epsilon: 0.7623030219724566
+INFO: Episode has ended
+INFO: Done
+episode: 408   score: 260.0   memory length: 2000   epsilon: 0.7617947351351482
+INFO: Episode has ended
+INFO: Done
+episode: 409   score: 140.0   memory length: 2000   epsilon: 0.7612936388276309
+INFO: Episode has ended
+INFO: Done
+episode: 410   score: 180.0   memory length: 2000   epsilon: 0.760824826120832
+INFO: Episode has ended
+INFO: Done
+episode: 411   score: 280.0   memory length: 2000   epsilon: 0.7603585831873428
+INFO: Episode has ended
+INFO: Done
+episode: 412   score: 290.0   memory length: 2000   epsilon: 0.7598964254478622
+INFO: Episode has ended
+INFO: Done
+episode: 413   score: 190.0   memory length: 2000   epsilon: 0.7593927808425879
+INFO: Episode has ended
+INFO: Done
+episode: 414   score: 280.0   memory length: 2000   epsilon: 0.7588697391636015
+INFO: Episode has ended
+INFO: Done
+episode: 415   score: 230.0   memory length: 2000   epsilon: 0.758403935927068
+INFO: Episode has ended
+INFO: Done
+episode: 416   score: 240.0   memory length: 2000   epsilon: 0.7579240179057322
+INFO: Episode has ended
+INFO: Done
+episode: 417   score: 220.0   memory length: 2000   epsilon: 0.7574337994238037
+INFO: Episode has ended
+INFO: Done
+episode: 418   score: 140.0   memory length: 2000   epsilon: 0.7569257315661714
+INFO: Episode has ended
+INFO: Done
+episode: 419   score: 110.0   memory length: 2000   epsilon: 0.7565110496911313
+INFO: Episode has ended
+INFO: Done
+episode: 420   score: 150.0   memory length: 2000   epsilon: 0.7561003754939356
+INFO: Episode has ended
+INFO: Done
+episode: 421   score: 220.0   memory length: 2000   epsilon: 0.7557141067089926
+INFO: Episode has ended
+INFO: Done
+episode: 422   score: 280.0   memory length: 2000   epsilon: 0.7552170101409224
+INFO: Episode has ended
+INFO: Done
+episode: 423   score: 170.0   memory length: 2000   epsilon: 0.7547979807821701
+INFO: Episode has ended
+INFO: Done
+episode: 424   score: 580.0   memory length: 2000   epsilon: 0.7541129349309584
+INFO: Episode has ended
+INFO: Done
+episode: 425   score: 480.0   memory length: 2000   epsilon: 0.7535023504684453
+INFO: Episode has ended
+INFO: Done
+episode: 426   score: 230.0   memory length: 2000   epsilon: 0.7530503844355365
+INFO: Episode has ended
+INFO: Done
+episode: 427   score: 320.0   memory length: 2000   epsilon: 0.7525128980977468
+INFO: Episode has ended
+INFO: Done
+episode: 428   score: 630.0   memory length: 2000   epsilon: 0.7517908320017005
+INFO: Episode has ended
+INFO: Done
+episode: 429   score: 630.0   memory length: 2000   epsilon: 0.7509725769972166
+INFO: Episode has ended
+INFO: Done
+episode: 430   score: 240.0   memory length: 2000   epsilon: 0.7504868546451494
+INFO: Episode has ended
+INFO: Done
+episode: 431   score: 330.0   memory length: 2000   epsilon: 0.7498904543979987
+INFO: Episode has ended
+INFO: Done
+episode: 432   score: 240.0   memory length: 2000   epsilon: 0.7493769550735698
+INFO: Episode has ended
+INFO: Done
+episode: 433   score: 200.0   memory length: 2000   epsilon: 0.7488413417874377
+INFO: Episode has ended
+INFO: Done
+episode: 434   score: 180.0   memory length: 2000   epsilon: 0.748276179667338
+INFO: Episode has ended
+INFO: Done
+episode: 435   score: 200.0   memory length: 2000   epsilon: 0.7478774545338893
+INFO: Episode has ended
+INFO: Done
+episode: 436   score: 200.0   memory length: 2000   epsilon: 0.7473645862775561
+INFO: Episode has ended
+INFO: Done
+episode: 437   score: 280.0   memory length: 2000   epsilon: 0.7467982982882593
+INFO: Episode has ended
+INFO: Done
+episode: 438   score: 180.0   memory length: 2000   epsilon: 0.7462122913688928
+INFO: Episode has ended
+INFO: Done
+episode: 439   score: 300.0   memory length: 2000   epsilon: 0.7456841597831649
+INFO: Episode has ended
+INFO: Done
+episode: 440   score: 210.0   memory length: 2000   epsilon: 0.7452398642150054
+INFO: Episode has ended
+INFO: Done
+episode: 441   score: 310.0   memory length: 2000   epsilon: 0.7446439104389334
+INFO: Episode has ended
+INFO: Done
+episode: 442   score: 200.0   memory length: 2000   epsilon: 0.7441109359601887
+INFO: Episode has ended
+INFO: Done
+episode: 443   score: 200.0   memory length: 2000   epsilon: 0.7435753686458688
+INFO: Episode has ended
+INFO: Done
+episode: 444   score: 220.0   memory length: 2000   epsilon: 0.7431561101703142
+INFO: Episode has ended
+INFO: Done
+episode: 445   score: 240.0   memory length: 2000   epsilon: 0.7426553914628458
+INFO: Episode has ended
+INFO: Done
+episode: 446   score: 160.0   memory length: 2000   epsilon: 0.7421616895547374
+INFO: Episode has ended
+INFO: Done
+episode: 447   score: 290.0   memory length: 2000   epsilon: 0.7416008270697192
+INFO: Episode has ended
+INFO: Done
+episode: 448   score: 180.0   memory length: 2000   epsilon: 0.7412115886249095
+INFO: Episode has ended
+INFO: Done
+episode: 449   score: 130.0   memory length: 2000   epsilon: 0.7407232908556285
+INFO: Episode has ended
+INFO: Done
+episode: 450   score: 160.0   memory length: 2000   epsilon: 0.7402782496835586
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 451   score: 240.0   memory length: 2000   epsilon: 0.7397935259519913
+INFO: Episode has ended
+INFO: Done
+episode: 452   score: 240.0   memory length: 2000   epsilon: 0.7392588482746438
+INFO: Episode has ended
+INFO: Done
+episode: 453   score: 130.0   memory length: 2000   epsilon: 0.7389218229189296
+INFO: Episode has ended
+INFO: Done
+episode: 454   score: 230.0   memory length: 2000   epsilon: 0.7384099272320264
+INFO: Episode has ended
+INFO: Done
+episode: 455   score: 250.0   memory length: 2000   epsilon: 0.7379323302895677
+INFO: Episode has ended
+INFO: Done
+episode: 456   score: 180.0   memory length: 2000   epsilon: 0.737496340911911
+INFO: Episode has ended
+INFO: Done
+episode: 457   score: 150.0   memory length: 2000   epsilon: 0.737116627890968
+INFO: Episode has ended
+INFO: Done
+episode: 458   score: 190.0   memory length: 2000   epsilon: 0.7367304797645137
+INFO: Episode has ended
+INFO: Done
+episode: 459   score: 280.0   memory length: 2000   epsilon: 0.7361965434749927
+INFO: Episode has ended
+INFO: Done
+episode: 460   score: 230.0   memory length: 2000   epsilon: 0.7357439215699331
+INFO: Episode has ended
+INFO: Done
+episode: 461   score: 190.0   memory length: 2000   epsilon: 0.7353202548869817
+INFO: Episode has ended
+INFO: Done
+episode: 462   score: 380.0   memory length: 2000   epsilon: 0.7345838326325163
+INFO: Episode has ended
+INFO: Done
+episode: 463   score: 240.0   memory length: 2000   epsilon: 0.7341065080499235
+INFO: Episode has ended
+INFO: Done
+episode: 464   score: 550.0   memory length: 2000   epsilon: 0.7331549886269285
+INFO: Episode has ended
+INFO: Done
+episode: 465   score: 290.0   memory length: 2000   epsilon: 0.7327262181717693
+INFO: Episode has ended
+INFO: Done
+episode: 466   score: 280.0   memory length: 2000   epsilon: 0.7320912195347837
+INFO: Episode has ended
+INFO: Done
+episode: 467   score: 270.0   memory length: 2000   epsilon: 0.7315643033058489
+INFO: Episode has ended
+INFO: Done
+episode: 468   score: 250.0   memory length: 2000   epsilon: 0.7310889407805619
+INFO: Episode has ended
+INFO: Done
+episode: 469   score: 170.0   memory length: 2000   epsilon: 0.7307293333125755
+INFO: Episode has ended
+INFO: Done
+episode: 470   score: 230.0   memory length: 2000   epsilon: 0.7303151270120546
+INFO: Episode has ended
+INFO: Done
+episode: 471   score: 210.0   memory length: 2000   epsilon: 0.7298821783072271
+INFO: Episode has ended
+INFO: Done
+episode: 472   score: 490.0   memory length: 2000   epsilon: 0.7291832856539735
+INFO: Episode has ended
+INFO: Done
+episode: 473   score: 290.0   memory length: 2000   epsilon: 0.7287327893758665
+INFO: Episode has ended
+INFO: Done
+episode: 474   score: 140.0   memory length: 2000   epsilon: 0.7283583167825816
+INFO: Episode has ended
+INFO: Done
+episode: 475   score: 180.0   memory length: 2000   epsilon: 0.7278835817031106
+INFO: Episode has ended
+INFO: Done
+episode: 476   score: 190.0   memory length: 2000   epsilon: 0.7273676948892108
+INFO: Episode has ended
+INFO: Done
+episode: 477   score: 1120.0   memory length: 2000   epsilon: 0.7266639432793924
+INFO: Episode has ended
+INFO: Done
+episode: 478   score: 270.0   memory length: 2000   epsilon: 0.7261859554409524
+INFO: Episode has ended
+INFO: Done
+episode: 479   score: 230.0   memory length: 2000   epsilon: 0.7257714214138438
+INFO: Episode has ended
+INFO: Done
+episode: 480   score: 210.0   memory length: 2000   epsilon: 0.7252940206619122
+INFO: Episode has ended
+INFO: Done
+episode: 481   score: 200.0   memory length: 2000   epsilon: 0.7248408533019514
+INFO: Episode has ended
+INFO: Done
+episode: 482   score: 150.0   memory length: 2000   epsilon: 0.7243119123015102
+INFO: Episode has ended
+INFO: Done
+episode: 483   score: 840.0   memory length: 2000   epsilon: 0.7235033071811773
+INFO: Episode has ended
+INFO: Done
+episode: 484   score: 640.0   memory length: 2000   epsilon: 0.7228669040111027
+INFO: Episode has ended
+INFO: Done
+episode: 485   score: 250.0   memory length: 2000   epsilon: 0.7223878018540933
+INFO: Episode has ended
+INFO: Done
+episode: 486   score: 140.0   memory length: 2000   epsilon: 0.7219133487059606
+INFO: Episode has ended
+INFO: Done
+episode: 487   score: 140.0   memory length: 2000   epsilon: 0.7215077471858781
+INFO: Episode has ended
+INFO: Done
+episode: 488   score: 310.0   memory length: 2000   epsilon: 0.7209170739592812
+INFO: Episode has ended
+INFO: Done
+episode: 489   score: 290.0   memory length: 2000   epsilon: 0.7203333672706275
+INFO: Episode has ended
+INFO: Done
+episode: 490   score: 270.0   memory length: 2000   epsilon: 0.7198991369666299
+INFO: Episode has ended
+INFO: Done
+episode: 491   score: 230.0   memory length: 2000   epsilon: 0.7193795571208303
+INFO: Episode has ended
+INFO: Done
+episode: 492   score: 410.0   memory length: 2000   epsilon: 0.7187007829113364
+INFO: Episode has ended
+INFO: Done
+episode: 493   score: 230.0   memory length: 2000   epsilon: 0.7182617906392649
+INFO: Episode has ended
+INFO: Done
+episode: 494   score: 250.0   memory length: 2000   epsilon: 0.7177333441892633
+INFO: Episode has ended
+INFO: Done
+episode: 495   score: 160.0   memory length: 2000   epsilon: 0.7171973973142444
+INFO: Episode has ended
+INFO: Done
+episode: 496   score: 290.0   memory length: 2000   epsilon: 0.7166969679508552
+INFO: Episode has ended
+INFO: Done
+episode: 497   score: 230.0   memory length: 2000   epsilon: 0.7162491720727651
+INFO: Episode has ended
+INFO: Done
+episode: 498   score: 270.0   memory length: 2000   epsilon: 0.715820982895082
+INFO: Episode has ended
+INFO: Done
+episode: 499   score: 270.0   memory length: 2000   epsilon: 0.7153579962799625
+INFO: Episode has ended
+INFO: Done
+episode: 500   score: 190.0   memory length: 2000   epsilon: 0.7149432087347314
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 501   score: 160.0   memory length: 2000   epsilon: 0.7144179182815402
+INFO: Episode has ended
+INFO: Done
+episode: 502   score: 260.0   memory length: 2000   epsilon: 0.7139208561595554
+INFO: Episode has ended
+INFO: Done
+episode: 503   score: 180.0   memory length: 2000   epsilon: 0.7134312741532538
+INFO: Episode has ended
+INFO: Done
+episode: 504   score: 170.0   memory length: 2000   epsilon: 0.7130261600502639
+INFO: Episode has ended
+INFO: Done
+episode: 505   score: 470.0   memory length: 2000   epsilon: 0.7121738900957096
+INFO: Episode has ended
+INFO: Done
+episode: 506   score: 150.0   memory length: 2000   epsilon: 0.7117410197600004
+INFO: Episode has ended
+INFO: Done
+episode: 507   score: 180.0   memory length: 2000   epsilon: 0.7112145259688436
+INFO: Episode has ended
+INFO: Done
+episode: 508   score: 130.0   memory length: 2000   epsilon: 0.710745989761587
+INFO: Episode has ended
+INFO: Done
+episode: 509   score: 170.0   memory length: 2000   epsilon: 0.7103083048338371
+INFO: Episode has ended
+INFO: Done
+episode: 510   score: 510.0   memory length: 2000   epsilon: 0.7097551898540525
+INFO: Episode has ended
+INFO: Done
+episode: 511   score: 230.0   memory length: 2000   epsilon: 0.709330882918773
+INFO: Episode has ended
+INFO: Done
+episode: 512   score: 90.0   memory length: 2000   epsilon: 0.7090578429558863
+INFO: Episode has ended
+INFO: Done
+episode: 513   score: 380.0   memory length: 2000   epsilon: 0.7085652187154584
+INFO: Episode has ended
+INFO: Done
+episode: 514   score: 220.0   memory length: 2000   epsilon: 0.7081154224021072
+INFO: Episode has ended
+INFO: Done
+episode: 515   score: 290.0   memory length: 2000   epsilon: 0.7076439743046931
+INFO: Episode has ended
+INFO: Done
+episode: 516   score: 240.0   memory length: 2000   epsilon: 0.7071565752909251
+INFO: Episode has ended
+INFO: Done
+episode: 517   score: 260.0   memory length: 2000   epsilon: 0.7066045013425075
+INFO: Episode has ended
+INFO: Done
+episode: 518   score: 210.0   memory length: 2000   epsilon: 0.7061044021614934
+INFO: Episode has ended
+INFO: Done
+episode: 519   score: 160.0   memory length: 2000   epsilon: 0.7056879232293349
+INFO: Episode has ended
+INFO: Done
+episode: 520   score: 210.0   memory length: 2000   epsilon: 0.7052738057666936
+INFO: Episode has ended
+INFO: Done
+episode: 521   score: 170.0   memory length: 2000   epsilon: 0.7049297159421697
+INFO: Episode has ended
+INFO: Done
+episode: 522   score: 330.0   memory length: 2000   epsilon: 0.7044117827057512
+INFO: Episode has ended
+INFO: Done
+episode: 523   score: 360.0   memory length: 2000   epsilon: 0.7037415014579524
+INFO: Episode has ended
+INFO: Done
+episode: 524   score: 1000.0   memory length: 2000   epsilon: 0.7030395174367775
+INFO: Episode has ended
+INFO: Done
+episode: 525   score: 230.0   memory length: 2000   epsilon: 0.7025278906669948
+INFO: Episode has ended
+INFO: Done
+episode: 526   score: 280.0   memory length: 2000   epsilon: 0.7020278685877984
+INFO: Episode has ended
+INFO: Done
+episode: 527   score: 220.0   memory length: 2000   epsilon: 0.7016348428423442
+INFO: Episode has ended
+INFO: Done
+episode: 528   score: 170.0   memory length: 2000   epsilon: 0.7011880435447257
+INFO: Episode has ended
+INFO: Done
+episode: 529   score: 110.0   memory length: 2000   epsilon: 0.7007527407275332
+INFO: Episode has ended
+INFO: Done
+episode: 530   score: 270.0   memory length: 2000   epsilon: 0.7002476798452507
+INFO: Episode has ended
+INFO: Done
+episode: 531   score: 440.0   memory length: 2000   epsilon: 0.6996317326355175
+INFO: Episode has ended
+INFO: Done
+episode: 532   score: 320.0   memory length: 2000   epsilon: 0.6991890056652519
+INFO: Episode has ended
+INFO: Done
+episode: 533   score: 150.0   memory length: 2000   epsilon: 0.69874586010606
+INFO: Episode has ended
+INFO: Done
+episode: 534   score: 190.0   memory length: 2000   epsilon: 0.6983190565738794
+INFO: Episode has ended
+INFO: Done
+episode: 535   score: 190.0   memory length: 2000   epsilon: 0.6979120550128665
+INFO: Episode has ended
+INFO: Done
+episode: 536   score: 190.0   memory length: 2000   epsilon: 0.6975234260471134
+INFO: Episode has ended
+INFO: Done
+episode: 537   score: 250.0   memory length: 2000   epsilon: 0.6969788726548569
+INFO: Episode has ended
+INFO: Done
+episode: 538   score: 210.0   memory length: 2000   epsilon: 0.6965043913845328
+INFO: Episode has ended
+INFO: Done
+episode: 539   score: 520.0   memory length: 2000   epsilon: 0.6957950145438861
+INFO: Episode has ended
+INFO: Done
+episode: 540   score: 210.0   memory length: 2000   epsilon: 0.6953630597597076
+INFO: Episode has ended
+INFO: Done
+episode: 541   score: 280.0   memory length: 2000   epsilon: 0.6948618834387922
+INFO: Episode has ended
+INFO: Done
+episode: 542   score: 170.0   memory length: 2000   epsilon: 0.6944506467362409
+INFO: Episode has ended
+INFO: Done
+episode: 543   score: 890.0   memory length: 2000   epsilon: 0.6935089158466496
+INFO: Episode has ended
+INFO: Done
+episode: 544   score: 340.0   memory length: 2000   epsilon: 0.69294601489423
+INFO: Episode has ended
+INFO: Done
+episode: 545   score: 150.0   memory length: 2000   epsilon: 0.6925442225357312
+INFO: Episode has ended
+INFO: Done
+episode: 546   score: 300.0   memory length: 2000   epsilon: 0.6920111684699898
+INFO: Episode has ended
+INFO: Done
+episode: 547   score: 270.0   memory length: 2000   epsilon: 0.6915483675910242
+INFO: Episode has ended
+INFO: Done
+episode: 548   score: 260.0   memory length: 2000   epsilon: 0.6910927871192317
+INFO: Episode has ended
+INFO: Done
+episode: 549   score: 500.0   memory length: 2000   epsilon: 0.6902632824843661
+INFO: Episode has ended
+INFO: Done
+episode: 550   score: 270.0   memory length: 2000   epsilon: 0.689840970385001
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 551   score: 240.0   memory length: 2000   epsilon: 0.689441667872719
+INFO: Episode has ended
+INFO: Done
+episode: 552   score: 300.0   memory length: 2000   epsilon: 0.6890019441555228
+INFO: Episode has ended
+INFO: Done
+episode: 553   score: 330.0   memory length: 2000   epsilon: 0.6885439099468831
+INFO: Episode has ended
+INFO: Done
+episode: 554   score: 170.0   memory length: 2000   epsilon: 0.6881907773307641
+INFO: Episode has ended
+INFO: Done
+episode: 555   score: 240.0   memory length: 2000   epsilon: 0.6877305314400094
+INFO: Episode has ended
+INFO: Done
+episode: 556   score: 260.0   memory length: 2000   epsilon: 0.6872877753391384
+INFO: Episode has ended
+INFO: Done
+episode: 557   score: 990.0   memory length: 2000   epsilon: 0.6867731892746411
+INFO: Episode has ended
+INFO: Done
+episode: 558   score: 210.0   memory length: 2000   epsilon: 0.6863742897437467
+INFO: Episode has ended
+INFO: Done
+episode: 559   score: 220.0   memory length: 2000   epsilon: 0.6859605306010594
+INFO: Episode has ended
+INFO: Done
+episode: 560   score: 270.0   memory length: 2000   epsilon: 0.6855113733439843
+INFO: Episode has ended
+INFO: Done
+episode: 561   score: 300.0   memory length: 2000   epsilon: 0.6848070293948113
+INFO: Episode has ended
+INFO: Done
+episode: 562   score: 560.0   memory length: 2000   epsilon: 0.6842265588979081
+INFO: Episode has ended
+INFO: Done
+episode: 563   score: 270.0   memory length: 2000   epsilon: 0.6837607590012507
+INFO: Episode has ended
+INFO: Done
+episode: 564   score: 280.0   memory length: 2000   epsilon: 0.6832515466863128
+INFO: Episode has ended
+INFO: Done
+episode: 565   score: 140.0   memory length: 2000   epsilon: 0.6829024941619353
+INFO: Episode has ended
+INFO: Done
+episode: 566   score: 990.0   memory length: 2000   epsilon: 0.6822867935270645
+INFO: Episode has ended
+INFO: Done
+episode: 567   score: 260.0   memory length: 2000   epsilon: 0.6818311779137257
+INFO: Episode has ended
+INFO: Done
+episode: 568   score: 280.0   memory length: 2000   epsilon: 0.6813431612771214
+INFO: Episode has ended
+INFO: Done
+episode: 569   score: 180.0   memory length: 2000   epsilon: 0.6809229019997904
+INFO: Episode has ended
+INFO: Done
+episode: 570   score: 210.0   memory length: 2000   epsilon: 0.6805546221543393
+INFO: Episode has ended
+INFO: Done
+episode: 571   score: 340.0   memory length: 2000   epsilon: 0.6801164858536222
+INFO: Episode has ended
+INFO: Done
+episode: 572   score: 190.0   memory length: 2000   epsilon: 0.6797615575148888
+INFO: Episode has ended
+INFO: Done
+episode: 573   score: 250.0   memory length: 2000   epsilon: 0.6793320837238043
+INFO: Episode has ended
+INFO: Done
+episode: 574   score: 590.0   memory length: 2000   epsilon: 0.6786714147435697
+INFO: Episode has ended
+INFO: Done
+episode: 575   score: 490.0   memory length: 2000   epsilon: 0.6781368320546862
+INFO: Episode has ended
+INFO: Done
+episode: 576   score: 380.0   memory length: 2000   epsilon: 0.6776812769594106
+INFO: Episode has ended
+INFO: Done
+episode: 577   score: 140.0   memory length: 2000   epsilon: 0.6773587772713348
+INFO: Episode has ended
+INFO: Done
+episode: 578   score: 210.0   memory length: 2000   epsilon: 0.6768550095139911
+INFO: Episode has ended
+INFO: Done
+episode: 579   score: 160.0   memory length: 2000   epsilon: 0.6764530768231896
+INFO: Episode has ended
+INFO: Done
+episode: 580   score: 330.0   memory length: 2000   epsilon: 0.6759912168838995
+INFO: Episode has ended
+INFO: Done
+episode: 581   score: 390.0   memory length: 2000   epsilon: 0.6754351047058812
+INFO: Episode has ended
+INFO: Done
+episode: 582   score: 240.0   memory length: 2000   epsilon: 0.6749935143423842
+INFO: Episode has ended
+INFO: Done
+episode: 583   score: 320.0   memory length: 2000   epsilon: 0.6745333254777348
+INFO: Episode has ended
+INFO: Done
+episode: 584   score: 230.0   memory length: 2000   epsilon: 0.6741071548870271
+INFO: Episode has ended
+INFO: Done
+episode: 585   score: 220.0   memory length: 2000   epsilon: 0.6736260139256185
+INFO: Episode has ended
+INFO: Done
+episode: 586   score: 230.0   memory length: 2000   epsilon: 0.6731647378805099
+INFO: Episode has ended
+INFO: Done
+episode: 587   score: 390.0   memory length: 2000   epsilon: 0.6726022070490103
+INFO: Episode has ended
+INFO: Done
+episode: 588   score: 270.0   memory length: 2000   epsilon: 0.672146337082065
+INFO: Episode has ended
+INFO: Done
+episode: 589   score: 200.0   memory length: 2000   epsilon: 0.6718217686285509
+INFO: Episode has ended
+INFO: Done
+episode: 590   score: 250.0   memory length: 2000   epsilon: 0.6713536717724593
+INFO: Episode has ended
+INFO: Done
+episode: 591   score: 200.0   memory length: 2000   epsilon: 0.6709093824955659
+INFO: Episode has ended
+INFO: Done
+episode: 592   score: 230.0   memory length: 2000   epsilon: 0.6704995818647902
+INFO: Episode has ended
+INFO: Done
+episode: 593   score: 140.0   memory length: 2000   epsilon: 0.6700545176975421
+INFO: Episode has ended
+INFO: Done
+episode: 594   score: 220.0   memory length: 2000   epsilon: 0.6697497120881126
+INFO: Episode has ended
+INFO: Done
+episode: 595   score: 260.0   memory length: 2000   epsilon: 0.6692917596936281
+INFO: Episode has ended
+INFO: Done
+episode: 596   score: 270.0   memory length: 2000   epsilon: 0.6687792782548946
+INFO: Episode has ended
+INFO: Done
+episode: 597   score: 220.0   memory length: 2000   epsilon: 0.6683353559906605
+INFO: Episode has ended
+INFO: Done
+episode: 598   score: 270.0   memory length: 2000   epsilon: 0.6678142574072898
+INFO: Episode has ended
+INFO: Done
+episode: 599   score: 160.0   memory length: 2000   epsilon: 0.6674130214214503
+INFO: Episode has ended
+INFO: Done
+episode: 600   score: 260.0   memory length: 2000   epsilon: 0.6670213647445169
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 601   score: 560.0   memory length: 2000   epsilon: 0.6665019571771734
+INFO: Episode has ended
+INFO: Done
+episode: 602   score: 870.0   memory length: 2000   epsilon: 0.6659576471868965
+INFO: Episode has ended
+INFO: Done
+episode: 603   score: 220.0   memory length: 2000   epsilon: 0.665493636201402
+INFO: Episode has ended
+INFO: Done
+episode: 604   score: 400.0   memory length: 2000   epsilon: 0.6648617171401112
+INFO: Episode has ended
+INFO: Done
+episode: 605   score: 200.0   memory length: 2000   epsilon: 0.6644602617139608
+INFO: Episode has ended
+INFO: Done
+episode: 606   score: 230.0   memory length: 2000   epsilon: 0.6640829552618199
+INFO: Episode has ended
+INFO: Done
+episode: 607   score: 330.0   memory length: 2000   epsilon: 0.6636102962479064
+INFO: Episode has ended
+INFO: Done
+episode: 608   score: 300.0   memory length: 2000   epsilon: 0.6631671523749594
+INFO: Episode has ended
+INFO: Done
+episode: 609   score: 270.0   memory length: 2000   epsilon: 0.6627640690944975
+INFO: Episode has ended
+INFO: Done
+episode: 610   score: 180.0   memory length: 2000   epsilon: 0.6623989864993666
+INFO: Episode has ended
+INFO: Done
+episode: 611   score: 360.0   memory length: 2000   epsilon: 0.6619679048758953
+INFO: Episode has ended
+INFO: Done
+episode: 612   score: 160.0   memory length: 2000   epsilon: 0.6615900289071189
+INFO: Episode has ended
+INFO: Done
+episode: 613   score: 360.0   memory length: 2000   epsilon: 0.6609274473756277
+INFO: Episode has ended
+INFO: Done
+episode: 614   score: 160.0   memory length: 2000   epsilon: 0.6604867555349363
+INFO: Episode has ended
+INFO: Done
+episode: 615   score: 250.0   memory length: 2000   epsilon: 0.6600258964076768
+INFO: Episode has ended
+INFO: Done
+episode: 616   score: 260.0   memory length: 2000   epsilon: 0.6596108704506587
+INFO: Episode has ended
+INFO: Done
+episode: 617   score: 250.0   memory length: 2000   epsilon: 0.6591598506561005
+INFO: Episode has ended
+INFO: Done
+episode: 618   score: 310.0   memory length: 2000   epsilon: 0.6587354881594751
+INFO: Episode has ended
+INFO: Done
+episode: 619   score: 160.0   memory length: 2000   epsilon: 0.6583219319363671
+INFO: Episode has ended
+INFO: Done
+episode: 620   score: 970.0   memory length: 2000   epsilon: 0.6576606504137362
+INFO: Episode has ended
+INFO: Done
+episode: 621   score: 510.0   memory length: 2000   epsilon: 0.6570578517213309
+INFO: Episode has ended
+INFO: Done
+episode: 622   score: 290.0   memory length: 2000   epsilon: 0.6565816571821008
+INFO: Episode has ended
+INFO: Done
+episode: 623   score: 320.0   memory length: 2000   epsilon: 0.6561786395821352
+INFO: Episode has ended
+INFO: Done
+episode: 624   score: 260.0   memory length: 2000   epsilon: 0.655760130919275
+INFO: Episode has ended
+INFO: Done
+episode: 625   score: 350.0   memory length: 2000   epsilon: 0.6552396637678776
+INFO: Episode has ended
+INFO: Done
+episode: 626   score: 250.0   memory length: 2000   epsilon: 0.6549101609291531
+INFO: Episode has ended
+INFO: Done
+episode: 627   score: 220.0   memory length: 2000   epsilon: 0.6545016242611486
+INFO: Episode has ended
+INFO: Done
+episode: 628   score: 160.0   memory length: 2000   epsilon: 0.6540678332849542
+INFO: Episode has ended
+INFO: Done
+episode: 629   score: 270.0   memory length: 2000   epsilon: 0.6535990344985249
+INFO: Episode has ended
+INFO: Done
+episode: 630   score: 250.0   memory length: 2000   epsilon: 0.6531462470501824
+INFO: Episode has ended
+INFO: Done
+episode: 631   score: 400.0   memory length: 2000   epsilon: 0.6526624447101071
+INFO: Episode has ended
+INFO: Done
+episode: 632   score: 360.0   memory length: 2000   epsilon: 0.6520844415882703
+INFO: Episode has ended
+INFO: Done
+episode: 633   score: 280.0   memory length: 2000   epsilon: 0.6515773169362055
+INFO: Episode has ended
+INFO: Done
+episode: 634   score: 250.0   memory length: 2000   epsilon: 0.6511519756246161
+INFO: Episode has ended
+INFO: Done
+episode: 635   score: 1010.0   memory length: 2000   epsilon: 0.6504816340397134
+INFO: Episode has ended
+INFO: Done
+episode: 636   score: 550.0   memory length: 2000   epsilon: 0.6498886649279821
+INFO: Episode has ended
+INFO: Done
+episode: 637   score: 390.0   memory length: 2000   epsilon: 0.6492774070305836
+INFO: Episode has ended
+INFO: Done
+episode: 638   score: 210.0   memory length: 2000   epsilon: 0.6489327320744026
+INFO: Episode has ended
+INFO: Done
+episode: 639   score: 640.0   memory length: 2000   epsilon: 0.6483645156321189
+INFO: Episode has ended
+INFO: Done
+episode: 640   score: 240.0   memory length: 2000   epsilon: 0.6479283128936705
+INFO: Episode has ended
+INFO: Done
+episode: 641   score: 230.0   memory length: 2000   epsilon: 0.6475798210397916
+INFO: Episode has ended
+INFO: Done
+episode: 642   score: 150.0   memory length: 2000   epsilon: 0.647226986017173
+INFO: Episode has ended
+INFO: Done
+episode: 643   score: 210.0   memory length: 2000   epsilon: 0.6468109526262038
+INFO: Episode has ended
+INFO: Done
+episode: 644   score: 320.0   memory length: 2000   epsilon: 0.646263335424127
+INFO: Episode has ended
+INFO: Done
+episode: 645   score: 270.0   memory length: 2000   epsilon: 0.6458220880485288
+INFO: Episode has ended
+INFO: Done
+episode: 646   score: 280.0   memory length: 2000   epsilon: 0.6454321290918172
+INFO: Episode has ended
+INFO: Done
+episode: 647   score: 310.0   memory length: 2000   epsilon: 0.6449862893230622
+INFO: Episode has ended
+INFO: Done
+episode: 648   score: 720.0   memory length: 2000   epsilon: 0.6443622443694419
+INFO: Episode has ended
+INFO: Done
+episode: 649   score: 460.0   memory length: 2000   epsilon: 0.6438154127134242
+INFO: Episode has ended
+INFO: Done
+episode: 650   score: 430.0   memory length: 2000   epsilon: 0.6432561798620088
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 651   score: 140.0   memory length: 2000   epsilon: 0.642957778079911
+INFO: Episode has ended
+INFO: Done
+episode: 652   score: 250.0   memory length: 2000   epsilon: 0.6425085074067777
+INFO: Episode has ended
+INFO: Done
+episode: 653   score: 250.0   memory length: 2000   epsilon: 0.6421443081612102
+INFO: Episode has ended
+INFO: Done
+episode: 654   score: 290.0   memory length: 2000   epsilon: 0.6415724121141976
+INFO: Episode has ended
+INFO: Done
+episode: 655   score: 420.0   memory length: 2000   epsilon: 0.6409939744238524
+INFO: Episode has ended
+INFO: Done
+episode: 656   score: 360.0   memory length: 2000   epsilon: 0.640551200362182
+INFO: Episode has ended
+INFO: Done
+episode: 657   score: 150.0   memory length: 2000   epsilon: 0.6402085969532603
+INFO: Episode has ended
+INFO: Done
+episode: 658   score: 220.0   memory length: 2000   epsilon: 0.6397925963720641
+INFO: Episode has ended
+INFO: Done
+episode: 659   score: 1100.0   memory length: 2000   epsilon: 0.6391454534504919
+INFO: Episode has ended
+INFO: Done
+episode: 660   score: 230.0   memory length: 2000   epsilon: 0.6387780502695835
+INFO: Episode has ended
+INFO: Done
+episode: 661   score: 260.0   memory length: 2000   epsilon: 0.6384204345243684
+INFO: Episode has ended
+INFO: Done
+episode: 662   score: 250.0   memory length: 2000   epsilon: 0.6380266504142542
+INFO: Episode has ended
+INFO: Done
+episode: 663   score: 260.0   memory length: 2000   epsilon: 0.6376178061754827
+INFO: Episode has ended
+INFO: Done
+episode: 664   score: 260.0   memory length: 2000   epsilon: 0.6372232426861651
+INFO: Episode has ended
+INFO: Done
+episode: 665   score: 1690.0   memory length: 2000   epsilon: 0.6367620597962073
+INFO: Episode has ended
+INFO: Done
+episode: 666   score: 220.0   memory length: 2000   epsilon: 0.6364386666569375
+INFO: Episode has ended
+INFO: Done
+episode: 667   score: 240.0   memory length: 2000   epsilon: 0.6360193915322884
+INFO: Episode has ended
+INFO: Done
+episode: 668   score: 320.0   memory length: 2000   epsilon: 0.6355736979498166
+INFO: Episode has ended
+INFO: Done
+episode: 669   score: 210.0   memory length: 2000   epsilon: 0.6351899271548048
+INFO: Episode has ended
+INFO: Done
+episode: 670   score: 390.0   memory length: 2000   epsilon: 0.6346984801199862
+INFO: Episode has ended
+INFO: Done
+episode: 671   score: 310.0   memory length: 2000   epsilon: 0.6342492724097373
+INFO: Episode has ended
+INFO: Done
+episode: 672   score: 230.0   memory length: 2000   epsilon: 0.6338105235184665
+INFO: Episode has ended
+INFO: Done
+episode: 673   score: 1120.0   memory length: 2000   epsilon: 0.6332701133893711
+INFO: Episode has ended
+INFO: Done
+episode: 674   score: 390.0   memory length: 2000   epsilon: 0.6326188132684064
+INFO: Episode has ended
+INFO: Done
+episode: 675   score: 640.0   memory length: 2000   epsilon: 0.6320193745125551
+INFO: Episode has ended
+INFO: Done
+episode: 676   score: 700.0   memory length: 2000   epsilon: 0.6312197438575898
+INFO: Episode has ended
+INFO: Done
+episode: 677   score: 320.0   memory length: 2000   epsilon: 0.6308152614499855
+INFO: Episode has ended
+INFO: Done
+episode: 678   score: 170.0   memory length: 2000   epsilon: 0.6304356247548735
+INFO: Episode has ended
+INFO: Done
+episode: 679   score: 470.0   memory length: 2000   epsilon: 0.6299125800183821
+INFO: Episode has ended
+INFO: Done
+episode: 680   score: 120.0   memory length: 2000   epsilon: 0.6296254052191287
+INFO: Episode has ended
+INFO: Done
+episode: 681   score: 270.0   memory length: 2000   epsilon: 0.629170350345774
+INFO: Episode has ended
+INFO: Done
+episode: 682   score: 190.0   memory length: 2000   epsilon: 0.6288539570809196
+INFO: Episode has ended
+INFO: Done
+episode: 683   score: 160.0   memory length: 2000   epsilon: 0.6284447061758454
+INFO: Episode has ended
+INFO: Done
+episode: 684   score: 290.0   memory length: 2000   epsilon: 0.6280055766003161
+INFO: Episode has ended
+INFO: Done
+episode: 685   score: 240.0   memory length: 2000   epsilon: 0.6275535750992163
+INFO: Episode has ended
+INFO: Done
+episode: 686   score: 170.0   memory length: 2000   epsilon: 0.6272191780012235
+INFO: Episode has ended
+INFO: Done
+episode: 687   score: 160.0   memory length: 2000   epsilon: 0.6267458060055467
+INFO: Episode has ended
+INFO: Done
+episode: 688   score: 510.0   memory length: 2000   epsilon: 0.6261513060732142
+INFO: Episode has ended
+INFO: Done
+episode: 689   score: 200.0   memory length: 2000   epsilon: 0.6257369308747177
+INFO: Episode has ended
+INFO: Done
+episode: 690   score: 640.0   memory length: 2000   epsilon: 0.625274056599025
+INFO: Episode has ended
+INFO: Done
+episode: 691   score: 680.0   memory length: 2000   epsilon: 0.6247259313653558
+INFO: Episode has ended
+INFO: Done
+episode: 692   score: 250.0   memory length: 2000   epsilon: 0.6242781631927412
+INFO: Episode has ended
+INFO: Done
+episode: 693   score: 170.0   memory length: 2000   epsilon: 0.6239929331095763
+INFO: Episode has ended
+INFO: Done
+episode: 694   score: 330.0   memory length: 2000   epsilon: 0.6235569142376592
+INFO: Episode has ended
+INFO: Done
+episode: 695   score: 290.0   memory length: 2000   epsilon: 0.6230464299414965
+INFO: Episode has ended
+INFO: Done
+episode: 696   score: 250.0   memory length: 2000   epsilon: 0.622656524734453
+INFO: Episode has ended
+INFO: Done
+episode: 697   score: 210.0   memory length: 2000   epsilon: 0.6223154022644205
+INFO: Episode has ended
+INFO: Done
+episode: 698   score: 230.0   memory length: 2000   epsilon: 0.6218967246901526
+INFO: Episode has ended
+INFO: Done
+episode: 699   score: 310.0   memory length: 2000   epsilon: 0.6213844926014787
+INFO: Episode has ended
+INFO: Done
+episode: 700   score: 320.0   memory length: 2000   epsilon: 0.6210024584350488
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 701   score: 200.0   memory length: 2000   epsilon: 0.6206200385268564
+INFO: Episode has ended
+INFO: Done
+episode: 702   score: 510.0   memory length: 2000   epsilon: 0.6199960083958497
+INFO: Episode has ended
+INFO: Done
+episode: 703   score: 270.0   memory length: 2000   epsilon: 0.6195404785296349
+INFO: Episode has ended
+INFO: Done
+episode: 704   score: 550.0   memory length: 2000   epsilon: 0.6189942844614523
+INFO: Episode has ended
+INFO: Done
+episode: 705   score: 220.0   memory length: 2000   epsilon: 0.6185060903448069
+INFO: Episode has ended
+INFO: Done
+episode: 706   score: 350.0   memory length: 2000   epsilon: 0.6180256975291762
+INFO: Episode has ended
+INFO: Done
+episode: 707   score: 400.0   memory length: 2000   epsilon: 0.6174419388225456
+INFO: Episode has ended
+INFO: Done
+episode: 708   score: 290.0   memory length: 2000   epsilon: 0.6169734779601229
+INFO: Episode has ended
+INFO: Done
+episode: 709   score: 360.0   memory length: 2000   epsilon: 0.6165411308912395
+INFO: Episode has ended
+INFO: Done
+episode: 710   score: 190.0   memory length: 2000   epsilon: 0.6161762463757721
+INFO: Episode has ended
+INFO: Done
+episode: 711   score: 220.0   memory length: 2000   epsilon: 0.6157315274663611
+INFO: Episode has ended
+INFO: Done
+episode: 712   score: 330.0   memory length: 2000   epsilon: 0.6152668253778716
+INFO: Episode has ended
+INFO: Done
+episode: 713   score: 620.0   memory length: 2000   epsilon: 0.6147354641561511
+INFO: Episode has ended
+INFO: Done
+episode: 714   score: 160.0   memory length: 2000   epsilon: 0.614321886166576
+INFO: Episode has ended
+INFO: Done
+episode: 715   score: 190.0   memory length: 2000   epsilon: 0.6139785760246692
+INFO: Episode has ended
+INFO: Done
+episode: 716   score: 260.0   memory length: 2000   epsilon: 0.6135875960165932
+INFO: Episode has ended
+INFO: Done
+episode: 717   score: 380.0   memory length: 2000   epsilon: 0.6130484892222734
+INFO: Episode has ended
+INFO: Done
+episode: 718   score: 300.0   memory length: 2000   epsilon: 0.6126532002434681
+INFO: Episode has ended
+INFO: Done
+episode: 719   score: 310.0   memory length: 2000   epsilon: 0.6123126595729315
+INFO: Episode has ended
+INFO: Done
+episode: 720   score: 210.0   memory length: 2000   epsilon: 0.6119955635916651
+INFO: Episode has ended
+INFO: Done
+episode: 721   score: 430.0   memory length: 2000   epsilon: 0.6113202929697745
+INFO: Episode has ended
+INFO: Done
+episode: 722   score: 210.0   memory length: 2000   epsilon: 0.6109487230145657
+INFO: Episode has ended
+INFO: Done
+episode: 723   score: 210.0   memory length: 2000   epsilon: 0.610619510219063
+INFO: Episode has ended
+INFO: Done
+episode: 724   score: 270.0   memory length: 2000   epsilon: 0.6101745305883944
+INFO: Episode has ended
+INFO: Done
+episode: 725   score: 430.0   memory length: 2000   epsilon: 0.6097201196249875
+INFO: Episode has ended
+INFO: Done
+episode: 726   score: 230.0   memory length: 2000   epsilon: 0.6093001669428887
+INFO: Episode has ended
+INFO: Done
+episode: 727   score: 450.0   memory length: 2000   epsilon: 0.6087502169569375
+INFO: Episode has ended
+INFO: Done
+episode: 728   score: 190.0   memory length: 2000   epsilon: 0.608393593652313
+INFO: Episode has ended
+INFO: Done
+episode: 729   score: 170.0   memory length: 2000   epsilon: 0.6080414355451091
+INFO: Episode has ended
+INFO: Done
+episode: 730   score: 170.0   memory length: 2000   epsilon: 0.6077630161913097
+INFO: Episode has ended
+INFO: Done
+episode: 731   score: 330.0   memory length: 2000   epsilon: 0.6073419821157187
+INFO: Episode has ended
+INFO: Done
+episode: 732   score: 170.0   memory length: 2000   epsilon: 0.6067173483329841
+INFO: Episode has ended
+INFO: Done
+episode: 733   score: 950.0   memory length: 2000   epsilon: 0.6060679015689963
+INFO: Episode has ended
+INFO: Done
+episode: 734   score: 370.0   memory length: 2000   epsilon: 0.6055529624752953
+INFO: Episode has ended
+INFO: Done
+episode: 735   score: 240.0   memory length: 2000   epsilon: 0.6052060798457112
+INFO: Episode has ended
+INFO: Done
+episode: 736   score: 170.0   memory length: 2000   epsilon: 0.6048140331467848
+INFO: Episode has ended
+INFO: Done
+episode: 737   score: 390.0   memory length: 2000   epsilon: 0.6042608811355024
+INFO: Episode has ended
+INFO: Done
+episode: 738   score: 610.0   memory length: 2000   epsilon: 0.6036774466768053
+INFO: Episode has ended
+INFO: Done
+episode: 739   score: 300.0   memory length: 2000   epsilon: 0.6032417486483581
+INFO: Episode has ended
+INFO: Done
+episode: 740   score: 280.0   memory length: 2000   epsilon: 0.6027925006866223
+INFO: Episode has ended
+INFO: Done
+episode: 741   score: 300.0   memory length: 2000   epsilon: 0.602343587290146
+INFO: Episode has ended
+INFO: Done
+episode: 742   score: 250.0   memory length: 2000   epsilon: 0.6019245018025041
+INFO: Episode has ended
+INFO: Done
+episode: 743   score: 760.0   memory length: 2000   epsilon: 0.6012783815931498
+INFO: Episode has ended
+INFO: Done
+episode: 744   score: 240.0   memory length: 2000   epsilon: 0.6008684493347144
+INFO: Episode has ended
+INFO: Done
+episode: 745   score: 300.0   memory length: 2000   epsilon: 0.6004593970143037
+INFO: Episode has ended
+INFO: Done
+episode: 746   score: 470.0   memory length: 2000   epsilon: 0.5999282252605158
+INFO: Episode has ended
+INFO: Done
+episode: 747   score: 500.0   memory length: 2000   epsilon: 0.5990361954500577
+INFO: Episode has ended
+INFO: Done
+episode: 748   score: 700.0   memory length: 2000   epsilon: 0.5984883277449697
+INFO: Episode has ended
+INFO: Done
+episode: 749   score: 640.0   memory length: 2000   epsilon: 0.5978345370375381
+INFO: Episode has ended
+INFO: Done
+episode: 750   score: 270.0   memory length: 2000   epsilon: 0.5973881211722346
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 751   score: 400.0   memory length: 2000   epsilon: 0.5967438866943595
+INFO: Episode has ended
+INFO: Done
+episode: 752   score: 210.0   memory length: 2000   epsilon: 0.5963662671544536
+INFO: Episode has ended
+INFO: Done
+episode: 753   score: 310.0   memory length: 2000   epsilon: 0.59603001124472
+INFO: Episode has ended
+INFO: Done
+episode: 754   score: 320.0   memory length: 2000   epsilon: 0.5955230052132974
+INFO: Episode has ended
+INFO: Done
+episode: 755   score: 560.0   memory length: 2000   epsilon: 0.595041421688077
+INFO: Episode has ended
+INFO: Done
+episode: 756   score: 210.0   memory length: 2000   epsilon: 0.5946565542138541
+INFO: Episode has ended
+INFO: Done
+episode: 757   score: 970.0   memory length: 2000   epsilon: 0.5941317039695279
+INFO: Episode has ended
+INFO: Done
+episode: 758   score: 520.0   memory length: 2000   epsilon: 0.5935990065152303
+INFO: Episode has ended
+INFO: Done
+episode: 759   score: 320.0   memory length: 2000   epsilon: 0.5931231307257516
+INFO: Episode has ended
+INFO: Done
+episode: 760   score: 950.0   memory length: 2000   epsilon: 0.5925854116697615
+INFO: Episode has ended
+INFO: Done
+episode: 761   score: 390.0   memory length: 2000   epsilon: 0.592159495680948
+INFO: Episode has ended
+INFO: Done
+episode: 762   score: 220.0   memory length: 2000   epsilon: 0.5917977965585617
+INFO: Episode has ended
+INFO: Done
+episode: 763   score: 540.0   memory length: 2000   epsilon: 0.5911625465977063
+INFO: Episode has ended
+INFO: Done
+episode: 764   score: 260.0   memory length: 2000   epsilon: 0.5908185899246989
+INFO: Episode has ended
+INFO: Done
+episode: 765   score: 200.0   memory length: 2000   epsilon: 0.5904565289310667
+INFO: Episode has ended
+INFO: Done
+episode: 766   score: 590.0   memory length: 2000   epsilon: 0.5899867123109382
+INFO: Episode has ended
+INFO: Done
+episode: 767   score: 300.0   memory length: 2000   epsilon: 0.5895320076395576
+INFO: Episode has ended
+INFO: Done
+episode: 768   score: 280.0   memory length: 2000   epsilon: 0.5891171229552689
+INFO: Episode has ended
+INFO: Done
+episode: 769   score: 410.0   memory length: 2000   epsilon: 0.5886907563084041
+INFO: Episode has ended
+INFO: Done
+episode: 770   score: 440.0   memory length: 2000   epsilon: 0.5882376386721533
+INFO: Episode has ended
+INFO: Done
+episode: 771   score: 180.0   memory length: 2000   epsilon: 0.587872456316793
+INFO: Episode has ended
+INFO: Done
+episode: 772   score: 740.0   memory length: 2000   epsilon: 0.5872566883934222
+INFO: Episode has ended
+INFO: Done
+episode: 773   score: 250.0   memory length: 2000   epsilon: 0.5869226342181145
+INFO: Episode has ended
+INFO: Done
+episode: 774   score: 240.0   memory length: 2000   epsilon: 0.5865002018041665
+INFO: Episode has ended
+INFO: Done
+episode: 775   score: 350.0   memory length: 2000   epsilon: 0.5861220309581149
+INFO: Episode has ended
+INFO: Done
+episode: 776   score: 450.0   memory length: 2000   epsilon: 0.5855725059858012
+INFO: Episode has ended
+INFO: Done
+episode: 777   score: 360.0   memory length: 2000   epsilon: 0.5851650891154312
+INFO: Episode has ended
+INFO: Done
+episode: 778   score: 310.0   memory length: 2000   epsilon: 0.5847737443945347
+INFO: Episode has ended
+INFO: Done
+episode: 779   score: 770.0   memory length: 2000   epsilon: 0.5841869258939164
+INFO: Episode has ended
+INFO: Done
+episode: 780   score: 620.0   memory length: 2000   epsilon: 0.5837285188761671
+INFO: Episode has ended
+INFO: Done
+episode: 781   score: 240.0   memory length: 2000   epsilon: 0.5833608855421083
+INFO: Episode has ended
+INFO: Done
+episode: 782   score: 250.0   memory length: 2000   epsilon: 0.5829888198126773
+INFO: Episode has ended
+INFO: Done
+episode: 783   score: 230.0   memory length: 2000   epsilon: 0.5826338875317842
+INFO: Episode has ended
+INFO: Done
+episode: 784   score: 240.0   memory length: 2000   epsilon: 0.5822139596910767
+INFO: Episode has ended
+INFO: Done
+episode: 785   score: 140.0   memory length: 2000   epsilon: 0.5818577535798191
+INFO: Episode has ended
+INFO: Done
+episode: 786   score: 380.0   memory length: 2000   epsilon: 0.5814686207275495
+INFO: Episode has ended
+INFO: Done
+episode: 787   score: 250.0   memory length: 2000   epsilon: 0.5810780048807236
+INFO: Episode has ended
+INFO: Done
+episode: 788   score: 230.0   memory length: 2000   epsilon: 0.5806952004320141
+INFO: Episode has ended
+INFO: Done
+episode: 789   score: 170.0   memory length: 2000   epsilon: 0.5803793879938354
+INFO: Episode has ended
+INFO: Done
+episode: 790   score: 310.0   memory length: 2000   epsilon: 0.5798926536575325
+INFO: Episode has ended
+INFO: Done
+episode: 791   score: 150.0   memory length: 2000   epsilon: 0.5795506177313657
+INFO: Episode has ended
+INFO: Done
+episode: 792   score: 820.0   memory length: 2000   epsilon: 0.5790078328655645
+INFO: Episode has ended
+INFO: Done
+episode: 793   score: 240.0   memory length: 2000   epsilon: 0.5786148197935697
+INFO: Episode has ended
+INFO: Done
+episode: 794   score: 290.0   memory length: 2000   epsilon: 0.5782371074638746
+INFO: Episode has ended
+INFO: Done
+episode: 795   score: 250.0   memory length: 2000   epsilon: 0.5778694654022641
+INFO: Episode has ended
+INFO: Done
+episode: 796   score: 320.0   memory length: 2000   epsilon: 0.577452394020581
+INFO: Episode has ended
+INFO: Done
+episode: 797   score: 240.0   memory length: 2000   epsilon: 0.5771377680518808
+INFO: Episode has ended
+INFO: Done
+episode: 798   score: 400.0   memory length: 2000   epsilon: 0.576721224765284
+INFO: Episode has ended
+INFO: Done
+episode: 799   score: 1900.0   memory length: 2000   epsilon: 0.5761724471444973
+INFO: Episode has ended
+INFO: Done
+episode: 800   score: 850.0   memory length: 2000   epsilon: 0.5755879285117572
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 801   score: 510.0   memory length: 2000   epsilon: 0.5750885347083616
+INFO: Episode has ended
+INFO: Done
+episode: 802   score: 230.0   memory length: 2000   epsilon: 0.5747470333839204
+INFO: Episode has ended
+INFO: Done
+episode: 803   score: 1170.0   memory length: 2000   epsilon: 0.5742397554959366
+INFO: Episode has ended
+INFO: Done
+episode: 804   score: 160.0   memory length: 2000   epsilon: 0.573939506475641
+INFO: Episode has ended
+INFO: Done
+episode: 805   score: 250.0   memory length: 2000   epsilon: 0.573551654284137
+INFO: Episode has ended
+INFO: Done
+episode: 806   score: 120.0   memory length: 2000   epsilon: 0.5732569243385462
+INFO: Episode has ended
+INFO: Done
+episode: 807   score: 490.0   memory length: 2000   epsilon: 0.5727074341959806
+INFO: Episode has ended
+INFO: Done
+episode: 808   score: 230.0   memory length: 2000   epsilon: 0.572306679072312
+INFO: Episode has ended
+INFO: Done
+episode: 809   score: 260.0   memory length: 2000   epsilon: 0.5719216460629085
+INFO: Episode has ended
+INFO: Done
+episode: 810   score: 440.0   memory length: 2000   epsilon: 0.5715368720936742
+INFO: Episode has ended
+INFO: Done
+episode: 811   score: 240.0   memory length: 2000   epsilon: 0.5712146160214302
+INFO: Episode has ended
+INFO: Done
+episode: 812   score: 280.0   memory length: 2000   epsilon: 0.5707983521048385
+INFO: Episode has ended
+INFO: Done
+episode: 813   score: 180.0   memory length: 2000   epsilon: 0.5704890630682442
+INFO: Episode has ended
+INFO: Done
+episode: 814   score: 300.0   memory length: 2000   epsilon: 0.5701286277097278
+INFO: Episode has ended
+INFO: Done
+episode: 815   score: 260.0   memory length: 2000   epsilon: 0.5697593038481544
+INFO: Episode has ended
+INFO: Done
+episode: 816   score: 290.0   memory length: 2000   epsilon: 0.5694352028576817
+INFO: Episode has ended
+INFO: Done
+episode: 817   score: 290.0   memory length: 2000   epsilon: 0.5690293400623806
+INFO: Episode has ended
+INFO: Done
+episode: 818   score: 220.0   memory length: 2000   epsilon: 0.5687335215771023
+INFO: Episode has ended
+INFO: Done
+episode: 819   score: 420.0   memory length: 2000   epsilon: 0.5682298465861035
+INFO: Episode has ended
+INFO: Done
+episode: 820   score: 230.0   memory length: 2000   epsilon: 0.5678515313120792
+INFO: Episode has ended
+INFO: Done
+episode: 821   score: 200.0   memory length: 2000   epsilon: 0.5675557575721207
+INFO: Episode has ended
+INFO: Done
+episode: 822   score: 250.0   memory length: 2000   epsilon: 0.5672215654930338
+INFO: Episode has ended
+INFO: Done
+episode: 823   score: 220.0   memory length: 2000   epsilon: 0.5668388199360986
+INFO: Episode has ended
+INFO: Done
+episode: 824   score: 370.0   memory length: 2000   epsilon: 0.5664585984763644
+INFO: Episode has ended
+INFO: Done
+episode: 825   score: 270.0   memory length: 2000   epsilon: 0.5661392057443357
+INFO: Episode has ended
+INFO: Done
+episode: 826   score: 250.0   memory length: 2000   epsilon: 0.5657996239358183
+INFO: Episode has ended
+INFO: Done
+episode: 827   score: 230.0   memory length: 2000   epsilon: 0.5654545912383626
+INFO: Episode has ended
+INFO: Done
+episode: 828   score: 260.0   memory length: 2000   epsilon: 0.5650447850275009
+INFO: Episode has ended
+INFO: Done
+episode: 829   score: 610.0   memory length: 2000   epsilon: 0.5645867192485775
+INFO: Episode has ended
+INFO: Done
+episode: 830   score: 650.0   memory length: 2000   epsilon: 0.5638887569065753
+INFO: Episode has ended
+INFO: Done
+episode: 831   score: 520.0   memory length: 2000   epsilon: 0.5633966965913304
+INFO: Episode has ended
+INFO: Done
+episode: 832   score: 630.0   memory length: 2000   epsilon: 0.5629213901492741
+INFO: Episode has ended
+INFO: Done
+episode: 833   score: 460.0   memory length: 2000   epsilon: 0.5623694347679234
+INFO: Episode has ended
+INFO: Done
+episode: 834   score: 660.0   memory length: 2000   epsilon: 0.5618674627755269
+INFO: Episode has ended
+INFO: Done
+episode: 835   score: 750.0   memory length: 2000   epsilon: 0.5613406779327514
+INFO: Episode has ended
+INFO: Done
+episode: 836   score: 320.0   memory length: 2000   epsilon: 0.5609181472937418
+INFO: Episode has ended
+INFO: Done
+episode: 837   score: 130.0   memory length: 2000   epsilon: 0.5606080451543735
+INFO: Episode has ended
+INFO: Done
+episode: 838   score: 280.0   memory length: 2000   epsilon: 0.5602813057544591
+INFO: Episode has ended
+INFO: Done
+episode: 839   score: 180.0   memory length: 2000   epsilon: 0.5599681958703455
+INFO: Episode has ended
+INFO: Done
+episode: 840   score: 220.0   memory length: 2000   epsilon: 0.5596244807575527
+INFO: Episode has ended
+INFO: Done
+episode: 841   score: 450.0   memory length: 2000   epsilon: 0.5591232815429581
+INFO: Episode has ended
+INFO: Done
+episode: 842   score: 300.0   memory length: 2000   epsilon: 0.5587409717920556
+INFO: Episode has ended
+INFO: Done
+episode: 843   score: 640.0   memory length: 2000   epsilon: 0.5582400056067854
+INFO: Episode has ended
+INFO: Done
+episode: 844   score: 450.0   memory length: 2000   epsilon: 0.5577841095531408
+INFO: Episode has ended
+INFO: Done
+episode: 845   score: 290.0   memory length: 2000   epsilon: 0.5574924645898193
+INFO: Episode has ended
+INFO: Done
+episode: 846   score: 240.0   memory length: 2000   epsilon: 0.5571162839633635
+INFO: Episode has ended
+INFO: Done
+episode: 847   score: 280.0   memory length: 2000   epsilon: 0.5567949204291206
+INFO: Episode has ended
+INFO: Done
+episode: 848   score: 280.0   memory length: 2000   epsilon: 0.556477081122385
+INFO: Episode has ended
+INFO: Done
+episode: 849   score: 500.0   memory length: 2000   epsilon: 0.555979812675329
+INFO: Episode has ended
+INFO: Done
+episode: 850   score: 440.0   memory length: 2000   epsilon: 0.5555118744687032
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 851   score: 280.0   memory length: 2000   epsilon: 0.5551270379085361
+INFO: Episode has ended
+INFO: Done
+episode: 852   score: 150.0   memory length: 2000   epsilon: 0.5548001641935209
+INFO: Episode has ended
+INFO: Done
+episode: 853   score: 220.0   memory length: 2000   epsilon: 0.5544701561179505
+INFO: Episode has ended
+INFO: Done
+episode: 854   score: 290.0   memory length: 2000   epsilon: 0.554166389560145
+INFO: Episode has ended
+INFO: Done
+episode: 855   score: 1000.0   memory length: 2000   epsilon: 0.5537531353898669
+INFO: Episode has ended
+INFO: Done
+episode: 856   score: 270.0   memory length: 2000   epsilon: 0.5534552961800291
+INFO: Episode has ended
+INFO: Done
+episode: 857   score: 840.0   memory length: 2000   epsilon: 0.5527478789922101
+INFO: Episode has ended
+INFO: Done
+episode: 858   score: 410.0   memory length: 2000   epsilon: 0.5522776904056995
+INFO: Episode has ended
+INFO: Done
+episode: 859   score: 310.0   memory length: 2000   epsilon: 0.5518873678786815
+INFO: Episode has ended
+INFO: Done
+episode: 860   score: 400.0   memory length: 2000   epsilon: 0.5515028362158447
+INFO: Episode has ended
+INFO: Done
+episode: 861   score: 300.0   memory length: 2000   epsilon: 0.5511543963677155
+INFO: Episode has ended
+INFO: Done
+episode: 862   score: 460.0   memory length: 2000   epsilon: 0.5506530737527326
+INFO: Episode has ended
+INFO: Done
+episode: 863   score: 430.0   memory length: 2000   epsilon: 0.5501632102937216
+INFO: Episode has ended
+INFO: Done
+episode: 864   score: 360.0   memory length: 2000   epsilon: 0.5497787803914057
+INFO: Episode has ended
+INFO: Done
+episode: 865   score: 260.0   memory length: 2000   epsilon: 0.5493709956393033
+INFO: Episode has ended
+INFO: Done
+episode: 866   score: 280.0   memory length: 2000   epsilon: 0.5489799825120817
+INFO: Episode has ended
+INFO: Done
+episode: 867   score: 340.0   memory length: 2000   epsilon: 0.5486111917070171
+INFO: Episode has ended
+INFO: Done
+episode: 868   score: 190.0   memory length: 2000   epsilon: 0.5482952824932179
+INFO: Episode has ended
+INFO: Done
+episode: 869   score: 460.0   memory length: 2000   epsilon: 0.5476952274489367
+INFO: Episode has ended
+INFO: Done
+episode: 870   score: 340.0   memory length: 2000   epsilon: 0.5472900827000861
+INFO: Episode has ended
+INFO: Done
+episode: 871   score: 230.0   memory length: 2000   epsilon: 0.5469289902385673
+INFO: Episode has ended
+INFO: Done
+episode: 872   score: 350.0   memory length: 2000   epsilon: 0.5465222262014219
+INFO: Episode has ended
+INFO: Done
+episode: 873   score: 310.0   memory length: 2000   epsilon: 0.546155086454606
+INFO: Episode has ended
+INFO: Done
+episode: 874   score: 160.0   memory length: 2000   epsilon: 0.545888081771785
+INFO: Episode has ended
+INFO: Done
+episode: 875   score: 220.0   memory length: 2000   epsilon: 0.5455159128379529
+INFO: Episode has ended
+INFO: Done
+episode: 876   score: 510.0   memory length: 2000   epsilon: 0.5449347024244345
+INFO: Episode has ended
+INFO: Done
+episode: 877   score: 300.0   memory length: 2000   epsilon: 0.5446165533077202
+INFO: Episode has ended
+INFO: Done
+episode: 878   score: 430.0   memory length: 2000   epsilon: 0.5441347806329971
+INFO: Episode has ended
+INFO: Done
+episode: 879   score: 220.0   memory length: 2000   epsilon: 0.5437670696377426
+INFO: Episode has ended
+INFO: Done
+episode: 880   score: 190.0   memory length: 2000   epsilon: 0.5434572105713338
+INFO: Episode has ended
+INFO: Done
+episode: 881   score: 400.0   memory length: 2000   epsilon: 0.5431127677275204
+INFO: Episode has ended
+INFO: Done
+episode: 882   score: 220.0   memory length: 2000   epsilon: 0.5427560596521931
+INFO: Episode has ended
+INFO: Done
+episode: 883   score: 330.0   memory length: 2000   epsilon: 0.5424261641013766
+INFO: Episode has ended
+INFO: Done
+episode: 884   score: 280.0   memory length: 2000   epsilon: 0.5421241167049483
+INFO: Episode has ended
+INFO: Done
+episode: 885   score: 210.0   memory length: 2000   epsilon: 0.5417555974320711
+INFO: Episode has ended
+INFO: Done
+episode: 886   score: 230.0   memory length: 2000   epsilon: 0.5414696258367785
+INFO: Episode has ended
+INFO: Done
+episode: 887   score: 640.0   memory length: 2000   epsilon: 0.5410696274009005
+INFO: Episode has ended
+INFO: Done
+episode: 888   score: 290.0   memory length: 2000   epsilon: 0.5407407568897622
+INFO: Episode has ended
+INFO: Done
+episode: 889   score: 380.0   memory length: 2000   epsilon: 0.5403964145401245
+INFO: Episode has ended
+INFO: Done
+episode: 890   score: 780.0   memory length: 2000   epsilon: 0.53987734278013
+INFO: Episode has ended
+INFO: Done
+episode: 891   score: 240.0   memory length: 2000   epsilon: 0.5395545924797218
+INFO: Episode has ended
+INFO: Done
+episode: 892   score: 790.0   memory length: 2000   epsilon: 0.5388908090869702
+INFO: Episode has ended
+INFO: Done
+episode: 893   score: 590.0   memory length: 2000   epsilon: 0.5383861046374494
+INFO: Episode has ended
+INFO: Done
+episode: 894   score: 450.0   memory length: 2000   epsilon: 0.5379587955208671
+INFO: Episode has ended
+INFO: Done
+episode: 895   score: 170.0   memory length: 2000   epsilon: 0.5376479450260685
+INFO: Episode has ended
+INFO: Done
+episode: 896   score: 160.0   memory length: 2000   epsilon: 0.537373276972482
+INFO: Episode has ended
+INFO: Done
+episode: 897   score: 260.0   memory length: 2000   epsilon: 0.5370412827180958
+INFO: Episode has ended
+INFO: Done
+episode: 898   score: 650.0   memory length: 2000   epsilon: 0.5365313355078011
+INFO: Episode has ended
+INFO: Done
+episode: 899   score: 540.0   memory length: 2000   epsilon: 0.536002576067838
+INFO: Episode has ended
+INFO: Done
+episode: 900   score: 600.0   memory length: 2000   epsilon: 0.5353843855504772
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 901   score: 640.0   memory length: 2000   epsilon: 0.5349648084781096
+INFO: Episode has ended
+INFO: Done
+episode: 902   score: 180.0   memory length: 2000   epsilon: 0.5347294756217326
+INFO: Episode has ended
+INFO: Done
+episode: 903   score: 180.0   memory length: 2000   epsilon: 0.5344648498992491
+INFO: Episode has ended
+INFO: Done
+episode: 904   score: 1000.0   memory length: 2000   epsilon: 0.5340625491513528
+INFO: Episode has ended
+INFO: Done
+episode: 905   score: 160.0   memory length: 2000   epsilon: 0.5338345530095012
+INFO: Episode has ended
+INFO: Done
+episode: 906   score: 310.0   memory length: 2000   epsilon: 0.5334972759941141
+INFO: Episode has ended
+INFO: Done
+episode: 907   score: 360.0   memory length: 2000   epsilon: 0.5331138291266078
+INFO: Episode has ended
+INFO: Done
+episode: 908   score: 340.0   memory length: 2000   epsilon: 0.5327988517810696
+INFO: Episode has ended
+INFO: Done
+episode: 909   score: 300.0   memory length: 2000   epsilon: 0.5324808656358626
+INFO: Episode has ended
+INFO: Done
+episode: 910   score: 320.0   memory length: 2000   epsilon: 0.5320906999794399
+INFO: Episode has ended
+INFO: Done
+episode: 911   score: 300.0   memory length: 2000   epsilon: 0.5317258107481143
+INFO: Episode has ended
+INFO: Done
+episode: 912   score: 800.0   memory length: 2000   epsilon: 0.5309781982273054
+INFO: Episode has ended
+INFO: Done
+episode: 913   score: 250.0   memory length: 2000   epsilon: 0.5306443177900776
+INFO: Episode has ended
+INFO: Done
+episode: 914   score: 390.0   memory length: 2000   epsilon: 0.5302676938534432
+INFO: Episode has ended
+INFO: Done
+episode: 915   score: 720.0   memory length: 2000   epsilon: 0.5296656514770004
+INFO: Episode has ended
+INFO: Done
+episode: 916   score: 240.0   memory length: 2000   epsilon: 0.5293405364249621
+INFO: Episode has ended
+INFO: Done
+episode: 917   score: 790.0   memory length: 2000   epsilon: 0.5288019416808061
+INFO: Episode has ended
+INFO: Done
+episode: 918   score: 220.0   memory length: 2000   epsilon: 0.528422926392321
+INFO: Episode has ended
+INFO: Done
+episode: 919   score: 350.0   memory length: 2000   epsilon: 0.5280552718103484
+INFO: Episode has ended
+INFO: Done
+episode: 920   score: 290.0   memory length: 2000   epsilon: 0.5277216461485561
+INFO: Episode has ended
+INFO: Done
+episode: 921   score: 260.0   memory length: 2000   epsilon: 0.5273971969522958
+INFO: Episode has ended
+INFO: Done
+episode: 922   score: 330.0   memory length: 2000   epsilon: 0.5270423778713402
+INFO: Episode has ended
+INFO: Done
+episode: 923   score: 210.0   memory length: 2000   epsilon: 0.5267673334054123
+INFO: Episode has ended
+INFO: Done
+episode: 924   score: 180.0   memory length: 2000   epsilon: 0.5264160965689099
+INFO: Episode has ended
+INFO: Done
+episode: 925   score: 260.0   memory length: 2000   epsilon: 0.5260798239655952
+INFO: Episode has ended
+INFO: Done
+episode: 926   score: 240.0   memory length: 2000   epsilon: 0.5257406117172314
+INFO: Episode has ended
+INFO: Done
+episode: 927   score: 780.0   memory length: 2000   epsilon: 0.5252119823426721
+INFO: Episode has ended
+INFO: Done
+episode: 928   score: 300.0   memory length: 2000   epsilon: 0.5249252947298
+INFO: Episode has ended
+INFO: Done
+episode: 929   score: 380.0   memory length: 2000   epsilon: 0.5245275519210809
+INFO: Episode has ended
+INFO: Done
+episode: 930   score: 520.0   memory length: 2000   epsilon: 0.5240541170929611
+INFO: Episode has ended
+INFO: Done
+episode: 931   score: 440.0   memory length: 2000   epsilon: 0.523676410065417
+INFO: Episode has ended
+INFO: Done
+episode: 932   score: 290.0   memory length: 2000   epsilon: 0.5233895138659833
+INFO: Episode has ended
+INFO: Done
+episode: 933   score: 220.0   memory length: 2000   epsilon: 0.523063543586136
+INFO: Episode has ended
+INFO: Done
+episode: 934   score: 340.0   memory length: 2000   epsilon: 0.5227236625861457
+INFO: Episode has ended
+INFO: Done
+episode: 935   score: 290.0   memory length: 2000   epsilon: 0.5223526603215862
+INFO: Episode has ended
+INFO: Done
+episode: 936   score: 250.0   memory length: 2000   epsilon: 0.522016373336218
+INFO: Episode has ended
+INFO: Done
+episode: 937   score: 430.0   memory length: 2000   epsilon: 0.5216150968550552
+INFO: Episode has ended
+INFO: Done
+episode: 938   score: 210.0   memory length: 2000   epsilon: 0.5213069132559367
+INFO: Episode has ended
+INFO: Done
+episode: 939   score: 370.0   memory length: 2000   epsilon: 0.520923372336371
+INFO: Episode has ended
+INFO: Done
+episode: 940   score: 360.0   memory length: 2000   epsilon: 0.5205140872311776
+INFO: Episode has ended
+INFO: Done
+episode: 941   score: 230.0   memory length: 2000   epsilon: 0.5202341258286282
+INFO: Episode has ended
+INFO: Done
+episode: 942   score: 1810.0   memory length: 2000   epsilon: 0.5197723627471482
+INFO: Episode has ended
+INFO: Done
+episode: 943   score: 200.0   memory length: 2000   epsilon: 0.5194917613001658
+INFO: Episode has ended
+INFO: Done
+episode: 944   score: 1230.0   memory length: 2000   epsilon: 0.5187748379688288
+INFO: Episode has ended
+INFO: Done
+episode: 945   score: 310.0   memory length: 2000   epsilon: 0.5184403359195858
+INFO: Episode has ended
+INFO: Done
+episode: 946   score: 320.0   memory length: 2000   epsilon: 0.5181588990934691
+INFO: Episode has ended
+INFO: Done
+episode: 947   score: 1090.0   memory length: 2000   epsilon: 0.5176860356771479
+INFO: Episode has ended
+INFO: Done
+episode: 948   score: 180.0   memory length: 2000   epsilon: 0.5174376058837218
+INFO: Episode has ended
+INFO: Done
+episode: 949   score: 170.0   memory length: 2000   epsilon: 0.5171799859798547
+INFO: Episode has ended
+INFO: Done
+episode: 950   score: 100.0   memory length: 2000   epsilon: 0.5169886646859984
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 951   score: 670.0   memory length: 2000   epsilon: 0.5165039564398628
+INFO: Episode has ended
+INFO: Done
+episode: 952   score: 280.0   memory length: 2000   epsilon: 0.5162292492762593
+INFO: Episode has ended
+INFO: Done
+episode: 953   score: 540.0   memory length: 2000   epsilon: 0.5157468002670083
+INFO: Episode has ended
+INFO: Done
+episode: 954   score: 500.0   memory length: 2000   epsilon: 0.5153591042713132
+INFO: Episode has ended
+INFO: Done
+episode: 955   score: 1110.0   memory length: 2000   epsilon: 0.5149026980945054
+INFO: Episode has ended
+INFO: Done
+episode: 956   score: 850.0   memory length: 2000   epsilon: 0.5144281763577248
+INFO: Episode has ended
+INFO: Done
+episode: 957   score: 460.0   memory length: 2000   epsilon: 0.513972594618181
+INFO: Episode has ended
+INFO: Done
+episode: 958   score: 280.0   memory length: 2000   epsilon: 0.5136791998921135
+INFO: Episode has ended
+INFO: Done
+episode: 959   score: 1010.0   memory length: 2000   epsilon: 0.5132391651795822
+INFO: Episode has ended
+INFO: Done
+episode: 960   score: 240.0   memory length: 2000   epsilon: 0.5129072066738787
+INFO: Episode has ended
+INFO: Done
+episode: 961   score: 250.0   memory length: 2000   epsilon: 0.5126210841450942
+INFO: Episode has ended
+INFO: Done
+episode: 962   score: 260.0   memory length: 2000   epsilon: 0.5123192390776998
+INFO: Episode has ended
+INFO: Done
+episode: 963   score: 320.0   memory length: 2000   epsilon: 0.5119837796833095
+INFO: Episode has ended
+INFO: Done
+episode: 964   score: 280.0   memory length: 2000   epsilon: 0.5116592846805201
+INFO: Episode has ended
+INFO: Done
+episode: 965   score: 250.0   memory length: 2000   epsilon: 0.5112889772407176
+INFO: Episode has ended
+INFO: Done
+episode: 966   score: 570.0   memory length: 2000   epsilon: 0.5109061649864333
+INFO: Episode has ended
+INFO: Done
+episode: 967   score: 290.0   memory length: 2000   epsilon: 0.5105670357266816
+INFO: Episode has ended
+INFO: Done
+episode: 968   score: 300.0   memory length: 2000   epsilon: 0.5102959964624763
+INFO: Episode has ended
+INFO: Done
+episode: 969   score: 400.0   memory length: 2000   epsilon: 0.5099654316060561
+INFO: Episode has ended
+INFO: Done
+episode: 970   score: 270.0   memory length: 2000   epsilon: 0.5096824791765915
+INFO: Episode has ended
+INFO: Done
+episode: 971   score: 350.0   memory length: 2000   epsilon: 0.5093059627761566
+INFO: Episode has ended
+INFO: Done
+episode: 972   score: 410.0   memory length: 2000   epsilon: 0.5089826559888994
+INFO: Episode has ended
+INFO: Done
+episode: 973   score: 330.0   memory length: 2000   epsilon: 0.5086610804181019
+INFO: Episode has ended
+INFO: Done
+episode: 974   score: 220.0   memory length: 2000   epsilon: 0.5082965009584965
+INFO: Episode has ended
+INFO: Done
+episode: 975   score: 160.0   memory length: 2000   epsilon: 0.5080612140340274
+INFO: Episode has ended
+INFO: Done
+episode: 976   score: 300.0   memory length: 2000   epsilon: 0.5077265118231105
+INFO: Episode has ended
+INFO: Done
+episode: 977   score: 200.0   memory length: 2000   epsilon: 0.5074737268425059
+INFO: Episode has ended
+INFO: Done
+episode: 978   score: 170.0   memory length: 2000   epsilon: 0.5071318046203755
+INFO: Episode has ended
+INFO: Done
+episode: 979   score: 210.0   memory length: 2000   epsilon: 0.5068737400857795
+INFO: Episode has ended
+INFO: Done
+episode: 980   score: 350.0   memory length: 2000   epsilon: 0.5065372874687578
+INFO: Episode has ended
+INFO: Done
+episode: 981   score: 370.0   memory length: 2000   epsilon: 0.5061838476302271
+INFO: Episode has ended
+INFO: Done
+episode: 982   score: 460.0   memory length: 2000   epsilon: 0.5057618660810648
+INFO: Episode has ended
+INFO: Done
+episode: 983   score: 270.0   memory length: 2000   epsilon: 0.5054579943702023
+INFO: Episode has ended
+INFO: Done
+episode: 984   score: 440.0   memory length: 2000   epsilon: 0.5050845987123436
+INFO: Episode has ended
+INFO: Done
+episode: 985   score: 520.0   memory length: 2000   epsilon: 0.5046549543436122
+INFO: Episode has ended
+INFO: Done
+episode: 986   score: 310.0   memory length: 2000   epsilon: 0.5043194701920651
+INFO: Episode has ended
+INFO: Done
+episode: 987   score: 350.0   memory length: 2000   epsilon: 0.503987736967001
+INFO: Episode has ended
+INFO: Done
+episode: 988   score: 120.0   memory length: 2000   epsilon: 0.5037267387931098
+INFO: Episode has ended
+INFO: Done
+episode: 989   score: 210.0   memory length: 2000   epsilon: 0.5034311378170025
+INFO: Episode has ended
+INFO: Done
+episode: 990   score: 190.0   memory length: 2000   epsilon: 0.503132188368433
+INFO: Episode has ended
+INFO: Done
+episode: 991   score: 210.0   memory length: 2000   epsilon: 0.5028324107768652
+INFO: Episode has ended
+INFO: Done
+episode: 992   score: 620.0   memory length: 2000   epsilon: 0.5024112135123271
+INFO: Episode has ended
+INFO: Done
+episode: 993   score: 240.0   memory length: 2000   epsilon: 0.5021078486130962
+INFO: Episode has ended
+INFO: Done
+episode: 994   score: 710.0   memory length: 2000   epsilon: 0.501690268411698
+INFO: Episode has ended
+INFO: Done
+episode: 995   score: 760.0   memory length: 2000   epsilon: 0.501279050808239
+INFO: Episode has ended
+INFO: Done
+episode: 996   score: 340.0   memory length: 2000   epsilon: 0.5009252725199006
+INFO: Episode has ended
+INFO: Done
+episode: 997   score: 270.0   memory length: 2000   epsilon: 0.5006007779286545
+INFO: Episode has ended
+INFO: Done
+episode: 998   score: 360.0   memory length: 2000   epsilon: 0.5002539815949505
+INFO: Episode has ended
+INFO: Done
+episode: 999   score: 160.0   memory length: 2000   epsilon: 0.5000024169902196
+INFO: Episode has ended
+INFO: Done
+episode: 1000   score: 150.0   memory length: 2000   epsilon: 0.49974748064437347
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 1001   score: 450.0   memory length: 2000   epsilon: 0.49939578205456997
+INFO: Episode has ended
+INFO: Done
+episode: 1002   score: 250.0   memory length: 2000   epsilon: 0.4991017244003832
+INFO: Episode has ended
+INFO: Done
+episode: 1003   score: 400.0   memory length: 2000   epsilon: 0.4987519765176494
+INFO: Episode has ended
+INFO: Done
+episode: 1004   score: 490.0   memory length: 2000   epsilon: 0.49808210378156675
+INFO: Episode has ended
+INFO: Done
+episode: 1005   score: 130.0   memory length: 2000   epsilon: 0.4978799233917317
+INFO: Episode has ended
+INFO: Done
+episode: 1006   score: 370.0   memory length: 2000   epsilon: 0.49755740154846634
+INFO: Episode has ended
+INFO: Done
+episode: 1007   score: 270.0   memory length: 2000   epsilon: 0.497255972954493
+INFO: Episode has ended
+INFO: Done
+episode: 1008   score: 180.0   memory length: 2000   epsilon: 0.4969934909708663
+INFO: Episode has ended
+INFO: Done
+episode: 1009   score: 300.0   memory length: 2000   epsilon: 0.4966606166908057
+INFO: Episode has ended
+INFO: Done
+episode: 1010   score: 190.0   memory length: 2000   epsilon: 0.49641582323091926
+INFO: Episode has ended
+INFO: Done
+episode: 1011   score: 290.0   memory length: 2000   epsilon: 0.49606002047827974
+INFO: Episode has ended
+INFO: Done
+episode: 1012   score: 170.0   memory length: 2000   epsilon: 0.49578478341463794
+INFO: Episode has ended
+INFO: Done
+episode: 1013   score: 280.0   memory length: 2000   epsilon: 0.4954556914245274
+INFO: Episode has ended
+INFO: Done
+episode: 1014   score: 320.0   memory length: 2000   epsilon: 0.4951456330650496
+INFO: Episode has ended
+INFO: Done
+episode: 1015   score: 540.0   memory length: 2000   epsilon: 0.49471207519976335
+INFO: Episode has ended
+INFO: Done
+episode: 1016   score: 280.0   memory length: 2000   epsilon: 0.49435798795522795
+INFO: Episode has ended
+INFO: Done
+episode: 1017   score: 150.0   memory length: 2000   epsilon: 0.4941281648139317
+INFO: Episode has ended
+INFO: Done
+episode: 1018   score: 380.0   memory length: 2000   epsilon: 0.493803629069037
+INFO: Episode has ended
+INFO: Done
+episode: 1019   score: 890.0   memory length: 2000   epsilon: 0.4932242434846836
+INFO: Episode has ended
+INFO: Done
+episode: 1020   score: 250.0   memory length: 2000   epsilon: 0.4929279046249184
+INFO: Episode has ended
+INFO: Done
+episode: 1021   score: 280.0   memory length: 2000   epsilon: 0.4926686925962122
+INFO: Episode has ended
+INFO: Done
+episode: 1022   score: 290.0   memory length: 2000   epsilon: 0.49241010928735796
+INFO: Episode has ended
+INFO: Done
+episode: 1023   score: 700.0   memory length: 2000   epsilon: 0.4918785931739196
+INFO: Episode has ended
+INFO: Done
+episode: 1024   score: 220.0   memory length: 2000   epsilon: 0.49157323123956315
+INFO: Episode has ended
+INFO: Done
+episode: 1025   score: 240.0   memory length: 2000   epsilon: 0.4912385836621889
+INFO: Episode has ended
+INFO: Done
+episode: 1026   score: 200.0   memory length: 2000   epsilon: 0.49100039059649686
+INFO: Episode has ended
+INFO: Done
+episode: 1027   score: 440.0   memory length: 2000   epsilon: 0.49059302914699665
+INFO: Episode has ended
+INFO: Done
+episode: 1028   score: 970.0   memory length: 2000   epsilon: 0.4901404204658152
+INFO: Episode has ended
+INFO: Done
+episode: 1029   score: 210.0   memory length: 2000   epsilon: 0.48985818073534443
+INFO: Episode has ended
+INFO: Done
+episode: 1030   score: 560.0   memory length: 2000   epsilon: 0.48942680551110423
+INFO: Episode has ended
+INFO: Done
+episode: 1031   score: 440.0   memory length: 2000   epsilon: 0.4890735667154461
+INFO: Episode has ended
+INFO: Done
+episode: 1032   score: 160.0   memory length: 2000   epsilon: 0.48880904934198754
+INFO: Episode has ended
+INFO: Done
+episode: 1033   score: 270.0   memory length: 2000   epsilon: 0.48848605316086285
+INFO: Episode has ended
+INFO: Done
+episode: 1034   score: 690.0   memory length: 2000   epsilon: 0.48810762294108895
+INFO: Episode has ended
+INFO: Done
+episode: 1035   score: 350.0   memory length: 2000   epsilon: 0.4876558442621532
+INFO: Episode has ended
+INFO: Done
+episode: 1036   score: 580.0   memory length: 2000   epsilon: 0.4872229978682545
+INFO: Episode has ended
+INFO: Done
+episode: 1037   score: 310.0   memory length: 2000   epsilon: 0.48685917801056083
+INFO: Episode has ended
+INFO: Done
+episode: 1038   score: 180.0   memory length: 2000   epsilon: 0.48667615327891717
+INFO: Episode has ended
+INFO: Done
+episode: 1039   score: 730.0   memory length: 2000   epsilon: 0.4861338115085485
+INFO: Episode has ended
+INFO: Done
+episode: 1040   score: 300.0   memory length: 2000   epsilon: 0.4857912077821268
+INFO: Episode has ended
+INFO: Done
+episode: 1041   score: 270.0   memory length: 2000   epsilon: 0.4854949653603743
+INFO: Episode has ended
+INFO: Done
+episode: 1042   score: 800.0   memory length: 2000   epsilon: 0.48490108275611354
+INFO: Episode has ended
+INFO: Done
+episode: 1043   score: 200.0   memory length: 2000   epsilon: 0.4845966603225721
+INFO: Episode has ended
+INFO: Done
+episode: 1044   score: 740.0   memory length: 2000   epsilon: 0.48413263879176094
+INFO: Episode has ended
+INFO: Done
+episode: 1045   score: 220.0   memory length: 2000   epsilon: 0.48383160177212325
+INFO: Episode has ended
+INFO: Done
+episode: 1046   score: 260.0   memory length: 2000   epsilon: 0.4835481593684911
+INFO: Episode has ended
+INFO: Done
+episode: 1047   score: 250.0   memory length: 2000   epsilon: 0.48330306246645016
+INFO: Episode has ended
+INFO: Done
+episode: 1048   score: 390.0   memory length: 2000   epsilon: 0.48296873227163817
+INFO: Episode has ended
+INFO: Done
+episode: 1049   score: 450.0   memory length: 2000   epsilon: 0.48258540710677006
+INFO: Episode has ended
+INFO: Done
+episode: 1050   score: 200.0   memory length: 2000   epsilon: 0.48235430393483675
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 1051   score: 410.0   memory length: 2000   epsilon: 0.48196086317175657
+INFO: Episode has ended
+INFO: Done
+episode: 1052   score: 620.0   memory length: 2000   epsilon: 0.4815272933138069
+INFO: Episode has ended
+INFO: Done
+episode: 1053   score: 340.0   memory length: 2000   epsilon: 0.4811802370905923
+INFO: Episode has ended
+INFO: Done
+episode: 1054   score: 710.0   memory length: 2000   epsilon: 0.48068631841078185
+INFO: Episode has ended
+INFO: Done
+episode: 1055   score: 520.0   memory length: 2000   epsilon: 0.4802342051117559
+INFO: Episode has ended
+INFO: Done
+episode: 1056   score: 420.0   memory length: 2000   epsilon: 0.47977771924787094
+INFO: Episode has ended
+INFO: Done
+episode: 1057   score: 180.0   memory length: 2000   epsilon: 0.47949809021750933
+INFO: Episode has ended
+INFO: Done
+episode: 1058   score: 220.0   memory length: 2000   epsilon: 0.4792373140635802
+INFO: Episode has ended
+INFO: Done
+episode: 1059   score: 440.0   memory length: 2000   epsilon: 0.47890148625989587
+INFO: Episode has ended
+INFO: Done
+episode: 1060   score: 360.0   memory length: 2000   epsilon: 0.4785055982550572
+INFO: Episode has ended
+INFO: Done
+episode: 1061   score: 310.0   memory length: 2000   epsilon: 0.47820088709741154
+INFO: Episode has ended
+INFO: Done
+episode: 1062   score: 250.0   memory length: 2000   epsilon: 0.47795802261812687
+INFO: Episode has ended
+INFO: Done
+episode: 1063   score: 400.0   memory length: 2000   epsilon: 0.47765031658967444
+INFO: Episode has ended
+INFO: Done
+episode: 1064   score: 450.0   memory length: 2000   epsilon: 0.477200581624992
+INFO: Episode has ended
+INFO: Done
+episode: 1065   score: 200.0   memory length: 2000   epsilon: 0.4768819179226516
+INFO: Episode has ended
+INFO: Done
+episode: 1066   score: 290.0   memory length: 2000   epsilon: 0.4765963510468426
+INFO: Episode has ended
+INFO: Done
+episode: 1067   score: 300.0   memory length: 2000   epsilon: 0.4762952371644255
+INFO: Episode has ended
+INFO: Done
+episode: 1068   score: 290.0   memory length: 2000   epsilon: 0.4759995494948177
+INFO: Episode has ended
+INFO: Done
+episode: 1069   score: 250.0   memory length: 2000   epsilon: 0.47572021961093247
+INFO: Episode has ended
+INFO: Done
+episode: 1070   score: 370.0   memory length: 2000   epsilon: 0.47542964319158926
+INFO: Episode has ended
+INFO: Done
+episode: 1071   score: 220.0   memory length: 2000   epsilon: 0.47520101640804363
+INFO: Episode has ended
+INFO: Done
+episode: 1072   score: 310.0   memory length: 2000   epsilon: 0.47485662035759346
+INFO: Episode has ended
+INFO: Done
+episode: 1073   score: 330.0   memory length: 2000   epsilon: 0.4745437927763644
+INFO: Episode has ended
+INFO: Done
+episode: 1074   score: 610.0   memory length: 2000   epsilon: 0.47416430936599335
+INFO: Episode has ended
+INFO: Done
+episode: 1075   score: 480.0   memory length: 2000   epsilon: 0.4737846556359711
+INFO: Episode has ended
+INFO: Done
+episode: 1076   score: 200.0   memory length: 2000   epsilon: 0.4734677995430943
+INFO: Episode has ended
+INFO: Done
+episode: 1077   score: 390.0   memory length: 2000   epsilon: 0.47312229400153105
+INFO: Episode has ended
+INFO: Done
+episode: 1078   score: 550.0   memory length: 2000   epsilon: 0.47273732896374693
+INFO: Episode has ended
+INFO: Done
+episode: 1079   score: 530.0   memory length: 2000   epsilon: 0.472314418123687
+INFO: Episode has ended
+INFO: Done
+episode: 1080   score: 110.0   memory length: 2000   epsilon: 0.4721193924470581
+INFO: Episode has ended
+INFO: Done
+episode: 1081   score: 370.0   memory length: 2000   epsilon: 0.4716470371522943
+INFO: Episode has ended
+INFO: Done
+episode: 1082   score: 260.0   memory length: 2000   epsilon: 0.4713212414620897
+INFO: Episode has ended
+INFO: Done
+episode: 1083   score: 550.0   memory length: 2000   epsilon: 0.47096976675657665
+INFO: Episode has ended
+INFO: Done
+episode: 1084   score: 270.0   memory length: 2000   epsilon: 0.47063643800734056
+INFO: Episode has ended
+INFO: Done
+episode: 1085   score: 1220.0   memory length: 2000   epsilon: 0.4701401781402079
+INFO: Episode has ended
+INFO: Done
+episode: 1086   score: 210.0   memory length: 2000   epsilon: 0.46986992510783643
+INFO: Episode has ended
+INFO: Done
+episode: 1087   score: 240.0   memory length: 2000   epsilon: 0.4696167333329138
+INFO: Episode has ended
+INFO: Done
+episode: 1088   score: 740.0   memory length: 2000   epsilon: 0.46920881345453413
+INFO: Episode has ended
+INFO: Done
+episode: 1089   score: 250.0   memory length: 2000   epsilon: 0.46897895734035344
+INFO: Episode has ended
+INFO: Done
+episode: 1090   score: 700.0   memory length: 2000   epsilon: 0.46853035894243694
+INFO: Episode has ended
+INFO: Done
+episode: 1091   score: 140.0   memory length: 2000   epsilon: 0.46827461106409746
+INFO: Episode has ended
+INFO: Done
+episode: 1092   score: 560.0   memory length: 2000   epsilon: 0.4679286837894182
+INFO: Episode has ended
+INFO: Done
+episode: 1093   score: 1020.0   memory length: 2000   epsilon: 0.4673656363951432
+INFO: Episode has ended
+INFO: Done
+episode: 1094   score: 760.0   memory length: 2000   epsilon: 0.4669620066766194
+INFO: Episode has ended
+INFO: Done
+episode: 1095   score: 350.0   memory length: 2000   epsilon: 0.46665297997280175
+INFO: Episode has ended
+INFO: Done
+episode: 1096   score: 490.0   memory length: 2000   epsilon: 0.46615392807506933
+INFO: Episode has ended
+INFO: Done
+episode: 1097   score: 270.0   memory length: 2000   epsilon: 0.465856150716131
+INFO: Episode has ended
+INFO: Done
+episode: 1098   score: 550.0   memory length: 2000   epsilon: 0.46544498108755805
+INFO: Episode has ended
+INFO: Done
+episode: 1099   score: 140.0   memory length: 2000   epsilon: 0.4652141775055505
+INFO: Episode has ended
+INFO: Done
+episode: 1100   score: 710.0   memory length: 2000   epsilon: 0.4648839925039649
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 1101   score: 360.0   memory length: 2000   epsilon: 0.4645633330290394
+INFO: Episode has ended
+INFO: Done
+episode: 1102   score: 440.0   memory length: 2000   epsilon: 0.46423453843186946
+INFO: Episode has ended
+INFO: Done
+episode: 1103   score: 270.0   memory length: 2000   epsilon: 0.463994591087253
+INFO: Episode has ended
+INFO: Done
+episode: 1104   score: 350.0   memory length: 2000   epsilon: 0.46367129937585944
+INFO: Episode has ended
+INFO: Done
+episode: 1105   score: 970.0   memory length: 2000   epsilon: 0.46329773069017116
+INFO: Episode has ended
+INFO: Done
+episode: 1106   score: 600.0   memory length: 2000   epsilon: 0.46283512713484615
+INFO: Episode has ended
+INFO: Done
+episode: 1107   score: 170.0   memory length: 2000   epsilon: 0.4626014542861609
+INFO: Episode has ended
+INFO: Done
+episode: 1108   score: 520.0   memory length: 2000   epsilon: 0.4619477977470371
+INFO: Episode has ended
+INFO: Done
+episode: 1109   score: 360.0   memory length: 2000   epsilon: 0.4616190078137428
+INFO: Episode has ended
+INFO: Done
+episode: 1110   score: 450.0   memory length: 2000   epsilon: 0.46127938105214844
+INFO: Episode has ended
+INFO: Done
+episode: 1111   score: 230.0   memory length: 2000   epsilon: 0.46102528599575104
+INFO: Episode has ended
+INFO: Done
+episode: 1112   score: 270.0   memory length: 2000   epsilon: 0.4607114344976173
+INFO: Episode has ended
+INFO: Done
+episode: 1113   score: 590.0   memory length: 2000   epsilon: 0.4603439332416296
+INFO: Episode has ended
+INFO: Done
+episode: 1114   score: 150.0   memory length: 2000   epsilon: 0.46010139578176906
+INFO: Episode has ended
+INFO: Done
+episode: 1115   score: 270.0   memory length: 2000   epsilon: 0.4598038063104703
+INFO: Episode has ended
+INFO: Done
+episode: 1116   score: 980.0   memory length: 2000   epsilon: 0.45942186787384526
+INFO: Episode has ended
+INFO: Done
+episode: 1117   score: 710.0   memory length: 2000   epsilon: 0.45899250896925947
+INFO: Episode has ended
+INFO: Done
+episode: 1118   score: 1500.0   memory length: 2000   epsilon: 0.45822708900969045
+INFO: Episode has ended
+INFO: Done
+episode: 1119   score: 350.0   memory length: 2000   epsilon: 0.45778099288601354
+INFO: Episode has ended
+INFO: Done
+episode: 1120   score: 520.0   memory length: 2000   epsilon: 0.4573595704756516
+INFO: Episode has ended
+INFO: Done
+episode: 1121   score: 330.0   memory length: 2000   epsilon: 0.45698971602449556
+INFO: Episode has ended
+INFO: Done
+episode: 1122   score: 1300.0   memory length: 2000   epsilon: 0.45630748280273203
+INFO: Episode has ended
+INFO: Done
+episode: 1123   score: 210.0   memory length: 2000   epsilon: 0.4560570386226617
+INFO: Episode has ended
+INFO: Done
+episode: 1124   score: 1270.0   memory length: 2000   epsilon: 0.4555729628953011
+INFO: Episode has ended
+INFO: Done
+episode: 1125   score: 560.0   memory length: 2000   epsilon: 0.45515539376423714
+INFO: Episode has ended
+INFO: Done
+episode: 1126   score: 360.0   memory length: 2000   epsilon: 0.45489466429936326
+INFO: Episode has ended
+INFO: Done
+episode: 1127   score: 570.0   memory length: 2000   epsilon: 0.45441772975393646
+INFO: Episode has ended
+INFO: Done
+episode: 1128   score: 280.0   memory length: 2000   epsilon: 0.45419375691501584
+INFO: Episode has ended
+INFO: Done
+episode: 1129   score: 680.0   memory length: 2000   epsilon: 0.4538264625726073
+INFO: Episode has ended
+INFO: Done
+episode: 1130   score: 440.0   memory length: 2000   epsilon: 0.453460825632425
+INFO: Episode has ended
+INFO: Done
+episode: 1131   score: 2020.0   memory length: 2000   epsilon: 0.45295187470018483
+INFO: Episode has ended
+INFO: Done
+episode: 1132   score: 910.0   memory length: 2000   epsilon: 0.4525439486553851
+INFO: Episode has ended
+INFO: Done
+episode: 1133   score: 280.0   memory length: 2000   epsilon: 0.45229195173763526
+INFO: Episode has ended
+INFO: Done
+episode: 1134   score: 360.0   memory length: 2000   epsilon: 0.4519700343232293
+INFO: Episode has ended
+INFO: Done
+episode: 1135   score: 610.0   memory length: 2000   epsilon: 0.45159053871510935
+INFO: Episode has ended
+INFO: Done
+episode: 1136   score: 370.0   memory length: 2000   epsilon: 0.451200081600929
+INFO: Episode has ended
+INFO: Done
+episode: 1137   score: 410.0   memory length: 2000   epsilon: 0.4509005840411826
+INFO: Episode has ended
+INFO: Done
+episode: 1138   score: 340.0   memory length: 2000   epsilon: 0.4506544593973688
+INFO: Episode has ended
+INFO: Done
+episode: 1139   score: 210.0   memory length: 2000   epsilon: 0.4503593772288743
+INFO: Episode has ended
+INFO: Done
+episode: 1140   score: 200.0   memory length: 2000   epsilon: 0.4500919430608874
+INFO: Episode has ended
+INFO: Done
+episode: 1141   score: 290.0   memory length: 2000   epsilon: 0.4498035264285749
+INFO: Episode has ended
+INFO: Done
+episode: 1142   score: 370.0   memory length: 2000   epsilon: 0.44951799171338436
+INFO: Episode has ended
+INFO: Done
+episode: 1143   score: 290.0   memory length: 2000   epsilon: 0.44923488442520293
+INFO: Episode has ended
+INFO: Done
+episode: 1144   score: 260.0   memory length: 2000   epsilon: 0.44899505691664293
+INFO: Episode has ended
+INFO: Done
+episode: 1145   score: 180.0   memory length: 2000   epsilon: 0.44868625440331944
+INFO: Episode has ended
+
+INFO: Done
+episode: 1146   score: 400.0   memory length: 2000   epsilon: 0.448365109868048
+INFO: Episode has ended
+INFO: Done
+episode: 1147   score: 400.0   memory length: 2000   epsilon: 0.44801148914126304
+INFO: Episode has ended
+INFO: Done
+episode: 1148   score: 1800.0   memory length: 2000   epsilon: 0.44743213690635825
+INFO: Episode has ended
+INFO: Done
+episode: 1149   score: 370.0   memory length: 2000   epsilon: 0.4470595809411299
+INFO: Episode has ended
+INFO: Done
+episode: 1150   score: 330.0   memory length: 2000   epsilon: 0.446777575186717
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 1151   score: 1130.0   memory length: 2000   epsilon: 0.44632164784498873
+INFO: Episode has ended
+INFO: Done
+episode: 1152   score: 190.0   memory length: 2000   epsilon: 0.44604189174460657
+INFO: Episode has ended
+INFO: Done
+episode: 1153   score: 910.0   memory length: 2000   epsilon: 0.44557334774509827
+INFO: Episode has ended
+INFO: Done
+episode: 1154   score: 1140.0   memory length: 2000   epsilon: 0.4451787443967807
+INFO: Episode has ended
+INFO: Done
+episode: 1155   score: 400.0   memory length: 2000   epsilon: 0.4448454301923133
+INFO: Episode has ended
+INFO: Done
+episode: 1156   score: 340.0   memory length: 2000   epsilon: 0.4445088094603598
+INFO: Episode has ended
+INFO: Done
+episode: 1157   score: 310.0   memory length: 2000   epsilon: 0.44425373448970484
+INFO: Episode has ended
+INFO: Done
+episode: 1158   score: 430.0   memory length: 2000   epsilon: 0.44390868323524324
+INFO: Episode has ended
+INFO: Done
+episode: 1159   score: 200.0   memory length: 2000   epsilon: 0.4436570582284593
+INFO: Episode has ended
+INFO: Done
+episode: 1160   score: 120.0   memory length: 2000   epsilon: 0.44344681450942885
+INFO: Episode has ended
+INFO: Done
+episode: 1161   score: 400.0   memory length: 2000   epsilon: 0.4431617697168907
+INFO: Episode has ended
+INFO: Done
+episode: 1162   score: 610.0   memory length: 2000   epsilon: 0.4427290118881077
+INFO: Episode has ended
+INFO: Done
+episode: 1163   score: 170.0   memory length: 2000   epsilon: 0.44249619754698033
+INFO: Episode has ended
+INFO: Done
+episode: 1164   score: 620.0   memory length: 2000   epsilon: 0.44211404575456026
+INFO: Episode has ended
+INFO: Done
+episode: 1165   score: 420.0   memory length: 2000   epsilon: 0.441760495780017
+INFO: Episode has ended
+INFO: Done
+episode: 1166   score: 390.0   memory length: 2000   epsilon: 0.4414584347665083
+INFO: Episode has ended
+INFO: Done
+episode: 1167   score: 250.0   memory length: 2000   epsilon: 0.4412148168334369
+INFO: Episode has ended
+INFO: Done
+episode: 1168   score: 210.0   memory length: 2000   epsilon: 0.4410039664428172
+INFO: Episode has ended
+INFO: Done
+episode: 1169   score: 400.0   memory length: 2000   epsilon: 0.4407121182834984
+INFO: Episode has ended
+INFO: Done
+episode: 1170   score: 610.0   memory length: 2000   epsilon: 0.44033150727061987
+INFO: Episode has ended
+INFO: Done
+episode: 1171   score: 290.0   memory length: 2000   epsilon: 0.44000578232546167
+INFO: Episode has ended
+INFO: Done
+episode: 1172   score: 320.0   memory length: 2000   epsilon: 0.4396987652972895
+INFO: Episode has ended
+INFO: Done
+episode: 1173   score: 850.0   memory length: 2000   epsilon: 0.4392149231187577
+INFO: Episode has ended
+INFO: Done
+episode: 1174   score: 760.0   memory length: 2000   epsilon: 0.4387263486071764
+INFO: Episode has ended
+INFO: Done
+episode: 1175   score: 1290.0   memory length: 2000   epsilon: 0.4382777608200193
+INFO: Episode has ended
+INFO: Done
+episode: 1176   score: 750.0   memory length: 2000   epsilon: 0.43778979100011994
+INFO: Episode has ended
+INFO: Done
+episode: 1177   score: 330.0   memory length: 2000   epsilon: 0.43746419636903117
+INFO: Episode has ended
+INFO: Done
+episode: 1178   score: 420.0   memory length: 2000   epsilon: 0.43717031903596715
+INFO: Episode has ended
+INFO: Done
+episode: 1179   score: 330.0   memory length: 2000   epsilon: 0.43692163975605347
+INFO: Episode has ended
+INFO: Done
+episode: 1180   score: 280.0   memory length: 2000   epsilon: 0.43661721132655174
+INFO: Episode has ended
+INFO: Done
+episode: 1181   score: 1210.0   memory length: 2000   epsilon: 0.43623664687819624
+INFO: Episode has ended
+INFO: Done
+episode: 1182   score: 290.0   memory length: 2000   epsilon: 0.4359479536416121
+INFO: Episode has ended
+INFO: Done
+episode: 1183   score: 360.0   memory length: 2000   epsilon: 0.43560456179659196
+INFO: Episode has ended
+INFO: Done
+episode: 1184   score: 270.0   memory length: 2000   epsilon: 0.435288427497288
+INFO: Episode has ended
+INFO: Done
+episode: 1185   score: 670.0   memory length: 2000   epsilon: 0.43488162282498566
+INFO: Episode has ended
+INFO: Done
+episode: 1186   score: 290.0   memory length: 2000   epsilon: 0.4346072989421007
+INFO: Episode has ended
+INFO: Done
+episode: 1187   score: 240.0   memory length: 2000   epsilon: 0.4343996061918762
+INFO: Episode has ended
+INFO: Done
+episode: 1188   score: 270.0   memory length: 2000   epsilon: 0.4341607519799656
+INFO: Episode has ended
+INFO: Done
+episode: 1189   score: 340.0   memory length: 2000   epsilon: 0.43382701053484546
+INFO: Episode has ended
+INFO: Done
+episode: 1190   score: 370.0   memory length: 2000   epsilon: 0.4335563867883423
+INFO: Episode has ended
+INFO: Done
+episode: 1191   score: 460.0   memory length: 2000   epsilon: 0.4331667945497622
+INFO: Episode has ended
+INFO: Done
+episode: 1192   score: 200.0   memory length: 2000   epsilon: 0.4328732068537307
+INFO: Episode has ended
+INFO: Done
+episode: 1193   score: 170.0   memory length: 2000   epsilon: 0.43265379565358325
+INFO: Episode has ended
+INFO: Done
+episode: 1194   score: 500.0   memory length: 2000   epsilon: 0.43223475697309244
+INFO: Episode has ended
+INFO: Done
+episode: 1195   score: 580.0   memory length: 2000   epsilon: 0.4317319281676853
+INFO: Episode has ended
+INFO: Done
+episode: 1196   score: 290.0   memory length: 2000   epsilon: 0.4314915203232848
+INFO: Episode has ended
+INFO: Done
+episode: 1197   score: 370.0   memory length: 2000   epsilon: 0.4312167476118443
+INFO: Episode has ended
+INFO: Done
+episode: 1198   score: 370.0   memory length: 2000   epsilon: 0.4308757898605628
+INFO: Episode has ended
+INFO: Done
+episode: 1199   score: 270.0   memory length: 2000   epsilon: 0.43061949489275503
+INFO: Episode has ended
+INFO: Done
+episode: 1200   score: 300.0   memory length: 2000   epsilon: 0.43039261809278895
+INFO: Episode has ended
+INFO: Every 50 episodes we save the network into the /pacman.h5 file.
+INFO: Done
+episode: 1201   score: 290.0   memory length: 2000   epsilon: 0.4301000504504663
+INFO: Episode has ended
+INFO: Done
+episode: 1202   score: 1270.0   memory length: 2000   epsilon: 0.4296203262901589
+INFO: Episode has ended
+INFO: Done
+episode: 1203   score: 420.0   memory length: 2000   epsilon: 0.4292368463962877
+INFO: Episode has ended
+INFO: Done
+episode: 1204   score: 540.0   memory length: 2000   epsilon: 0.42878295373739633
+INFO: Episode has ended
+INFO: Done
+episode: 1205   score: 630.0   memory length: 2000   epsilon: 0.4283766599077988
+INFO: Episode has ended
+INFO: Done
+episode: 1206   score: 140.0   memory length: 2000   epsilon: 0.42813169840151416
+INFO: Episode has ended
+INFO: Done
+episode: 1207   score: 220.0   memory length: 2000   epsilon: 0.427887304860519
+INFO: Episode has ended
+INFO: Done
+episode: 1208   score: 630.0   memory length: 2000   epsilon: 0.4274647607631892
+INFO: Episode has ended
+INFO: Done
+episode: 1209   score: 840.0   memory length: 2000   epsilon: 0.4269956618037653
+INFO: Episode has ended
+INFO: Done
+episode: 1210   score: 1220.0   memory length: 2000   epsilon: 0.4265582152613331
+INFO: Episode has ended
+INFO: Done
+episode: 1211   score: 330.0   memory length: 2000   epsilon: 0.42630235696940344
+INFO: Episode has ended
+INFO: Done
+episode: 1212   score: 820.0   memory length: 2000   epsilon: 0.4259337646854633
+INFO: Episode has ended
+INFO: Done
+episode: 1213   score: 740.0   memory length: 2000   epsilon: 0.4255778326805172
+INFO: Episode has ended
+INFO: Done
+episode: 1214   score: 780.0   memory length: 2000   epsilon: 0.42520816600250877
+INFO: Episode has ended
+INFO: Done
+
+episode: 1215   score: 230.0   memory length: 2000   epsilon: 0.4249135986755442
+INFO: Episode has ended
+INFO: Done
+episode: 1216   score: 370.0   memory length: 2000   epsilon: 0.4245767755913767
+INFO: Episode has ended
+
+
+
+INFO: Done
+episode: 1217   score: 850.0   memory length: 2000   epsilon: 0.4240858240867411
+INFO: Episode has ended
+INFO: Done
+episode: 1218   score: 250.0   memory length: 2000   epsilon: 0.4237721165061752
+INFO: Episode has ended

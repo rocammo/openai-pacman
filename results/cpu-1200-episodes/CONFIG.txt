@@ -1,0 +1,11 @@
+EPISODES        = 1501
+ENVIROMENT      = 'MsPacman-ram-v0'
+TRAINING_PATH   = ''
+
+discount_factor = 0.99
+learning_rate = 0.0001
+epsilon = 1.0
+epsilon_decay = 0.999999
+epsilon_min = 0.1
+batch_size = 128
+train_start = 1000
