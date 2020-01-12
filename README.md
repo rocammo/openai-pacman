@@ -69,7 +69,7 @@ Remember that Xming server should be running on Windows, as is needed to handle 
 To execute the project:
 
 ```
-$ python -m pacman
+$ python -m pacman -n DDQN -m TRAIN
 ```
 
 ## Algorithms
