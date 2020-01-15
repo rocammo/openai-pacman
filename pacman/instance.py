@@ -47,7 +47,7 @@ class PacMan:
             print('\033[95m' + 'INFO: Render is disabled'+ '\033[0m')
             self.agent.render = False
 
-    def train(self, path, statistics):
+    def train(self, path, statistics, mode):
         print('\033[95m' + 'INFO: Running' + '\033[0m')
 
         if path:
@@ -109,8 +109,8 @@ class PacMan:
                     
                     print('\033[92m' + 'INFO: Episode', e, "  Score", score, "  Memory Length", len(agent.memory), "  Epsilon", agent.epsilon, '\033[0m')
 
-            # Save the model every 50 episodes
-            if e % 50 == 0:
+            # Save the model every 50 episodes if we are not in testing phase
+            if (e % 50 == 0) & (mode.lower() != 'test'):
                 agent.model.save_weights(TRAINING_PATH+"pacman.h5")
                 print('\033[95m' +'INFO: Episode has ended, saving the network into the',TRAINING_PATH+'pacman.h5 file.' + '\033[0m')
             else:

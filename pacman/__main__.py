@@ -16,4 +16,4 @@ if __name__ == '__main__':
 
     game_instance = PacMan(args.network, args.mode, args.view)
 
-    game_instance.train(args.path, args.statistics)
+    game_instance.train(args.path, args.statistics, args.mode)
