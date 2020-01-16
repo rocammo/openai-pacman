@@ -1,0 +1,3033 @@
+rocammo at rocabook in ~/dev/openai-pacman (master●) (env)
+$ python -m pacman -n DDQN -m TRAIN
+Using TensorFlow backend.
+Namespace(mode='TRAIN', network='DDQN', path=None, statistics=False, view=False)
+INFO: Using DDQN on MsPacman-ram-v0
+INFO: DeepQAgent is initializing
+INFO: DeepQAgent is using Training hyper parameters
+INFO: DeepQAgent is building the model
+2020-01-16 02:00:52.793871: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-01-16 02:00:52.804387: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fbb1918a0e0 executing computations on platform Host. Devices:
+2020-01-16 02:00:52.804424: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+Model: "sequential_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+dense_1 (Dense)              (None, 128)               16512
+_________________________________________________________________
+dense_2 (Dense)              (None, 32)                4128
+_________________________________________________________________
+dense_3 (Dense)              (None, 9)                 297
+=================================================================
+Total params: 20,937
+Trainable params: 20,937
+Non-trainable params: 0
+_________________________________________________________________
+INFO: DeepQAgent model was sucessfully built
+INFO: Render is disabled
+INFO: Running
+INFO: Path set to ./results/
+INFO: Statistics are off, scores will not be plotted
+INFO: Episode 0   Score 260.0   Memory Length 628   Epsilon 0.9391283320998
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 1   Score 260.0   Memory Length 1272   Epsilon 0.8805519427745995
+INFO: Episode has ended.
+INFO: Episode 2   Score 300.0   Memory Length 1962   Epsilon 0.8218397858450438
+INFO: Episode has ended.
+INFO: Episode 3   Score 130.0   Memory Length 2000   Epsilon 0.7799601691237231
+INFO: Episode has ended.
+INFO: Episode 4   Score 140.0   Memory Length 2000   Epsilon 0.7349774973955224
+INFO: Episode has ended.
+INFO: Episode 5   Score 650.0   Memory Length 2000   Epsilon 0.6711115299249129
+INFO: Episode has ended.
+INFO: Episode 6   Score 310.0   Memory Length 2000   Epsilon 0.6296928447253641
+INFO: Episode has ended.
+INFO: Episode 7   Score 190.0   Memory Length 2000   Epsilon 0.5923686124245872
+INFO: Episode has ended.
+INFO: Episode 8   Score 170.0   Memory Length 2000   Epsilon 0.5568667632145597
+INFO: Episode has ended.
+INFO: Episode 9   Score 260.0   Memory Length 2000   Epsilon 0.5163693127091433
+INFO: Episode has ended.
+INFO: Episode 10   Score 280.0   Memory Length 2000   Epsilon 0.4779558511052554
+INFO: Episode has ended.
+INFO: Episode 11   Score 230.0   Memory Length 2000   Epsilon 0.44881699507769246
+INFO: Episode has ended.
+INFO: Episode 12   Score 320.0   Memory Length 2000   Epsilon 0.4174695473160871
+INFO: Episode has ended.
+INFO: Episode 13   Score 290.0   Memory Length 2000   Epsilon 0.3947326897030423
+INFO: Episode has ended.
+INFO: Episode 14   Score 340.0   Memory Length 2000   Epsilon 0.3653679527860587
+INFO: Episode has ended.
+INFO: Episode 15   Score 270.0   Memory Length 2000   Epsilon 0.34292157112727556
+INFO: Episode has ended.
+INFO: Episode 16   Score 420.0   Memory Length 2000   Epsilon 0.3110323372561015
+INFO: Episode has ended.
+INFO: Episode 17   Score 430.0   Memory Length 2000   Epsilon 0.2905551722257155
+INFO: Episode has ended.
+INFO: Episode 18   Score 710.0   Memory Length 2000   Epsilon 0.2681078861038509
+INFO: Episode has ended.
+INFO: Episode 19   Score 330.0   Memory Length 2000   Epsilon 0.2508326865396852
+INFO: Episode has ended.
+INFO: Episode 20   Score 1100.0   Memory Length 2000   Epsilon 0.2286246313086999
+INFO: Episode has ended.
+INFO: Episode 21   Score 220.0   Memory Length 2000   Epsilon 0.21430029066987014
+INFO: Episode has ended.
+INFO: Episode 22   Score 200.0   Memory Length 2000   Epsilon 0.20342057903106497
+INFO: Episode has ended.
+INFO: Episode 23   Score 550.0   Memory Length 2000   Epsilon 0.18740490687017483
+INFO: Episode has ended.
+INFO: Episode 24   Score 340.0   Memory Length 2000   Epsilon 0.1736024175564238
+INFO: Episode has ended.
+INFO: Episode 25   Score 600.0   Memory Length 2000   Epsilon 0.15835876647562208
+INFO: Episode has ended.
+INFO: Episode 26   Score 180.0   Memory Length 2000   Epsilon 0.14903185836742472
+INFO: Episode has ended.
+INFO: Episode 27   Score 410.0   Memory Length 2000   Epsilon 0.13877536301130622
+INFO: Episode has ended.
+INFO: Episode 28   Score 190.0   Memory Length 2000   Epsilon 0.13325365632594713
+INFO: Episode has ended.
+INFO: Episode 29   Score 370.0   Memory Length 2000   Epsilon 0.12538029228807943
+INFO: Episode has ended.
+INFO: Episode 30   Score 670.0   Memory Length 2000   Epsilon 0.11548577321955299
+INFO: Episode has ended.
+INFO: Episode 31   Score 250.0   Memory Length 2000   Epsilon 0.10991912593591599
+INFO: Episode has ended.
+INFO: Episode 32   Score 280.0   Memory Length 2000   Epsilon 0.10395333395159755
+INFO: Episode has ended.
+INFO: Episode 33   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 34   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 35   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 36   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 37   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 38   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 39   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 40   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 41   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 42   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 43   Score 1140.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 44   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 45   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 46   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 47   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 48   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 49   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 50   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 51   Score 710.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 52   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 53   Score 970.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 54   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 55   Score 1020.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 56   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 57   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 58   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 59   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 60   Score 200.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 61   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 62   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 63   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 64   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 65   Score 770.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 66   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 67   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 68   Score 140.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 69   Score 680.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 70   Score 870.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 71   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 72   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 73   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 74   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 75   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 76   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 77   Score 820.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 78   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 79   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 80   Score 1420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 81   Score 560.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 82   Score 720.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 83   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 84   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 85   Score 970.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 86   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 87   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 88   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 89   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 90   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 91   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 92   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 93   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 94   Score 610.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 95   Score 160.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 96   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 97   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 98   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 99   Score 1020.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 100   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 101   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 102   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 103   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 104   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 105   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 106   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 107   Score 620.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 108   Score 140.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 109   Score 790.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 110   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 111   Score 830.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 112   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 113   Score 1150.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 114   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 115   Score 200.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 116   Score 970.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 117   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 118   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 119   Score 740.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 120   Score 510.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 121   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 122   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 123   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 124   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 125   Score 910.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 126   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 127   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 128   Score 890.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 129   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 130   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 131   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 132   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 133   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 134   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 135   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 136   Score 1290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 137   Score 890.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 138   Score 660.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 139   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 140   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 141   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 142   Score 830.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 143   Score 690.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 144   Score 1180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 145   Score 610.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 146   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 147   Score 850.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 148   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 149   Score 1110.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 150   Score 1000.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 151   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 152   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 153   Score 170.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 154   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 155   Score 120.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 156   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 157   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 158   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 159   Score 690.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 160   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 161   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 162   Score 1110.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 163   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 164   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 165   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 166   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 167   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 168   Score 1320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 169   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 170   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 171   Score 720.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 172   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 173   Score 680.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 174   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 175   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 176   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 177   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 178   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 179   Score 510.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 180   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 181   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 182   Score 680.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 183   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 184   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 185   Score 1490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 186   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 187   Score 970.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 188   Score 990.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 189   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 190   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 191   Score 1130.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 192   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 193   Score 650.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 194   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 195   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 196   Score 740.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 197   Score 690.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 198   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 199   Score 790.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 200   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 201   Score 710.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 202   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 203   Score 1330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 204   Score 580.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 205   Score 1070.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 206   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 207   Score 730.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 208   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 209   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 210   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 211   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 212   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 213   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 214   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 215   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 216   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 217   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 218   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 219   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 220   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 221   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 222   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 223   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 224   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 225   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 226   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 227   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 228   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 229   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 230   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 231   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 232   Score 920.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 233   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 234   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 235   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 236   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 237   Score 610.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 238   Score 140.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 239   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 240   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 241   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 242   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 243   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 244   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 245   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 246   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 247   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 248   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 249   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 250   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 251   Score 760.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 252   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 253   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 254   Score 750.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 255   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 256   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 257   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 258   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 259   Score 1890.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 260   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 261   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 262   Score 620.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 263   Score 630.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 264   Score 580.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 265   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 266   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 267   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 268   Score 710.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 269   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 270   Score 700.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 271   Score 680.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 272   Score 610.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 273   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 274   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 275   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 276   Score 830.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 277   Score 770.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 278   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 279   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 280   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 281   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 282   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 283   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 284   Score 770.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 285   Score 1010.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 286   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 287   Score 860.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 288   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 289   Score 990.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 290   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 291   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 292   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 293   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 294   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 295   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 296   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 297   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 298   Score 130.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 299   Score 120.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 300   Score 1160.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 301   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 302   Score 600.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 303   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 304   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 305   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 306   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 307   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 308   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 309   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 310   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 311   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 312   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 313   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 314   Score 1000.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 315   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 316   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 317   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 318   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 319   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 320   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 321   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 322   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 323   Score 160.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 324   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 325   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 326   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 327   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 328   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 329   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 330   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 331   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 332   Score 200.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 333   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 334   Score 700.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 335   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 336   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 337   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 338   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 339   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 340   Score 630.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 341   Score 630.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 342   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 343   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 344   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 345   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 346   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 347   Score 650.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 348   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 349   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 350   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 351   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 352   Score 1080.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 353   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 354   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 355   Score 1010.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 356   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 357   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 358   Score 200.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 359   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 360   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 361   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 362   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 363   Score 510.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 364   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 365   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 366   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 367   Score 680.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 368   Score 960.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 369   Score 630.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 370   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 371   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 372   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 373   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 374   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 375   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 376   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 377   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 378   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 379   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 380   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 381   Score 970.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 382   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 383   Score 780.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 384   Score 200.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 385   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 386   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 387   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 388   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 389   Score 730.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 390   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 391   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 392   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 393   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 394   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 395   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 396   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 397   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 398   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 399   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 400   Score 680.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 401   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 402   Score 1150.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 403   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 404   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 405   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 406   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 407   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 408   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 409   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 410   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 411   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 412   Score 690.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 413   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 414   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 415   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 416   Score 690.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 417   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 418   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 419   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 420   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 421   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 422   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 423   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 424   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 425   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 426   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 427   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 428   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 429   Score 780.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 430   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 431   Score 630.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 432   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 433   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 434   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 435   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 436   Score 620.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 437   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 438   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 439   Score 750.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 440   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 441   Score 910.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 442   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 443   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 444   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 445   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 446   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 447   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 448   Score 720.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 449   Score 780.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 450   Score 110.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 451   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 452   Score 780.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 453   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 454   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 455   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 456   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 457   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 458   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 459   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 460   Score 1040.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 461   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 462   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 463   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 464   Score 1010.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 465   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 466   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 467   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 468   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 469   Score 580.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 470   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 471   Score 160.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 472   Score 1090.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 473   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 474   Score 710.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 475   Score 850.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 476   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 477   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 478   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 479   Score 1640.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 480   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 481   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 482   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 483   Score 850.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 484   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 485   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 486   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 487   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 488   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 489   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 490   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 491   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 492   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 493   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 494   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 495   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 496   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 497   Score 780.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 498   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 499   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 500   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 501   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 502   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 503   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 504   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 505   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 506   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 507   Score 880.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 508   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 509   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 510   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 511   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 512   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 513   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 514   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 515   Score 680.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 516   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 517   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 518   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 519   Score 880.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 520   Score 810.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 521   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 522   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 523   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 524   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 525   Score 690.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 526   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 527   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 528   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 529   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 530   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 531   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 532   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 533   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 534   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 535   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 536   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 537   Score 600.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 538   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 539   Score 2050.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 540   Score 710.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 541   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 542   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 543   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 544   Score 980.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 545   Score 910.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 546   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 547   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 548   Score 770.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 549   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 550   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 551   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 552   Score 630.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 553   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 554   Score 920.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 555   Score 580.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 556   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 557   Score 630.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 558   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 559   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 560   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 561   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 562   Score 850.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 563   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 564   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 565   Score 1040.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 566   Score 660.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 567   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 568   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 569   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 570   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 571   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 572   Score 510.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 573   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 574   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 575   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 576   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 577   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 578   Score 130.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 579   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 580   Score 1200.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 581   Score 110.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 582   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 583   Score 130.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 584   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 585   Score 610.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 586   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 587   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 588   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 589   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 590   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 591   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 592   Score 700.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 593   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 594   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 595   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 596   Score 1110.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 597   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 598   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 599   Score 700.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 600   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 601   Score 650.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 602   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 603   Score 60.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 604   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 605   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 606   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 607   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 608   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 609   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 610   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 611   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 612   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 613   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 614   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 615   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 616   Score 560.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 617   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 618   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 619   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 620   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 621   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 622   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 623   Score 700.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 624   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 625   Score 580.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 626   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 627   Score 650.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 628   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 629   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 630   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 631   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 632   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 633   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 634   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 635   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 636   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 637   Score 740.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 638   Score 690.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 639   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 640   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 641   Score 600.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 642   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 643   Score 2360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 644   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 645   Score 1070.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 646   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 647   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 648   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 649   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 650   Score 1080.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 651   Score 870.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 652   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 653   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 654   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 655   Score 730.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 656   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 657   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 658   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 659   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 660   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 661   Score 970.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 662   Score 1340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 663   Score 850.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 664   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 665   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 666   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 667   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 668   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 669   Score 560.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 670   Score 1320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 671   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 672   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 673   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 674   Score 510.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 675   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 676   Score 900.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 677   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 678   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 679   Score 850.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 680   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 681   Score 650.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 682   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 683   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 684   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 685   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 686   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 687   Score 150.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 688   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 689   Score 890.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 690   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 691   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 692   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 693   Score 1040.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 694   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 695   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 696   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 697   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 698   Score 560.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 699   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 700   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 701   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 702   Score 580.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 703   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 704   Score 950.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 705   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 706   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 707   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 708   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 709   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 710   Score 650.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 711   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 712   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 713   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 714   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 715   Score 1100.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 716   Score 1580.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 717   Score 1010.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 718   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 719   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 720   Score 990.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 721   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 722   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 723   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 724   Score 1010.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 725   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 726   Score 150.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 727   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 728   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 729   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 730   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 731   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 732   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 733   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 734   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 735   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 736   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 737   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 738   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 739   Score 790.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 740   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 741   Score 510.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 742   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 743   Score 850.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 744   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 745   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 746   Score 580.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 747   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 748   Score 1350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 749   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 750   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 751   Score 830.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 752   Score 1070.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 753   Score 1250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 754   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 755   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 756   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 757   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 758   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 759   Score 1050.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 760   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 761   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 762   Score 560.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 763   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 764   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 765   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 766   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 767   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 768   Score 690.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 769   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 770   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 771   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 772   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 773   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 774   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 775   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 776   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 777   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 778   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 779   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 780   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 781   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 782   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 783   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 784   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 785   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 786   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 787   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 788   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 789   Score 510.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 790   Score 920.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 791   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 792   Score 1720.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 793   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 794   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 795   Score 800.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 796   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 797   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 798   Score 780.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 799   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 800   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 801   Score 750.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 802   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 803   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 804   Score 1440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 805   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 806   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 807   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 808   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 809   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 810   Score 580.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 811   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 812   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 813   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 814   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 815   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 816   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 817   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 818   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 819   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 820   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 821   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 822   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 823   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 824   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 825   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 826   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 827   Score 950.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 828   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 829   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 830   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 831   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 832   Score 730.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 833   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 834   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 835   Score 800.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 836   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 837   Score 680.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 838   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 839   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 840   Score 960.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 841   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 842   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 843   Score 630.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 844   Score 200.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 845   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 846   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 847   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 848   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 849   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 850   Score 170.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 851   Score 560.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 852   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 853   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 854   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 855   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 856   Score 1950.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 857   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 858   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 859   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 860   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 861   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 862   Score 720.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 863   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 864   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 865   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 866   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 867   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 868   Score 910.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 869   Score 170.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 870   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 871   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 872   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 873   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 874   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 875   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 876   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 877   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 878   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 879   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 880   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 881   Score 850.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 882   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 883   Score 700.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 884   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 885   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 886   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 887   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 888   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 889   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 890   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 891   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 892   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 893   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 894   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 895   Score 1800.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 896   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 897   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 898   Score 660.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 899   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 900   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 901   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 902   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 903   Score 130.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 904   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 905   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 906   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 907   Score 560.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 908   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 909   Score 2070.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 910   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 911   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 912   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 913   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 914   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 915   Score 1440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 916   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 917   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 918   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 919   Score 580.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 920   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 921   Score 780.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 922   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 923   Score 600.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 924   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 925   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 926   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 927   Score 690.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 928   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 929   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 930   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 931   Score 850.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 932   Score 560.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 933   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 934   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 935   Score 650.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 936   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 937   Score 640.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 938   Score 510.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 939   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 940   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 941   Score 610.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 942   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 943   Score 630.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 944   Score 1030.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 945   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 946   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 947   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 948   Score 870.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 949   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 950   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 951   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 952   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 953   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 954   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 955   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 956   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 957   Score 650.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 958   Score 170.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 959   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 960   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 961   Score 160.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 962   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 963   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 964   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 965   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 966   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 967   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 968   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 969   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 970   Score 680.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 971   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 972   Score 930.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 973   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 974   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 975   Score 640.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 976   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 977   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 978   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 979   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 980   Score 860.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 981   Score 780.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 982   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 983   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 984   Score 110.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 985   Score 650.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 986   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 987   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 988   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 989   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 990   Score 720.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 991   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 992   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 993   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 994   Score 1110.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 995   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 996   Score 1160.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 997   Score 1050.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 998   Score 740.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 999   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1000   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 1001   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1002   Score 710.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1003   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1004   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1005   Score 510.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1006   Score 680.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1007   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1008   Score 130.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1009   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1010   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1011   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1012   Score 640.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1013   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1014   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1015   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1016   Score 850.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1017   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1018   Score 850.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1019   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1020   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1021   Score 890.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1022   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1023   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1024   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1025   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1026   Score 1310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1027   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1028   Score 170.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1029   Score 790.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1030   Score 1150.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1031   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1032   Score 610.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1033   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1034   Score 860.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1035   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1036   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1037   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1038   Score 970.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1039   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1040   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1041   Score 700.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1042   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1043   Score 680.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1044   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1045   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1046   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1047   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1048   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1049   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1050   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 1051   Score 1040.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1052   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1053   Score 1160.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1054   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1055   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1056   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1057   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1058   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1059   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1060   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1061   Score 610.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1062   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1063   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1064   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1065   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1066   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1067   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1068   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1069   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1070   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1071   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1072   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1073   Score 850.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1074   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1075   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1076   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1077   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1078   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1079   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1080   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1081   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1082   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1083   Score 1330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1084   Score 750.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1085   Score 710.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1086   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1087   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1088   Score 200.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1089   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1090   Score 710.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1091   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1092   Score 950.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1093   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1094   Score 580.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1095   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1096   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1097   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1098   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1099   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1100   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 1101   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1102   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1103   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1104   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1105   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1106   Score 740.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1107   Score 650.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1108   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1109   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1110   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1111   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1112   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1113   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1114   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1115   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1116   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1117   Score 150.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1118   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1119   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1120   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1121   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1122   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1123   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1124   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1125   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1126   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1127   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1128   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1129   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1130   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1131   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1132   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1133   Score 1890.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1134   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1135   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1136   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1137   Score 1000.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1138   Score 910.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1139   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1140   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1141   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1142   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1143   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1144   Score 740.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1145   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1146   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1147   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1148   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1149   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1150   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 1151   Score 1170.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1152   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1153   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1154   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1155   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1156   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1157   Score 1050.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1158   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1159   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1160   Score 660.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1161   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1162   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1163   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1164   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1165   Score 600.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1166   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1167   Score 90.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1168   Score 710.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1169   Score 110.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1170   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1171   Score 200.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1172   Score 600.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1173   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1174   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1175   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1176   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1177   Score 1120.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1178   Score 620.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1179   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1180   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1181   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1182   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1183   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1184   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1185   Score 650.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1186   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1187   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1188   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1189   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1190   Score 600.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1191   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1192   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1193   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1194   Score 1220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1195   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1196   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1197   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1198   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1199   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1200   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 1201   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1202   Score 1160.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1203   Score 600.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1204   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1205   Score 970.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1206   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1207   Score 700.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1208   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1209   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1210   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1211   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1212   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1213   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1214   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1215   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1216   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1217   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1218   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1219   Score 170.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1220   Score 580.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1221   Score 1160.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1222   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1223   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1224   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1225   Score 170.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1226   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1227   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1228   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1229   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1230   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1231   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1232   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1233   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1234   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1235   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1236   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1237   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1238   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1239   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1240   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1241   Score 620.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1242   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1243   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1244   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1245   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1246   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1247   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1248   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1249   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1250   Score 510.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 1251   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1252   Score 2060.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1253   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1254   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1255   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1256   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1257   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1258   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1259   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1260   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1261   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1262   Score 920.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1263   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1264   Score 540.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1265   Score 510.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1266   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1267   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1268   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1269   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1270   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1271   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1272   Score 130.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1273   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1274   Score 730.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1275   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1276   Score 770.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1277   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1278   Score 730.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1279   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1280   Score 640.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1281   Score 810.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1282   Score 200.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1283   Score 780.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1284   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1285   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1286   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1287   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1288   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1289   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1290   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1291   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1292   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1293   Score 1650.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1294   Score 920.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1295   Score 130.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1296   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1297   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1298   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1299   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1300   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 1301   Score 590.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1302   Score 740.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1303   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1304   Score 970.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1305   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1306   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1307   Score 2490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1308   Score 860.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1309   Score 900.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1310   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1311   Score 430.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1312   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1313   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1314   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1315   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1316   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1317   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1318   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1319   Score 970.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1320   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1321   Score 1070.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1322   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1323   Score 690.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1324   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1325   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1326   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1327   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1328   Score 390.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1329   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1330   Score 770.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1331   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1332   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1333   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1334   Score 80.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1335   Score 600.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1336   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1337   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1338   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1339   Score 850.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1340   Score 110.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1341   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1342   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1343   Score 1070.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1344   Score 1240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1345   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1346   Score 610.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1347   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1348   Score 1220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1349   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1350   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 1351   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1352   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1353   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1354   Score 740.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1355   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1356   Score 670.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1357   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1358   Score 270.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1359   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1360   Score 600.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1361   Score 150.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1362   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1363   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1364   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1365   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1366   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1367   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1368   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1369   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1370   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1371   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1372   Score 220.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1373   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1374   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1375   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1376   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1377   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1378   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1379   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1380   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1381   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1382   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1383   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1384   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1385   Score 920.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1386   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1387   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1388   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1389   Score 110.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1390   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1391   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1392   Score 570.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1393   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1394   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1395   Score 170.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1396   Score 800.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1397   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1398   Score 780.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1399   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1400   Score 200.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 1401   Score 1140.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1402   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1403   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1404   Score 450.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1405   Score 110.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1406   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1407   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1408   Score 710.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1409   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1410   Score 1080.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1411   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1412   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1413   Score 680.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1414   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1415   Score 300.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1416   Score 190.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1417   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1418   Score 580.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1419   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1420   Score 110.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1421   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1422   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1423   Score 1170.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1424   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1425   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1426   Score 1070.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1427   Score 1740.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1428   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1429   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1430   Score 230.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1431   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1432   Score 210.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1433   Score 280.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1434   Score 410.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1435   Score 1720.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1436   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1437   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1438   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1439   Score 510.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1440   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1441   Score 200.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1442   Score 330.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1443   Score 680.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1444   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1445   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1446   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1447   Score 3750.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1448   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1449   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1450   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: Episode 1451   Score 460.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1452   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1453   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1454   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1455   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1456   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1457   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1458   Score 290.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1459   Score 380.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1460   Score 600.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1461   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1462   Score 720.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1463   Score 890.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1464   Score 1730.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1465   Score 250.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1466   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1467   Score 420.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1468   Score 340.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1469   Score 700.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1470   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1471   Score 500.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1472   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1473   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1474   Score 1640.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1475   Score 170.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1476   Score 260.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1477   Score 240.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1478   Score 780.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1479   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1480   Score 830.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1481   Score 130.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1482   Score 840.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1483   Score 180.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1484   Score 350.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1485   Score 440.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1486   Score 490.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1487   Score 360.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1488   Score 370.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1489   Score 510.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1490   Score 480.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1491   Score 310.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1492   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1493   Score 320.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1494   Score 600.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1495   Score 550.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1496   Score 520.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1497   Score 400.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1498   Score 530.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1499   Score 720.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended.
+INFO: Episode 1500   Score 470.0   Memory Length 2000   Epsilon 0.0999969960769904
+INFO: Episode has ended, saving the network into the ./results/pacman.h5 file.
+INFO: All episodes were run, exiting.
