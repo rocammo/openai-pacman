@@ -16,7 +16,7 @@ class DuelQAgent:
         self.construct_network()
 
     def construct_network(self):
-        self.model = Sequential()
+        # self.model = Sequential()
         input_layer = Input(shape=(84, 84, NUM_FRAMES))
         conv1 = Convolution2D(32, 8, 8, subsample=(4, 4), activation='relu')(input_layer)
         conv2 = Convolution2D(64, 4, 4, subsample=(2, 2), activation='relu')(conv1)
