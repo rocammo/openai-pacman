@@ -20,10 +20,10 @@ class DeepQAgent:
             # When we load a saved model we disable training and just use the model
             print('\033[93m' + 'INFO: DeepQAgent is using Testing hyper parameters' + '\033[0m')
             self.discount_factor = 0.99
-            self.learning_rate = 0.000
-            self.epsilon = 0.0            # Starting epsilon, 1=exploring, 0=exploiting
-            self.epsilon_decay = 0
-            self.epsilon_min = 0.0
+            self.learning_rate = 0.00001
+            self.epsilon = 0.2            # Starting epsilon, 1=exploring, 0=exploiting
+            self.epsilon_decay = 0.99999
+            self.epsilon_min = 0.2
             self.batch_size = 128
             self.train_start = 1000
         else:
