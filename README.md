@@ -66,19 +66,25 @@ Remember that Xming server should be running on Windows, as is needed to handle 
 
 ## Usage
 
-To execute the project:
-
+To execute the project in training mode:
+The training mode starts from scratch (epsilon = 1)
 ```
 $ python -m pacman -n DDQN -m TRAIN
 ```
+
+To execute the project in testing mode:
+```
+$ python -m pacman -n DDQN -m TEST -p ./openai-pacman/results/cpu-1200-episodes/
+```
+The testing mode loads a file and starts from that knowledge represented in weights (epsilon near 0).
 
 ## Algorithms
 
 Our project implements three different reinforcement learning algorithms in the same framework:
 
  * [x] Deep Q Reinforcement Learning
- * [ ] Duel Q Reinforcement Learning
- * [ ] To be determined
+ * [x] Duel Q Reinforcement Learning
+ * [x] Cross Entropy
  
 You can choose the algorithm to run by using the `--network` parameter.
  
