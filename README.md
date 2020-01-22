@@ -78,6 +78,32 @@ $ python -m pacman -n DDQN -m TEST -p ./openai-pacman/results/cpu-1200-episodes/
 ```
 The testing mode loads a file and starts from that knowledge represented in weights (epsilon near 0).
 
+## Launch options
+```
+--network
+```
+Required: Selects the algorithm, DDQN for DeepQ, DQN for DuelQ.
+
+```
+--mode
+```
+Required: Selects the mode, TRAIN or TEST. Testing uses saved weights file.
+
+```
+--path
+```
+Optional: specify a path for the weights file and stats file, default ./results/ 
+
+```
+--statistics
+```
+Optional: Plot progress into a png chart. Default false.
+
+```
+--view
+```
+Optional: Renders Pac-Man. Default false.
+
 ## Algorithms
 
 Our project implements three different reinforcement learning algorithms in the same framework:
